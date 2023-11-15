@@ -1446,6 +1446,7 @@ html,body,*,::before,::after{box-sizing:border-box;-moz-box-sizing:border-box;-w
 a,input,button,textarea{-webkit-transition:all ease .3s;transition:all ease .3s}
 .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;color:#fff;background:#000;display:inline-block}
 body{font-family:"Gotham",sans-serif;font-size:16px;line-height:1.5}
+strong{font-weight:600 !important}
 .skip-link{display:inline-block;text-decoration:none;padding:8px 15px;color:#fff;background:#000;border-radius:6px;position:absolute;top:-80vh;left:10px;-webkit-box-shadow:0 5px 16px rgba(0,0,0,.25);box-shadow:0 5px 16px rgba(0,0,0,.25);z-index:-999;opacity:0}
 .skip-link:focus{top:10px;z-index:9999;opacity:1}
 section.wp-block-template-part{display:none}
@@ -1485,8 +1486,8 @@ body.logged-in.admin-bar header.wp-block-template-part.sticky{top:30px}
 .featured-story-wrap .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .featured-story-wrap .flexwrap .col{width:100%}
 .featured-story-wrap .flexwrap .textcol{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:center;align-content:center;color:#faf3d6}
-.featured-story-wrap .flexwrap h2,.featured-story-wrap .flexwrap h3,.featured-story-wrap .flexwrap h4,.featured-story-wrap .flexwrap h5,.featured-story-wrap .flexwrap h6{color:#faf3d6;line-height:1.2}
-.featured-story-wrap .flexwrap h2{margin:0 0 20px;font-size:3rem;font-weight:600;line-height:1.2}
+.featured-story-wrap .flexwrap h2,.featured-story-wrap .flexwrap h3,.featured-story-wrap .flexwrap h4,.featured-story-wrap .flexwrap h5,.featured-story-wrap .flexwrap h6{font-family:"Gotham",sans-serif;font-weight:500;color:#faf3d6;line-height:1.2}
+.featured-story-wrap .flexwrap h2{margin:0 0 20px;font-size:3rem;font-weight:500;line-height:1.2}
 .featured-story-wrap .flexwrap h3{margin:0 0 8px;font-size:1.3rem;font-weight:500}
 .featured-story-wrap .flexwrap p{margin-top:0}
 .featured-story-wrap .flexwrap .readmore{margin-top:30px}
@@ -1541,6 +1542,8 @@ body.logged-in.admin-bar header.wp-block-template-part.sticky{top:30px}
 #RecentNews ul.wp-block-latest-posts .morelink:after{content:"";display:inline-block;width:0;height:0;border-left:8px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent;position:absolute;top:5px;right:0;-webkit-transition:-webkit-transform ease .3s;transition:-webkit-transform ease .3s;transition:transform ease .3s;transition:transform ease .3s,-webkit-transform ease .3s}
 #RecentNews ul.wp-block-latest-posts .morelink:hover,#RecentNews ul.wp-block-latest-posts .morelink:focus{color:#f26522 !important}
 #RecentNews ul.wp-block-latest-posts .morelink:hover:after,#RecentNews ul.wp-block-latest-posts .morelink:focus:after{border-left-color:#f26522;-webkit-transform:translateX(5px);transform:translateX(5px)}
+#AboutNourishUp h2,#GetInvolved h2,#DonateToday h2{font-weight:500 !important}
+#GetInvolved p strong{font-weight:600 !important}
 #DonateToday{overflow:hidden;position:relative;margin-bottom:0;border-bottom:20px solid #faf3d6;background-color:#364b7d !important}
 #DonateToday:before,#DonateToday:after{content:"";display:block;width:100%;height:100%;position:absolute;top:0;background-size:contain;background-repeat:no-repeat}
 #DonateToday:before{left:0;background-position:top left;background-image:url("assets/img/graphic-left.png")}

@@ -36,6 +36,9 @@ body {
   font-size: 16px;
   line-height: 1.5;
 }
+strong {
+  font-weight: 600!important;
+}
 
 .skip-link {
   display: inline-block;
@@ -292,13 +295,15 @@ body.logged-in.admin-bar {
       color: $lightyellow;
     }
     h2, h3, h4, h5, h6 {
+      font-family: $font-secondary;
+      font-weight: 500;
       color: $lightyellow;
       line-height: 1.2;
     }
     h2 {
       margin: 0 0 20px;
       font-size: 3rem;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 1.2;
     }
     h3 {
@@ -702,6 +707,18 @@ body.logged-in.admin-bar {
       width: 100%;
       margin: 0 auto;
     }
+  }
+}
+
+#AboutNourishUp h2,
+#GetInvolved h2,
+#DonateToday h2 {
+  font-weight: 500!important;
+}
+
+#GetInvolved {
+  p strong {
+    font-weight: 600!important;
   }
 }
 
