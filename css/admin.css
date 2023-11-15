@@ -1,0 +1,21 @@
+/* body.post-type-stories [data-name="featured_story"] .acf-label {
+  display: none!important;
+} */
+body.post-type-stories [data-name="featured_story"][data-type="true_false"] {
+  position: relative;
+}
+body.post-type-stories [data-name="featured_story"][data-type="true_false"] .acf-label {
+  padding-left: 28px;
+}
+body.post-type-stories [data-name="featured_story"][data-type="true_false"] .acf-input {
+  position: absolute;
+  top: 0;
+  left: 22px;
+} 
+body.post-type-stories [data-name="featured_story"] {
+  padding-top: 0!important;
+  margin-top: 0!important;
+}
+body.post-type-stories [data-name="featured_story"] .acf-input label {
+  font-weight: bold;
+}
