@@ -85,6 +85,12 @@ header.wp-block-template-part {
       color: #FFF;
       padding: 30px 35px;
     }
+    @media screen and (max-width:1300px) {
+      img {
+        max-width: 140px;
+        width: 100%;
+      }
+    }
   }
 
   .wp-block-group.alignwide {
@@ -108,9 +114,12 @@ header.wp-block-template-part {
       justify-content: flex-end;
       height: 100%;
     }
-    .wp-block-navigation__responsive-container-content {
-      padding-left: 5vw;
-    }
+    // .wp-block-navigation__responsive-container-content {
+    //   padding-left: 5vw;
+    // }
+  }
+  .wp-block-navigation .wp-block-navigation-item {
+    margin: 0 1.8vw;
   }
   .wp-block-navigation .wp-block-navigation-item__content.wp-block-navigation-item__content,
   .wp-block-navigation > li > a {
@@ -146,10 +155,10 @@ header.wp-block-template-part {
       color: #FFF;
       border-radius: 100px;
       text-transform: uppercase;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 600;
       letter-spacing: 0.05em;
-      padding: 7px 25px!important;
+      padding: 5px 25px 4px!important;
       &:hover, &:focus {
         background-color: $yellow!important;
         box-shadow: 0 6px 20px rgba(0,0,0,.15);
