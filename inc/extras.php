@@ -431,7 +431,7 @@ function footer_privacy_policy_func( $atts ) {
             $output .= '<span class="privacy-policy"><a href="href'.$url.'" target="'.$target.'">'.$LinkName.'</a></span>';
         }
     }
-    $output .= '<span class="poweredby"><a href="href=https://bellaworksweb.com/" target="_blank">Site by Bellaworks</a></span>';
+    $output .= '<span class="poweredby"><a href="https://bellaworksweb.com/" target="_blank">Site by Bellaworks</a></span>';
     if($output) {
         return '<div class="FOOTER_PRIVACY"><div class="footerInner">'.$output.'</div></div>';
     }
