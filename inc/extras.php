@@ -121,8 +121,8 @@ function get_social_media() {
     $list = array();
     if($options) {
         foreach($options as $i=>$opt) {
-            if( isset($opt['social_media_url']) && $opt['social_media_url'] ) {
-                $url = $opt['social_media_url'];
+            if( isset($opt['link']) && $opt['link'] ) {
+                $url = $opt['link'];
                 $parts = parse_url($url);
                 $host = ( isset($parts['host']) && $parts['host'] ) ? $parts['host'] : '';
                 if($host) {
@@ -153,11 +153,12 @@ function get_social_media() {
 function social_icons() {
     $social_types = array(
         'facebook'  => 'fab fa-facebook-square',
-        'twitter'   => 'fab fa-twitter',
+        'twitter'   => 'fa-brands fa-x-twitter',
         'linkedin'  => 'fab fa-linkedin',
         'instagram' => 'fab fa-instagram',
         'youtube'   => 'fab fa-youtube',
-        'vimeo'  => 'fab fa-vimeo',
+        'vimeo'     => 'fab fa-vimeo',
+        'amazon'    => 'fa-brands fa-amazon'
     );
     return $social_types;
 }
@@ -308,4 +309,130 @@ function featured_story_func( $atts ) {
         }
     }
     return $output;
+}
+
+add_shortcode( 'footer_partners', 'footer_partners_func' );
+function footer_partners_func( $atts ) {
+    $out = '';
+    $partners = get_field('partners','option');
+    if($partners) { ob_start(); ?>
+    <div class="FOOTER_PARTNERS">
+        <div class="footerInner">
+        <?php foreach($partners as $p) { 
+            $id = $p['ID'];    
+            $website = get_field('image_website_url',$id);
+            if($website) { ?>
+                <a href="<?php echo $website ?>" target="_blank"><img src="<?php echo $p['url']?>" alt="<?php echo $p['title']?>"></a>
+            <?php } else {  ?>
+                <img src="<?php echo $p['url']?>" alt="<?php echo $p['title']?>">
+            <?php } ?>
+        <?php } ?>
+        </div>
+    </div>
+    <?php
+    $out = ob_get_contents();
+    ob_end_clean();
+    }
+    return $out;
+}
+
+add_shortcode( 'footer_navigation', 'footer_navigation_func' );
+function footer_navigation_func( $atts ) {
+    $out = '';
+    $footerNav = get_field('footernav','option');
+    if($footerNav) { ob_start(); ?>
+    <div class="FOOTER_NAV">
+        <div class="footerInner">
+        <?php foreach($footerNav as $n) { 
+            $e = $n['footlink'];
+            $target = (isset($e['target']) && $e['target']) ? $e['target'] : '_self';
+            $linkName = ($e['title']) ? $e['title'] : '';
+            $link = ($e['url']) ? $e['url'] : '';
+            if($linkName && $link) { ?>
+                <a href="<?php echo $link?>" target="<?php echo $target?>"><?php echo $linkName?></a>
+            <?php } ?>
+        <?php } ?>
+        </div>
+    </div>
+    <?php
+    $out = ob_get_contents();
+    ob_end_clean();
+    }
+    return $out;
+}
+
+add_shortcode( 'footer_contact', 'footer_contact_func' );
+function footer_contact_func( $atts ) {
+    // $atts = shortcode_atts( array(
+	// 	'foo' => 'no foo',
+	// 	'baz' => 'default baz'
+	// ), $atts, 'bartag' );
+    $address = get_field('office_address','option');
+    $pobox = get_field('pobox','option');
+    $phone = get_field('phone','option');
+    $email = get_field('email','option');
+    $mail = get_field('mailing_list_link','option');
+    
+    $output = '';
+    $result = '';
+    if($address) {
+        $output .= '<span class="address"><i class="fa-solid fa-location-dot"></i> '.$address.'</span>';
+    }
+    if($pobox) {
+        $output .= '<span class="pobox"><i class="fa-solid fa-envelope"></i> '.$pobox.'</span>';
+    }
+    if($phone) {
+        $output .= '<span class="phone"><i class="fa-solid fa-phone"></i><a href="tel:'.$phone.'">'.$phone.'</a></span>';
+    }
+    if($email) {
+        $output .= '<span class="email"><a href="mailto:'.antispambot($email,1).'">'.antispambot($email).'</a></span>';
+    }
+    if($mail) {
+        $target = (isset($mail['target']) && $mail['target']) ? $mail['target'] : '_self';
+        $LinkName = (isset($mail['title']) && $mail['title']) ? $mail['title'] : '';
+        $url = (isset($mail['url']) && $mail['url']) ? $mail['url'] : '';
+        if($LinkName && $url) {
+            $output .= '<span class="maillist"><a href="href'.$url.'" target="'.$target.'">'.$LinkName.'</a></span>';
+        }
+    }
+
+    if($output) {
+        return '<div class="FOOTER_CONTACT_INFO"><div class="footerInner">'.$output.'</div></div>';
+    }
+}
+
+add_shortcode( 'footer_social_media', 'footer_social_media_func' );
+function footer_social_media_func( $atts ) {
+    $social_media = get_social_media();
+    $output = '';
+    if ($social_media) { ob_start(); ?>
+    <div class="FOOTER_SOCIAL_MEDIA">
+        <div class="footerInner">
+        <?php foreach ($social_media as $icon) { ?>
+        <a href="<?php echo $icon['url'] ?>" target="_blank" arial-label="<?php echo ucwords($icon['type']) ?>"><i class="<?php echo $icon['icon'] ?>"></i></a> 
+        <?php } ?>
+        </div>
+    </div> 
+    <?php } 
+        $output = ob_get_contents();
+        ob_end_clean();
+    return $output;
+}
+
+add_shortcode( 'footer_privacy_policy', 'footer_privacy_policy_func' );
+function footer_privacy_policy_func( $atts ) {
+    $privacy = get_field('privacy_link','option');
+    $output = '';
+    if($privacy) {
+        $target = (isset($privacy['target']) && $privacy['target']) ? $privacy['target'] : '_self';
+        $LinkName = (isset($privacy['title']) && $privacy['title']) ? $privacy['title'] : '';
+        $url = (isset($privacy['url']) && $privacy['url']) ? $privacy['url'] : '';
+        if($LinkName && $url) {
+            $output .= '<span class="privacy-policy"><a href="href'.$url.'" target="'.$target.'">'.$LinkName.'</a></span>';
+        }
+    }
+    $output .= '<span class="poweredby"><a href="href=https://bellaworksweb.com/" target="_blank">Site by Bellaworks</a></span>';
+    if($output) {
+        return '<div class="FOOTER_PRIVACY"><div class="footerInner">'.$output.'</div></div>';
+    }
 }
