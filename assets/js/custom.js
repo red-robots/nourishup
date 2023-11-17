@@ -163,18 +163,12 @@ jQuery(document).ready(function ($) {
 
   if ($('body').hasClass('subpage')) {
     if ($('.hero').length) {
+      if ($('.hero h1').length) {
+        $('h1.wp-block-post-title').parent().remove();
+      }
+    } else {
       if ($('h1.wp-block-post-title').length) {
-        var pageTitle = $('h1.wp-block-post-title').eq(0);
-        pageTitle = pageTitle.text().replace(/\s+/g, " ");
-        var pageTitleOrigin = $('h1.wp-block-post-title').eq(0).text();
-
-        if ($('.hero .wp-block-cover__inner-container h1').length == 0) {
-          $('h1.wp-block-post-title').appendTo('.hero .wp-block-cover__inner-container');
-        } else {
-          $('.internal-hero .wp-block-cover__inner-container h1').remove();
-          $('h1.wp-block-post-title').appendTo('.hero .wp-block-cover__inner-container'); //var heroInternal = $('.internal-hero .wp-block-cover__inner-container');
-          //$('.hero .wp-block-cover__inner-container').appendTo(heroInternal);
-        }
+        $('h1.wp-block-post-title').show();
       }
     }
   }
