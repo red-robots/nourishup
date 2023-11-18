@@ -91,6 +91,51 @@ function get_page_id_by_template($fileName) {
     return $page_id;
 }
 
+/* Disabling Gutenberg on certain templates */
+function ea_disable_editor( $id = false ) {
+
+    $excluded_templates = array(
+      'page-repeatable.php',
+      'Flexible-Content'
+    );
+  
+    $excluded_ids = array(
+      get_option( 'page_on_front' ) /* Home page */
+    );
+  
+    if( empty( $id ) )
+      return false;
+  
+    $id = intval( $id );
+    $template = get_page_template_slug( $id );
+  
+    return in_array( $id, $excluded_ids ) || in_array( $template, $excluded_templates );
+  }
+  
+  /**
+   * Disable Gutenberg by template
+   *
+   */
+  function ea_disable_gutenberg( $can_edit, $post_type ) {
+  
+    if( ! ( is_admin() && !empty( $_GET['post'] ) ) )
+      return $can_edit;
+  
+    if( ea_disable_editor( $_GET['post'] ) )
+      $can_edit = false;
+  
+    if( get_post_type($_GET['post'])=='team' )
+      $can_edit = false;
+  
+    if( $_GET['post']==15 ) /* Contact page */
+      $can_edit = false;
+  
+    return $can_edit;
+  
+  }
+  add_filter( 'gutenberg_can_edit_post_type', 'ea_disable_gutenberg', 10, 2 );
+  add_filter( 'use_block_editor_for_post_type', 'ea_disable_gutenberg', 10, 2 );
+
 function string_cleaner($str) {
     if($str) {
         $str = str_replace(' ', '', $str); 
@@ -436,3 +481,5 @@ function footer_privacy_policy_func( $atts ) {
         return '<div class="FOOTER_PRIVACY"><div class="footerInner">'.$output.'</div></div>';
     }
 }
+
+

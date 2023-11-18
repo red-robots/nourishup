@@ -174,6 +174,40 @@ jQuery(document).ready(function ($) {
     });
   }
 
+  if( $('.wp-flexible-container').length ) {
+    //var pageId = $(/)
+    if( currentPageId ) {
+      displayFlexibleContent(currentPageId);
+    }
+  }
+
+  function displayFlexibleContent(postId) {
+    var flexibleContainer = $('.wp-flexible-container');
+    $.ajax({
+      url: siteURL + '/wp-json/repeatable/v1/post/' + postId,
+      method: 'GET',
+      beforeSend: function (xhr) {
+      },
+      success: function(data) {
+        if(data) {
+          flexibleContainer.html(data);
+        }
+      }
+    },function(data, status){
+      //console.log(data);
+    });
+  }
+
+  // $.ajax({
+  //   url: siteURL + '/wp-json/repeatable/v1/post/',
+  //   method: 'GET',
+  //   beforeSend: function (xhr) {
+  //   }
+  // }, function(data, status){
+  //     console.log(data);
+  // });
+
+
 }); 
 
 

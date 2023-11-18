@@ -19,3 +19,6 @@ body.post-type-stories [data-name="featured_story"] {
 body.post-type-stories [data-name="featured_story"] .acf-input label {
   font-weight: bold;
 }
+[data-name="repeatable_blocks"] .mce-edit-area iframe {
+  height: 150px!important;
+}
