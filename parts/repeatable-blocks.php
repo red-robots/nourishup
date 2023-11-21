@@ -92,5 +92,43 @@
     <?php } ?>
 
 
+    <?php /* FULLWIDTH BLOCK WITH IMAGE AND TEXT */
+    if( get_row_layout() == 'fullwidth_image_text' ) { 
+      $bgcolor = get_sub_field('bgcolor');
+      $bgcolor = ($bgcolor) ? $bgcolor : '#32845C';
+      $image = get_sub_field('image');
+      $title = get_sub_field('title');
+      $content = get_sub_field('content');
+      $btn = get_sub_field('button'); 
+      $btnTarget = (isset($btn['target']) && $btn['target']) ? $btn['target'] : '_self';
+      $btnLink = (isset($btn['url']) && $btn['url']) ? $btn['url'] : '';
+      $btnName = (isset($btn['title']) && $btn['title']) ? $btn['title'] : '';
+      $colClass = ($image && ($title||$content)) ? 'half':'full';
+      ?>
+      <div class="repeatable-image-text-block repeatable">
+        <div class="wrapper">
+          <div class="inner-block" style="background-color:<?php echo $bgcolor?>">
+            <div class="flexwrap <?php echo $colClass?>">
+              <?php if($image) { ?>
+                <figure class="imageCol">
+                  <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                </figure>
+              <?php } ?>
+              <?php if($title||$content) { ?>
+                <div class="textCol">
+                  <div class="inside">
+                    <?php if($title) { ?><h2 class="item-title"><?php echo $title?></h2><?php } ?>  
+                    <?php if($content) { ?><div class="item-text"><?php echo $content?></div><?php } ?>  
+                    <?php if($btnLink && $btnName) { ?><div class="item-link"><a href="<?php echo $btnLink?>" target="<?php echo $btnTarget?>"><?php echo $btnName?></a></div><?php } ?>  
+                  </div>
+                </div>
+              <?php } ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    <?php } ?>
+
+
   <?php $i++; endwhile; ?>
 <?php } ?>

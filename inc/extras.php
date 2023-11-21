@@ -100,7 +100,7 @@ function ea_disable_editor( $id = false ) {
     );
   
     $excluded_ids = array(
-      get_option( 'page_on_front' ) /* Home page */
+      //get_option( 'page_on_front' ) /* Home page */
     );
   
     if( empty( $id ) )
