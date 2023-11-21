@@ -114,24 +114,48 @@
       $block_type = $blockWidth;
       $block_type .= $image_position;
       ?>
+      <style>
+        .repeatable-image-text-block h2,
+        .repeatable-image-text-block p,
+        .repeatable-image-text-block *,
+        .repeatable-image-text-block a {
+          color: <?php echo $textcolor?>!important;
+        }
+        .repeatable-image-text-block .item-link a {
+          color: <?php echo $textcolor?>!important;
+          border-bottom-color: <?php echo $textcolor?>!important;
+        }
+        .repeatable-image-text-block .item-link a:after {
+          border-left-color: <?php echo $textcolor?>!important;
+        }
+        .repeatable-image-text-block .item-link a:hover {
+          color:#FEBC11!important;
+          border-bottom-color:#FEBC11!important;
+        }
+        .repeatable-image-text-block .item-link a:hover:after {
+          border-left-color:#FEBC11!important;
+        }
+      </style>
       <div class="repeatable-image-text-block repeatable block-type-<?php echo $block_type?>">
         <?php if($blockWidth=='full') { ?>
-          <div class="inner-block" style="background-color:<?php echo $bgcolor?>">
-            <div class="flexwrap <?php echo $colClass?>">
-              <?php if($image) { ?>
-                <figure class="imageCol">
-                  <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
-                </figure>
-              <?php } ?>
-              <?php if($title||$content) { ?>
-                <div class="textCol">
-                  <div class="inside">
-                    <?php if($title) { ?><h2 class="item-title"><?php echo $title?></h2><?php } ?>  
-                    <?php if($content) { ?><div class="item-text"><?php echo $content?></div><?php } ?>  
-                    <?php if($btnLink && $btnName) { ?><div class="item-link"><a href="<?php echo $btnLink?>" target="<?php echo $btnTarget?>"><?php echo $btnName?></a></div><?php } ?>  
+          <div class="wrapper">
+            <div class="inner-block" style="background-color:<?php echo $bgcolor?>">
+              <div class="flexwrap <?php echo $colClass?>">
+                <?php if($image) { ?>
+                  <figure class="imageCol">
+                    <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                  </figure>
+                <?php } ?>
+                <?php if($title||$content) { ?>
+                  <div class="textCol">
+                    <div class="inside">
+                      <?php if($title) { ?><h2 class="item-title"><?php echo $title?></h2><?php } ?>  
+                      <?php if($content) { ?><div class="item-text"><?php echo $content?></div><?php } ?>  
+                      <?php if($btnLink && $btnName) { ?><div class="item-link"><a href="<?php echo $btnLink?>" target="<?php echo $btnTarget?>"><?php echo $btnName?></a></div><?php } ?>  
+                    </div>
                   </div>
-                </div>
-              <?php } ?>
+                <?php } ?>
+              </div>
             </div>
           </div>
         <?php } else { ?>
