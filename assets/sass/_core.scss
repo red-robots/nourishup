@@ -1635,6 +1635,37 @@ body:not(.home) {
   }
 }
 
+p.button-arrow a,
+a.button-arrow {
+  display: inline-block;
+  padding: 5px 17px 5px 10px;
+  position: relative;
+  color: #364b7d;
+  text-decoration: underline;
+  font-size: 15px;
+  line-height: 1.2;
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 8px solid #364b7d;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    position: absolute;
+    top: 9px;
+    right: 0;
+    transition: transform ease .3s;
+  }
+  &:hover, &:focus {
+    color: $secondary!important;
+    &:after {
+      border-left-color: $secondary!important;
+      transform: translateX(3px);
+    }
+  }
+}
+
 .FOOTER_PRIVACY {
   .footerInner {
     display: flex;
