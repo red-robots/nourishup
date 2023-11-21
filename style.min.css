@@ -1614,7 +1614,7 @@ footer.wp-block-template-part .wp-block-group.footerNavigation p a:hover,footer.
 .boxStyles.wp-block-columns .wp-block-button__link:hover,.boxStyles.wp-block-columns .wp-block-button__link:focus{color:#f26522 !important}
 .boxStyles.wp-block-columns .wp-block-button__link:hover:after,.boxStyles.wp-block-columns .wp-block-button__link:focus:after{border-left-color:#f26522 !important;-webkit-transform:translateX(3px);transform:translateX(3px)}
 main.wp-block-group.wp-flexible-content{margin-top:0 !important;padding-top:0 !important}
-.repeatable-hero{position:relative;min-height:530px}
+.repeatable-hero{position:relative;min-height:400px}
 .repeatable-hero .hero-image{height:100%;left:0;margin:0;max-height:none;max-width:none;-o-object-fit:cover;object-fit:cover;outline:0;padding:0;position:absolute;right:0;top:0;width:100%}
 .repeatable-hero .sm-title{font-size:1.4em;font-weight:500;line-height:1.3;color:#fff}
 .repeatable-hero .heroText{position:absolute;top:0;left:0;width:100%;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;z-index:10;text-align:center}
