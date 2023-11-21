@@ -96,7 +96,12 @@
     if( get_row_layout() == 'fullwidth_image_text' ) { 
       $bgcolor = get_sub_field('bgcolor');
       $bgcolor = ($bgcolor) ? $bgcolor : '#32845C';
+
+      $textcolor = get_sub_field('textcolor');
+      $textcolor = ($textcolor) ? $textcolor : '#FFFFFF';
       $image = get_sub_field('image');
+      $image_position = get_sub_field('image_position');
+      $image_position = ($image_position) ? ' ' . $image_position : ' img_left';
       $title = get_sub_field('title');
       $content = get_sub_field('content');
       $btn = get_sub_field('button'); 
@@ -104,9 +109,13 @@
       $btnLink = (isset($btn['url']) && $btn['url']) ? $btn['url'] : '';
       $btnName = (isset($btn['title']) && $btn['title']) ? $btn['title'] : '';
       $colClass = ($image && ($title||$content)) ? 'half':'full';
+
+      $blockWidth = get_sub_field('block_type');
+      $block_type = $blockWidth;
+      $block_type .= $image_position;
       ?>
-      <div class="repeatable-image-text-block repeatable">
-        <div class="wrapper">
+      <div class="repeatable-image-text-block repeatable block-type-<?php echo $block_type?>">
+        <?php if($blockWidth=='full') { ?>
           <div class="inner-block" style="background-color:<?php echo $bgcolor?>">
             <div class="flexwrap <?php echo $colClass?>">
               <?php if($image) { ?>
@@ -125,7 +134,28 @@
               <?php } ?>
             </div>
           </div>
-        </div>
+        <?php } else { ?>
+          <div class="wrapper">
+            <div class="inner-block" style="background-color:<?php echo $bgcolor?>">
+              <div class="flexwrap <?php echo $colClass?>">
+                <?php if($image) { ?>
+                  <figure class="imageCol">
+                    <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                  </figure>
+                <?php } ?>
+                <?php if($title||$content) { ?>
+                  <div class="textCol">
+                    <div class="inside">
+                      <?php if($title) { ?><h2 class="item-title"><?php echo $title?></h2><?php } ?>  
+                      <?php if($content) { ?><div class="item-text"><?php echo $content?></div><?php } ?>  
+                      <?php if($btnLink && $btnName) { ?><div class="item-link"><a href="<?php echo $btnLink?>" target="<?php echo $btnTarget?>"><?php echo $btnName?></a></div><?php } ?>  
+                    </div>
+                  </div>
+                <?php } ?>
+              </div>
+            </div>
+          </div>
+        <?php } ?>
       </div>
     <?php } ?>
 

@@ -1637,7 +1637,7 @@ main.wp-block-group.wp-flexible-content{margin-top:0 !important;padding-top:0 !i
 .repeatable-columns .rcolumn .morelink a:hover,.repeatable-columns .rcolumn .morelink a:focus{color:#f26522 !important}
 .repeatable-columns .rcolumn .morelink a:hover:after,.repeatable-columns .rcolumn .morelink a:focus:after{border-left-color:#f26522 !important;-webkit-transform:translateX(3px);transform:translateX(3px)}
 .repeatable-image-text-block{margin-top:10px;margin-bottom:60px}
-.repeatable-image-text-block .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.repeatable-image-text-block .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative}
 .repeatable-image-text-block .inner-block{padding:30px}
 .repeatable-image-text-block .imageCol,.repeatable-image-text-block .textCol{width:100%}
 .repeatable-image-text-block .imageCol{margin:0 0 30px}
@@ -1649,6 +1649,10 @@ main.wp-block-group.wp-flexible-content{margin-top:0 !important;padding-top:0 !i
 .repeatable-image-text-block .item-link a:after{content:"";display:inline-block;width:0;height:0;border-left:8px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent;position:absolute;top:6px;right:-15px;-webkit-transition:-webkit-transform ease .3s;transition:-webkit-transform ease .3s;transition:transform ease .3s;transition:transform ease .3s,-webkit-transform ease .3s}
 .repeatable-image-text-block .item-link a:hover,.repeatable-image-text-block .item-link a:focus{color:#fcb405;border-bottom-color:#fcb405}
 .repeatable-image-text-block .item-link a:hover:after,.repeatable-image-text-block .item-link a:focus:after{border-left-color:#fcb405;-webkit-transform:translateX(3px);transform:translateX(3px)}
+.repeatable-image-text-block.block-type-full .inner-block{padding:0}
+.repeatable-image-text-block.block-type-full .imageCol{margin-bottom:0}
+.repeatable-image-text-block.block-type-full .textCol{padding:30px 20px 40px}
+.repeatable-image-text-block.block-type-full .flexwrap.half{overflow:hidden}
 footer.wp-block-template-part{margin-top:0 !important;padding-top:0 !important}
 footer.wp-block-template-part .wp-block-group.addressRow{gap:0;-ms-flex-wrap:wrap;flex-wrap:wrap;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;line-height:1.2}
 footer.wp-block-template-part .wp-block-group.addressRow p{padding:6px 15px}
@@ -1685,6 +1689,14 @@ body:not(.home) .wp-block-cover.hero .wp-block-cover__inner-container h1{font-fa
 @media screen and (min-width:800px){.repeatable-image-text-block .flexwrap.half{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .repeatable-image-text-block .flexwrap.half .imageCol{width:40%;margin-bottom:0}
 .repeatable-image-text-block .flexwrap.half .textCol{width:55%}
+.repeatable-image-text-block.block-type-wide.img_right .flexwrap.half{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
+.repeatable-image-text-block.block-type-full .flexwrap.half{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;min-height:450px}
+.repeatable-image-text-block.block-type-full .flexwrap.half .imageCol,.repeatable-image-text-block.block-type-full .flexwrap.half .textCol{width:50%}
+.repeatable-image-text-block.block-type-full .flexwrap.half .imageCol{position:absolute;top:0;left:0;height:100%}
+.repeatable-image-text-block.block-type-full .flexwrap.half .imageCol img{-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;position:absolute;top:0;left:0;width:100%;height:100%}
+.repeatable-image-text-block.block-type-full .flexwrap.half .textCol{padding:5vw 4vw}
+.repeatable-image-text-block.block-type-full.img_right .flexwrap.half{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
+.repeatable-image-text-block.block-type-full.img_right .flexwrap.half .imageCol{left:unset;right:0}
 }@media screen and (min-width:1300px){.repeatable-columns .rcolumn{margin-bottom:70px}
 }@media screen and (min-width:1400px){.wp-block-columns.involved,.wp-block-columns.involved .wp-block-columns{gap:5vw}
 .wp-block-group.impact .wp-block-group.numbers{max-width:90vw !important}
