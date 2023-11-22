@@ -36,6 +36,11 @@ body {
   font-size: 16px;
   line-height: 1.5;
 }
+
+body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  max-width: $wrapper;
+  width: 100%;
+}
 strong {
   font-weight: 600!important;
 }
@@ -244,7 +249,7 @@ header.wp-block-template-part {
         height: auto;
         position: relative;
         top: 3px;
-        left: -13px;
+        left: -30px;
       }
     }
     a.custom-logo-link {
@@ -252,7 +257,7 @@ header.wp-block-template-part {
       overflow: hidden;
       padding: 0 0;
       width: 150px;
-      height: 85px;
+      height: 65px!important;
       background: transparent;
       position: relative;
       top: 8px;
@@ -624,6 +629,7 @@ body:not(.home) {
         padding: 5px!important;
         text-decoration: underline;
         font-size: 18px;
+        font-weight: 500;
         line-height: 1.2;
         position: relative;
         color: $primary;
@@ -661,12 +667,9 @@ body:not(.home) {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    max-width: 100%!important;
+    max-width: 1400px!important;
     width: 100%;
     gap: 0;
-    @media screen and (min-width: 1400px) {
-      max-width: 90vw!important;
-    }
     @media screen and (max-width: 1100px) {
       justify-content: center;
     }
@@ -942,6 +945,14 @@ body:not(.home) {
 }
 
 footer.wp-block-template-part {
+  a.custom-logo-link {
+    display: inline-block;
+    width: 120px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
   p a {
     color: #FAF3D6;
     text-decoration: none;

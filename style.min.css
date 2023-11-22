@@ -1454,6 +1454,7 @@ html,body,*,::before,::after{box-sizing:border-box;-moz-box-sizing:border-box;-w
 a,input,button,textarea{-webkit-transition:all ease .3s;transition:all ease .3s}
 .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;color:#fff;background:#000;display:inline-block}
 body{font-family:"Gotham",sans-serif;font-size:16px;line-height:1.5}
+body .is-layout-constrained>:where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width:1300px;width:100%}
 strong{font-weight:600 !important}
 .skip-link{display:inline-block;text-decoration:none;padding:8px 15px;color:#fff;background:#000;border-radius:6px;position:absolute;top:-80vh;left:10px;-webkit-box-shadow:0 5px 16px rgba(0,0,0,.25);box-shadow:0 5px 16px rgba(0,0,0,.25);z-index:-999;opacity:0}
 .skip-link:focus{top:10px;z-index:9999;opacity:1}
@@ -1483,8 +1484,8 @@ header.wp-block-template-part .wp-block-button a.wp-element-button:hover,header.
 header.wp-block-template-part .wp-block-site-logo,header.wp-block-template-part .wp-block-site-logo *{-webkit-transition:all ease .3s;transition:all ease .3s}
 header.wp-block-template-part.sticky{position:fixed;top:0;left:0;width:100%;height:80px;z-index:100;background:#fff;-webkit-box-shadow:0 5px 15px rgba(0,0,0,.11);box-shadow:0 5px 15px rgba(0,0,0,.11);-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:.5s;animation-duration:.5s;-webkit-animation-name:fadeInDown;animation-name:fadeInDown}
 header.wp-block-template-part.sticky .wp-block-site-logo{width:150px;height:85px;overflow:hidden;z-index:50}
-header.wp-block-template-part.sticky .wp-block-site-logo img{max-width:unset;width:180px !important;height:auto;position:relative;top:3px;left:-13px}
-header.wp-block-template-part.sticky a.custom-logo-link{display:block;overflow:hidden;padding:0;width:150px;height:85px;background:transparent;position:relative;top:8px}
+header.wp-block-template-part.sticky .wp-block-site-logo img{max-width:unset;width:180px !important;height:auto;position:relative;top:3px;left:-30px}
+header.wp-block-template-part.sticky a.custom-logo-link{display:block;overflow:hidden;padding:0;width:150px;height:65px !important;background:transparent;position:relative;top:8px}
 h2.wp-block-heading{font-family:"Gotham",sans-serif;font-weight:bold;font-size:42px}
 body.logged-in.admin-bar header.wp-block-template-part.sticky{top:30px}
 .entry-content.wp-block-post-content{padding-top:0;margin-top:0}
@@ -1542,11 +1543,11 @@ body:not(.home) header.wp-block-template-part.sticky a.custom-logo-link img{top:
 .menu-toggle.active span.bar:after{-webkit-transform:rotate(270deg);transform:rotate(270deg)}
 #AboutNourishUp .wp-block-image{margin:0}
 #AboutNourishUp .wp-block-columns .wp-block-column:nth-child(2){padding-left:30px}
-#AboutNourishUp .wp-block-columns .wp-block-column:nth-child(2) .wp-element-button{display:inline-block;border:none !important;padding:5px !important;text-decoration:underline;font-size:18px;line-height:1.2;position:relative;color:#3d5588;padding-right:15px !important}
+#AboutNourishUp .wp-block-columns .wp-block-column:nth-child(2) .wp-element-button{display:inline-block;border:none !important;padding:5px !important;text-decoration:underline;font-size:18px;font-weight:500;line-height:1.2;position:relative;color:#3d5588;padding-right:15px !important}
 #AboutNourishUp .wp-block-columns .wp-block-column:nth-child(2) .wp-element-button:after{content:"";display:inline-block;width:0;height:0;border-left:8px solid #3d5588;border-top:5px solid transparent;border-bottom:5px solid transparent;position:absolute;top:10px;right:0;-webkit-transition:-webkit-transform ease .3s;transition:-webkit-transform ease .3s;transition:transform ease .3s;transition:transform ease .3s,-webkit-transform ease .3s}
 #AboutNourishUp .wp-block-columns .wp-block-column:nth-child(2) .wp-element-button:hover,#AboutNourishUp .wp-block-columns .wp-block-column:nth-child(2) .wp-element-button:focus{color:#f26522 !important}
 #AboutNourishUp .wp-block-columns .wp-block-column:nth-child(2) .wp-element-button:hover:after,#AboutNourishUp .wp-block-columns .wp-block-column:nth-child(2) .wp-element-button:focus:after{border-left-color:#f26522;-webkit-transform:translateX(5px);transform:translateX(5px)}
-.wp-block-group.impact .wp-block-group.numbers{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-sizing:border-box;box-sizing:border-box;max-width:100% !important;width:100%;gap:0}
+.wp-block-group.impact .wp-block-group.numbers{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-sizing:border-box;box-sizing:border-box;max-width:1400px !important;width:100%;gap:0}
 .wp-block-group.impact .wp-block-group.numbers .wp-block-group{width:20%;padding:35px 10px;position:relative;border-left:2px solid #00b2cd}
 .wp-block-group.impact .wp-block-group.numbers .wp-block-group:first-child{border-left:none !important}
 #RecentNews h2.wp-block-heading{margin-bottom:70px !important}
@@ -1579,6 +1580,8 @@ body:not(.home) header.wp-block-template-part.sticky a.custom-logo-link img{top:
 .wp-social-link-facebook a{width:100%;height:100%;border-radius:200px;position:absolute;top:0;left:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;font-size:25px}
 .wp-social-link-facebook a:before{content:"";display:inline-block;font:normal normal normal 14px/1 FontAwesome;text-rendering:auto;-webkit-font-smoothing:antialiased;font-size:20px;position:relative;left:-1px}
 .wp-social-link-facebook a svg{display:none}
+footer.wp-block-template-part a.custom-logo-link{display:inline-block;width:120px}
+footer.wp-block-template-part a.custom-logo-link img{width:100%;height:auto}
 footer.wp-block-template-part p a{color:#faf3d6;text-decoration:none;display:inline-block;position:relative;-webkit-transition:all ease .3s;transition:all ease .3s}
 footer.wp-block-template-part p a:after{content:"";display:block;width:100%;-webkit-transition:-webkit-transform ease .3s;transition:-webkit-transform ease .3s;transition:transform ease .3s;transition:transform ease .3s,-webkit-transform ease .3s;border-bottom:1px solid rgba(250,243,214,.4)}
 footer.wp-block-template-part p a:hover{-webkit-box-shadow:0 5px 6px rgba(61,85,136,.15);box-shadow:0 5px 6px rgba(61,85,136,.15);border-bottom-color:#fff}
@@ -1704,7 +1707,6 @@ p.button-arrow a:hover:after,p.button-arrow a:focus:after,a.button-arrow:hover:a
 }@media screen and (min-width:1300px){.repeatable-columns .rcolumn{margin-bottom:70px}
 .repeatable-columns .rcolumn .inside{padding:20px 3vw 3vw}
 }@media screen and (min-width:1400px){.wp-block-columns.involved,.wp-block-columns.involved .wp-block-columns{gap:5vw}
-.wp-block-group.impact .wp-block-group.numbers{max-width:90vw !important}
 .repeatable-columns .rcolumn .inside{padding:20px 5vw 3vw}
 .repeatable-image-text-block .inner-block{padding:3.5vw}
 }@media screen and (max-width:1470px){.featured-story-wrap{padding-left:30px;padding-right:30px}
