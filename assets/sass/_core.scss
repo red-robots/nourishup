@@ -1690,10 +1690,16 @@ a.button-arrow {
 }
 
 .button-arrow a.wp-element-button {
+  border: none!important;
   background-color: transparent!important;
+  padding: 10px 15px 10px 0!important;
+  &:after {
+    top: 15px;
+  }
 }
 .button-arrow.white a.wp-element-button {
   color: #FFF!important;
+  border: none!important;
   &:after {
     border-left-color: #FFF!important;
   }
