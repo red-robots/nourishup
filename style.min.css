@@ -1622,7 +1622,7 @@ main.wp-block-group.wp-flexible-content{margin-top:0 !important;padding-top:0 !i
 .repeatable-hero .overlay-background{position:absolute;top:0;left:0;width:100%;height:100%;background-color:#051027;opacity:.6;z-index:2}
 .repeatable-intro{color:#282f6f;text-align:center}
 .repeatable-intro h2,.repeatable-intro p{color:#282f6f}
-.repeatable-intro h2{margin:0}
+.repeatable-intro h2{color:#282f6f;font-size:42px;font-weight:bold;line-height:1.2;margin:0}
 .repeatable-intro .wrapper{max-width:1000px;padding-top:50px;padding-bottom:50px}
 .repeatable-columns{margin:30px 0;padding-top:30px}
 .repeatable-columns .rcolumns{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-left:-20px;margin-right:-20px;margin-top:-50px;margin-bottom:-50px}
@@ -1630,9 +1630,9 @@ main.wp-block-group.wp-flexible-content{margin-top:0 !important;padding-top:0 !i
 .repeatable-columns .rcolumn .inside{padding:20px;background:#faf3d6;color:#3d5588;height:100%;text-align:center}
 .repeatable-columns .rcolumn .coltitle{margin:0;font-size:20px;font-weight:500;line-height:1.2}
 .repeatable-columns .rcolumn .text{font-size:16px;margin:20px 0}
-.repeatable-columns .rcolumn .icondiv{width:10vw;height:10vw;position:relative;margin:-6vw auto 30px}
+.repeatable-columns .rcolumn .icondiv{width:10vw;height:10vw;position:relative;margin:-6vw auto 40px}
 .repeatable-columns .rcolumn .icondiv span{display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-size:contain;background-position:center;background-repeat:no-repeat;-webkit-transform:scale(0.75);transform:scale(0.75)}
-.repeatable-columns .rcolumn .morelink a{display:inline-block;padding:5px 17px 5px 10px;position:relative;color:#3d5588 !important;text-decoration:underline;font-size:15px;line-height:1.2}
+.repeatable-columns .rcolumn .morelink a{display:inline-block;padding:5px 17px 5px 10px;position:relative;color:#3d5588 !important;text-decoration:underline;font-size:15px;font-weight:500;line-height:1.2}
 .repeatable-columns .rcolumn .morelink a:after{content:"";display:inline-block;width:0;height:0;border-left:8px solid #3d5588;border-top:5px solid transparent;border-bottom:5px solid transparent;position:absolute;top:9px;right:0;-webkit-transition:-webkit-transform ease .3s;transition:-webkit-transform ease .3s;transition:transform ease .3s;transition:transform ease .3s,-webkit-transform ease .3s}
 .repeatable-columns .rcolumn .morelink a:hover,.repeatable-columns .rcolumn .morelink a:focus{color:#f26522 !important}
 .repeatable-columns .rcolumn .morelink a:hover:after,.repeatable-columns .rcolumn .morelink a:focus:after{border-left-color:#f26522 !important;-webkit-transform:translateX(3px);transform:translateX(3px)}
@@ -1642,7 +1642,7 @@ main.wp-block-group.wp-flexible-content{margin-top:0 !important;padding-top:0 !i
 .repeatable-image-text-block .imageCol,.repeatable-image-text-block .textCol{width:100%}
 .repeatable-image-text-block .imageCol{margin:0 0 30px}
 .repeatable-image-text-block .imageCol img{width:100%;height:auto;float:left}
-.repeatable-image-text-block h2.item-title{color:#fff;font-size:2.2em;font-weight:500;line-height:1.2;margin:0 0 20px}
+.repeatable-image-text-block h2.item-title{color:#fff;font-size:42px;font-weight:bold;line-height:1.2;margin:0 0 20px}
 .repeatable-image-text-block p{color:#fff}
 .repeatable-image-text-block .item-link{margin-top:30px}
 .repeatable-image-text-block .item-link a{display:inline-block;text-decoration:none;position:relative;color:#fff;font-weight:500;letter-spacing:.02em;border-bottom:1px solid #fff}
@@ -1702,8 +1702,10 @@ p.button-arrow a:hover:after,p.button-arrow a:focus:after,a.button-arrow:hover:a
 .repeatable-image-text-block.block-type-full.img_right .flexwrap.half{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 .repeatable-image-text-block.block-type-full.img_right .flexwrap.half .imageCol{left:unset;right:0}
 }@media screen and (min-width:1300px){.repeatable-columns .rcolumn{margin-bottom:70px}
+.repeatable-columns .rcolumn .inside{padding:20px 3vw 3vw}
 }@media screen and (min-width:1400px){.wp-block-columns.involved,.wp-block-columns.involved .wp-block-columns{gap:5vw}
 .wp-block-group.impact .wp-block-group.numbers{max-width:90vw !important}
+.repeatable-columns .rcolumn .inside{padding:20px 5vw 3vw}
 .repeatable-image-text-block .inner-block{padding:3.5vw}
 }@media screen and (max-width:1470px){.featured-story-wrap{padding-left:30px;padding-right:30px}
 }@media screen and (max-width:1400px){#AboutNourishUp .wp-block-columns .wp-block-column:nth-child(2){padding-left:2vw}
