@@ -99,9 +99,9 @@ function ea_disable_editor( $id = false ) {
       'Flexible-Content'
     );
   
-    $excluded_ids = array(
-      //get_option( 'page_on_front' ) /* Home page */
-    );
+    // $excluded_ids = array(
+    //   //get_option( 'page_on_front' ) /* Home page */
+    // );
   
     if( empty( $id ) )
       return false;
@@ -109,7 +109,7 @@ function ea_disable_editor( $id = false ) {
     $id = intval( $id );
     $template = get_page_template_slug( $id );
   
-    return in_array( $id, $excluded_ids ) || in_array( $template, $excluded_templates );
+    return in_array( $template, $excluded_templates );
   }
   
   /**
@@ -127,8 +127,8 @@ function ea_disable_editor( $id = false ) {
     if( get_post_type($_GET['post'])=='team' )
       $can_edit = false;
   
-    if( $_GET['post']==15 ) /* Contact page */
-      $can_edit = false;
+    // if( $_GET['post']==15 ) /* Contact page */
+    //   $can_edit = false;
   
     return $can_edit;
   
