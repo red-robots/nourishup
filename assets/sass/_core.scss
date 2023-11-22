@@ -1657,7 +1657,8 @@ body:not(.home) {
   }
 }
 
-.button-arrow a,
+.button-arrow a.wp-element-button,
+p.button-arrow a,
 a.button-arrow {
   display: inline-block;
   padding: 5px 17px 5px 10px;
@@ -1685,6 +1686,16 @@ a.button-arrow {
       border-left-color: $secondary!important;
       transform: translateX(3px);
     }
+  }
+}
+
+.button-arrow a.wp-element-button {
+  background-color: transparent!important;
+}
+.button-arrow.white a.wp-element-button {
+  color: #FFF!important;
+  &:after {
+    border-left-color: #FFF!important;
   }
 }
 
