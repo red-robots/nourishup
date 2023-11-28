@@ -152,3 +152,7 @@ function bellaworks_widgets_init() {
 add_action( 'widgets_init', 'bellaworks_widgets_init' );
 
 
+add_action( 'admin_head', 'action_admin_style_2020' );
+function action_admin_style_2020(){ ?>
+  <link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo('template_url') ?>/css/dashicons.min.css">
+<?php }

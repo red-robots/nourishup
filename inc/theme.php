@@ -7,31 +7,6 @@
  * @package bellaworks
  */
 
-add_action( 'customize_register', 'sitefavicon_customizer_setting' );
-function sitefavicon_customizer_setting( $wp_customize ) {
-  $wp_customize->add_setting(
-    'favicon',
-    array(
-      'default'    => '',
-      'type'     => 'option',
-      'capability' => 'edit_theme_options'
-    ),
-  );
-  $wp_customize->add_control( new WP_Customize_Control(
-    $wp_customize,
-    'favicon',
-    array(
-      'label'       => __( 'Site Favicon', 'site-favicon' ),
-      'description' => __( 'Add favicon (32x32 recommended).', 'site-favicon' ),
-      'settings'    => 'favicon',
-      'priority'    => 15,
-      'section'   => 'title_tagline',
-      'type'        => 'url'
-    )
-  ) );
-}
-
-
 /*Remove WordPress menu from admin bar*/
 add_action( 'admin_bar_menu', 'remove_wp_logo', 999 );
 function remove_wp_logo( $wp_admin_bar ) {
@@ -44,33 +19,36 @@ function remove_wp_logo( $wp_admin_bar ) {
 function my_login_logo() { 
   $custom_logo_id = get_theme_mod( 'custom_logo' );
   $logoImg = wp_get_attachment_image_src($custom_logo_id,'large');
-  $logo_url = ($logoImg) ? $logoImg[0] : '';
-  if($custom_logo_id) { ?>
+  $logo_url = ($logoImg) ? $logoImg[0] : ''; ?>
   <style type="text/css">
     body.login {
       background-color: #3d5588;
     }
+    <?php if($custom_logo_id) { ?>
     body.login div#login h1 a {
       background-image: url(<?php echo $logo_url; ?>);
       background-size: contain;
       width: 100%;
       height: 100px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+    }
+    <?php } ?>
+    body.login #backtoblog a, 
+    body.login #nav a {
+      color: #f1f1cb!important;
     }
     .login #backtoblog, .login #nav {
       text-align: center;
     }
-    .login #backtoblog a,
-    .login #nav a {
-      color: #fcd307!important;
+    body.login .privacy-policy-link {
+      color: #ea885a;
     }
-    .login #backtoblog a:hover,
-    .login #nav a:hover {
-      color: #fff3b5!important;
+    body.login form {
+      border-radius: 10px;
+      border: 1px solid #FFF;
     }
   </style>
 <?php }
-}
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
 // Change Link
@@ -181,9 +159,9 @@ add_action( 'init', 'my_theme_add_editor_styles' );
 function change_post_menu_label() {
     global $menu;
     global $submenu;
-    $menu[5][0] = 'News';
-    $submenu['edit.php'][5][0] = 'All News';
-    $submenu['edit.php'][10][0] = 'Add News';
+    $menu[5][0] = 'Stories';
+    $submenu['edit.php'][5][0] = 'Stories';
+    $submenu['edit.php'][10][0] = 'Add Story';
     //$submenu['edit.php'][15][0] = 'Status'; // Change name for categories
     //$submenu['edit.php'][16][0] = 'Labels'; // Change name for tags
     echo '';
@@ -192,16 +170,16 @@ function change_post_menu_label() {
 function change_post_object_label() {
         global $wp_post_types;
         $labels = &$wp_post_types['post']->labels;
-        $labels->name = 'News';
-        $labels->singular_name = 'News';
-        $labels->add_new = 'Add News';
-        $labels->add_new_item = 'Add News';
-        $labels->edit_item = 'Edit News Article';
-        $labels->new_item = 'News Article';
-        $labels->view_item = 'View News';
-        $labels->search_items = 'Search News';
-        $labels->not_found = 'No News Article found';
-        $labels->not_found_in_trash = 'No News Article found in Trash';
+        $labels->name = 'Stories';
+        $labels->singular_name = 'Story';
+        $labels->add_new = 'Add Story';
+        $labels->add_new_item = 'Add Story';
+        $labels->edit_item = 'Edit Story';
+        $labels->new_item = 'Story';
+        $labels->view_item = 'View Story';
+        $labels->search_items = 'Search Story';
+        $labels->not_found = 'No Story found';
+        $labels->not_found_in_trash = 'No Story found in Trash';
     }
 add_action( 'init', 'change_post_object_label' );
 add_action( 'admin_menu', 'change_post_menu_label' );

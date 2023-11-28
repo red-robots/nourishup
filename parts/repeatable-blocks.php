@@ -33,6 +33,7 @@
     if( get_row_layout() == 'intro' ) { 
       $title = get_sub_field('title');
       $content = get_sub_field('content');
+      $buttons = get_sub_field('buttons');
       if($title || $content) { ?>
       <div class="repeatable-intro repeatable">
         <div class="wrapper">
@@ -41,6 +42,19 @@
           <?php } ?>
           <?php if ($content) { ?>
           <div class="textwrap"><?php echo $content ?></div>
+          <?php } ?>
+          <?php if ($buttons) { ?>
+          <div class="buttons">
+            <?php foreach($buttons as $b) { 
+              $btn = $b['button'];
+              $btnTarget = (isset($btn['target']) && $btn['target']) ? $btn['target'] : '_self';
+              $btnTitle = (isset($btn['title']) && $btn['title']) ? $btn['title'] : '';
+              $btnLink = (isset($btn['url']) && $btn['url']) ? $btn['url'] : '';
+              if( $btnTitle && $btnLink ) { ?>
+                <a href="<?php echo $btnLink ?>" target="<?php echo $btnTarget ?>" class="repeatable-button"><?php echo $btnTitle ?></a>
+              <?php } ?>
+            <?php } ?>
+          </div>
           <?php } ?>
         </div>
       </div>
@@ -98,7 +112,7 @@
       $bgcolor = ($bgcolor) ? $bgcolor : '#32845C';
 
       $textcolor = get_sub_field('textcolor');
-      $textcolor = ($textcolor) ? $textcolor : '#FFFFFF';
+      $textcolor = ($textcolor) ? $textcolor : '#FFF';
       $image = get_sub_field('image');
       $image_position = get_sub_field('image_position');
       $image_position = ($image_position) ? ' ' . $image_position : ' img_left';
@@ -115,11 +129,23 @@
       $block_type .= $image_position;
       ?>
       <style>
-        .repeatable-image-text-block h2,
-        .repeatable-image-text-block p,
-        .repeatable-image-text-block *,
-        .repeatable-image-text-block a {
+        .repeatable-block-<?php echo $i?> .textCol p,
+        .repeatable-block-<?php echo $i?> .textCol *,
+        .repeatable-block-<?php echo $i?> .textCol a,
+        .repeatable-block-<?php echo $i?> .textCol .item-link a,
+        .repeatable-block-<?php echo $i?> .textCol h2,
+        .repeatable-block-<?php echo $i?> .textCol h3,
+        .repeatable-block-<?php echo $i?> .textCol h4,
+        .repeatable-block-<?php echo $i?> .textCol h5,
+        .repeatable-block-<?php echo $i?> .textCol h6,
+        .repeatable-block-<?php echo $i?> .textCol li {
           color: <?php echo $textcolor?>!important;
+        }
+        .repeatable-block-<?php echo $i?> .textCol .item-link a:after {
+          border-left-color: <?php echo $textcolor?>!important;
+        }
+        .repeatable-block-<?php echo $i?> .textCol .item-link a {
+          border-block-color: <?php echo $textcolor?>!important;
         }
         .repeatable-image-text-block .item-link a {
           color: <?php echo $textcolor?>!important;
@@ -136,7 +162,7 @@
           border-left-color:#FEBC11!important;
         }
       </style>
-      <div class="repeatable-image-text-block repeatable block-type-<?php echo $block_type?>">
+      <div class="repeatable-image-text-block repeatable-block-<?php echo $i?>  repeatable block-type-<?php echo $block_type?>" data-textcolor="<?php echo $textcolor?>">
         <?php if($blockWidth=='full') { ?>
           <div class="wrapper">
             <div class="inner-block" style="background-color:<?php echo $bgcolor?>">

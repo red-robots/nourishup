@@ -7,18 +7,24 @@
 
 add_action('init', 'js_custom_init', 1);
 function js_custom_init() {
-    
-    //'supports'  => array('title','editor','thumbnail')
-
     $post_types = array(
         array(
-          'post_type' => 'stories',
-          'menu_name' => 'Stories',
-          'plural'    => 'Stories',
-          'single'    => 'Story',
-          'menu_icon' => 'dashicons-book',
-          'supports'  => array('title','editor','thumbnail')
-        )
+          'post_type' => 'activities',
+          'menu_name' => 'Activities',
+          'plural'    => 'Activities',
+          'single'    => 'Activity',
+          'menu_icon' => 'dashicons-category',
+          'supports'  => array('title')
+        ),
+        array(
+          'post_type' => 'upcoming-events',
+          'menu_name' => 'Upcoming Events',
+          'plural'    => 'Upcoming Events',
+          'single'    => 'Upcoming Event',
+          'menu_icon' => 'dashicons-calendar-alt',
+          'menu_position'=> 5,
+          'supports'  => array('title','editor')
+        ),
     );
     
     if($post_types) {
@@ -86,13 +92,42 @@ add_action( 'init', 'build_taxonomies', 0 );
 function build_taxonomies() {
 
   $post_types = array(
-    // array(
-    //   'post_type' => array('projects'),
-    //   'menu_name' => 'Project Categories',
-    //   'plural'    => 'Project Categories',
-    //   'single'    => 'Project Category',
-    //   'taxonomy'  => 'project-category'
-    // )
+    array(
+      'post_type' => array('team','careers'),
+      'menu_name' => 'Divisions Taxonomy',
+      'plural'    => 'Divisions',
+      'single'    => 'Division',
+      'taxonomy'  => 'divisions'
+    ),
+    array(
+      'post_type' => array('communities'),
+      'menu_name' => 'Community Status',
+      'plural'    => 'Community Status',
+      'single'    => 'Community Status',
+      'taxonomy'  => 'community-status'
+    ),
+    array(
+      'post_type' => array('communities'),
+      'menu_name' => 'Community Location',
+      'plural'    => 'Community Locations',
+      'single'    => 'Community Location',
+      'taxonomy'  => 'community-location'
+    ),
+    array(
+      'post_type' => array('testimonial'),
+      'menu_name' => 'Testimonial Type',
+      'plural'    => 'Testimonial Types',
+      'single'    => 'Testimonial Type',
+      'taxonomy'  => 'testimonial-types',
+      'default_term' => array('name'=>'Resident','slug'=>'resident')
+    ),
+    array(
+      'post_type' => array('activities'),
+      'menu_name' => 'Activity Types',
+      'plural'    => 'Activity Types',
+      'single'    => 'Activity Type',
+      'taxonomy'  => 'activity-type'
+    )
   );
 
 
@@ -164,20 +199,18 @@ function set_custom_cpt_columns($columns) {
     $query = isset($wp_query->query) ? $wp_query->query : '';
     $post_type = ( isset($query['post_type']) ) ? $query['post_type'] : '';
     
-    // if($post_type=='projects') {
-    //     unset($columns['date']);
-    //     unset($columns['taxonomy-project-category']);
-    //     $columns['title'] = __( 'Name', 'bellaworks' );
-    //     $columns['image'] = __( 'Image', 'bellaworks' );
-    //     $columns['taxonomy-project-category'] = __( 'Categories', 'bellaworks' );
-    //     $columns['date'] = __( 'Date', 'bellaworks' );
-    // }
-    // else if($post_type=='events') {
-    //     unset($columns['date']);
-    //     $columns['title'] = __( 'Title', 'bellaworks' );
-    //     $columns['image'] = __( 'Photo', 'bellaworks' );
-    //     $columns['date'] = __( 'Date', 'bellaworks' );
-    // }
+    if($post_type=='activities') {
+        unset($columns['date']);
+        $columns['title'] = __( 'Name', 'bellaworks' );
+        $columns['image'] = __( 'Image', 'bellaworks' );
+        $columns['date'] = __( 'Date', 'bellaworks' );
+    }
+    else if($post_type=='events') {
+        unset($columns['date']);
+        $columns['title'] = __( 'Title', 'bellaworks' );
+        $columns['image'] = __( 'Photo', 'bellaworks' );
+        $columns['date'] = __( 'Date', 'bellaworks' );
+    }
     // else if($post_type=='communities') {
     //     unset($columns['date']);
     //     unset($columns['taxonomy-community-status']);
@@ -199,7 +232,7 @@ function custom_post_column( $column, $post_id ) {
     $query = isset($wp_query->query) ? $wp_query->query : '';
     $post_type = ( isset($query['post_type']) ) ? $query['post_type'] : '';
     
-    if($post_type=='projects') {
+    if($post_type=='activities') {
         switch ( $column ) {
           case 'image' :
             $img = get_field('main_photo',$post_id);
@@ -215,22 +248,22 @@ function custom_post_column( $column, $post_id ) {
             break;
         }
     }
-    // else if($post_type=='events') {
-    //     switch ( $column ) {
-    //       case 'image' :
-    //         $img = get_field('main_photo',$post_id);
-    //         $img_src = ($img) ? $img['sizes']['medium'] : '';
-    //         $the_photo = '<span class="tmphoto" style="display:inline-block;width:50px;height:50px;background:#e2e1e1;text-align:center;border:1px solid #CCC;overflow:hidden;">';
-    //         if($img_src) {
-    //            $the_photo .= '<span style="display:block;width:100%;height:100%;background:url('.$img_src.') top center no-repeat;background-size:cover;transform:scale(1.2)"></span>';
-    //         } else {
-    //             $the_photo .= '<i class="dashicons dashicons-format-image" style="font-size:25px;position:relative;top:13px;left: -3px;opacity:0.3;"></i>';
-    //         }
-    //         $the_photo .= '</span>';
-    //         echo $the_photo;
-    //         break;
-    //     }
-    // }
+    else if($post_type=='events') {
+        switch ( $column ) {
+          case 'image' :
+            $img = get_field('main_photo',$post_id);
+            $img_src = ($img) ? $img['sizes']['medium'] : '';
+            $the_photo = '<span class="tmphoto" style="display:inline-block;width:50px;height:50px;background:#e2e1e1;text-align:center;border:1px solid #CCC;overflow:hidden;">';
+            if($img_src) {
+               $the_photo .= '<span style="display:block;width:100%;height:100%;background:url('.$img_src.') top center no-repeat;background-size:cover;transform:scale(1.2)"></span>';
+            } else {
+                $the_photo .= '<i class="dashicons dashicons-format-image" style="font-size:25px;position:relative;top:13px;left: -3px;opacity:0.3;"></i>';
+            }
+            $the_photo .= '</span>';
+            echo $the_photo;
+            break;
+        }
+    }
     
 }
 
@@ -256,21 +289,21 @@ function theme_columns($theme_columns) {
 add_filter("manage_activity-type_custom_column", 'manage_theme_columns', 10, 3);
 function manage_theme_columns($out, $column_name, $theme_id) {
     $theme = get_term($theme_id, 'activity-type');
-    // switch ($column_name) {
-    //     case 'projects': 
-    //         $photo = get_field('project_image',$theme); 
-    //         $out = '<span class="tmphoto" style="display:inline-block;width:50px;height:50px;background:#e2e1e1;text-align:center;">';
-    //         if($photo) {
-    //             $out .= '<span style="display:block;width:100%;height:100%;background:url('.$photo['url'].');background-size:cover;background-position:center"></span>';
-    //         } else {
-    //             $out .= '<i class="dashicons dashicons-businessman" style="font-size:33px;position:relative;top:8px;left:-6px;opacity:0.3;"></i>';
-    //         }
-    //         $out .= '</span>';
-    //         break;
+    switch ($column_name) {
+        case 'tax_image': 
+            $photo = get_field('category_image',$theme); 
+            $out = '<span class="tmphoto" style="display:inline-block;width:50px;height:50px;background:#e2e1e1;text-align:center;">';
+            if($photo) {
+                $out .= '<span style="display:block;width:100%;height:100%;background:url('.$photo['url'].');background-size:cover;background-position:center"></span>';
+            } else {
+                $out .= '<i class="dashicons dashicons-businessman" style="font-size:33px;position:relative;top:8px;left:-6px;opacity:0.3;"></i>';
+            }
+            $out .= '</span>';
+            break;
  
-    //     default:
-    //         break;
-    // }
+        default:
+            break;
+    }
     return $out;    
 }
 

@@ -1,7 +1,5 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
 /**
  *	Custom jQuery Scripts
  *	Developed by: Lisa DeBona
@@ -34,37 +32,30 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 })(jQuery);
 
 jQuery(document).ready(function ($) {
-  if ($('.wp-block-site-logo').length) {
-    if ($('body').hasClass('home')) {
-      if ((typeof homepageLogo === "undefined" ? "undefined" : _typeof(homepageLogo)) != undefined && homepageLogo) {
-        $('.wp-block-site-logo a').html('<img src="' + homepageLogo + '" alt="' + siteName + ' Logo" class="custom-logo">');
-        $('.wp-block-site-logo').addClass('customized');
-      }
-    } else {
-      if ((typeof subpageLogo === "undefined" ? "undefined" : _typeof(subpageLogo)) != undefined && subpageLogo) {
-        $('.wp-block-site-logo a').html('<img src="' + subpageLogo + '" alt="' + siteName + ' Logo" class="custom-logo">');
-        $('.wp-block-site-logo').addClass('customized');
-      }
-    }
-  }
-
-  if ($('header.wp-block-template-part .mainNav').length) {
-    var header = $('header.wp-block-template-part .mainNav');
-
-    if (header.find('.wp-block-buttons').length) {
-      var headerButtons = header.find('.wp-block-buttons').html();
-      $('<div class="mobile-block-buttons">' + headerButtons + '</div>').insertBefore(header);
-    }
-
-    if (header.find('#menu-toggle').length == 0) {
-      $('<button id="menu-toggle" class="menu-toggle"><span class="sr">Menu Toggle</span><span class="bar"></span></button>').insertBefore(header);
-    }
-  }
-
+  // if( $('.wp-block-site-logo').length ) {
+  //   if( $('body').hasClass('home') ) {
+  //     if(typeof homepageLogo!=undefined && homepageLogo) {
+  //       $('.wp-block-site-logo a').html('<img src="'+homepageLogo+'" alt="'+siteName+' Logo" class="custom-logo">');
+  //       $('.wp-block-site-logo').addClass('customized');
+  //     }
+  //   } else {
+  //     if(typeof subpageLogo!=undefined && subpageLogo) {
+  //       $('.wp-block-site-logo a').html('<img src="'+subpageLogo+'" alt="'+siteName+' Logo" class="custom-logo">');
+  //       $('.wp-block-site-logo').addClass('customized');
+  //     }
+  //   }
+  // }
   $(document).on('click', '#menu-toggle', function (e) {
     e.preventDefault();
     $(this).toggleClass('active');
-    $('.mainNav').toggleClass('active');
+    $('#site-navigation').toggleClass('active');
+    $('body').toggleClass('mobile-nav-active');
+  });
+  $(document).on('click', '.main-navigation.active .menu-item-has-children > a ', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $(this).parent().toggleClass('active');
+    $(this).next('.sub-menu').slideToggle();
   }); //GET INVOLVED
 
   if ($('.wp-block-columns.involved').length) {
@@ -168,12 +159,12 @@ jQuery(document).ready(function ($) {
   } //Sticky Nav
 
 
-  var siteHeader = $('header.wp-block-template-part').height();
+  var siteHeader = $('header.site-header').height();
   $(window).scroll(function () {
     if ($(this).scrollTop() > siteHeader) {
-      $('header.wp-block-template-part').addClass('sticky');
+      $('header.site-header').addClass('sticky');
     } else {
-      $('header.wp-block-template-part').removeClass('sticky');
+      $('header.site-header').removeClass('sticky');
     }
   });
 
@@ -199,7 +190,6 @@ jQuery(document).ready(function ($) {
   }
 
   if ($('.wp-flexible-container').length) {
-    //var pageId = $(/)
     if (currentPageId) {
       displayFlexibleContent(currentPageId);
     }

@@ -1,4 +1,3 @@
-
 /**
  * skip-link-focus-fix.js
  *
