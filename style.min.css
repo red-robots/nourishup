@@ -1619,7 +1619,7 @@ body.logged-in.admin-bar header.site-header.sticky{top:31px}
 .repeatable-image-text-block.block-type-full .flexwrap.half .textCol{padding:5vw 4vw}
 .repeatable-image-text-block.block-type-full.img_right .flexwrap.half{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 .repeatable-image-text-block.block-type-full.img_right .flexwrap.half .imageCol{left:unset;right:0}
-}@media screen and (min-width:1300px){.rounded-images .wp-container-core-group-layout-5.wp-container-core-group-layout-5{gap:5rem}
+}@media screen and (min-width:1300px){.rounded-images .wp-block-group__inner-container .wp-block-group-is-layout-flex{gap:5rem}
 .repeatable-columns .rcolumn{margin-bottom:70px}
 .repeatable-columns .rcolumn .inside{padding:20px 3vw 3vw}
 .repeatable-columns .rcolumn.feat-image{margin-bottom:80px;margin-top:80px}
