@@ -313,8 +313,8 @@ h6 {font-size: 28px;}
 
   .wp-block-buttons {
     .wp-element-button {
-      font-family: $font_button!important;
-      font-weight: 500;
+      font-family: $font_primary!important;
+      font-weight: 600;
       padding: 8px 30px;
       background-color: $green;
       letter-spacing: 0.05em;
@@ -323,6 +323,17 @@ h6 {font-size: 28px;}
         box-shadow: 0 6px 20px rgba(0,0,0,.15);
         transform: translateY(-2px);
       }
+    }
+    .wp-block-button.blue {
+      .wp-element-button {
+        background-color: $primary;
+      }
+    }
+  }
+
+  @media screen and (min-width:1300px) {
+    .wp-container-core-group-layout-5.wp-container-core-group-layout-5 {
+      gap: 5rem;
     }
   }
 }

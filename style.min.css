@@ -1391,12 +1391,13 @@ h6{font-size:28px}
 .repeatable div.buttons{margin-top:30px}
 .wp-block-group.intro{color:#282f6f;margin:0 auto}
 .wp-block-group.intro .wp-block-heading{color:#282f6f;font-size:42px;font-weight:bold;line-height:1.2}
-.wp-block-group.intro .wp-block-group__inner-container{max-width:900px;width:100%;margin:0 auto}
+.wp-block-group.intro .wp-block-group__inner-container{max-width:940px;width:100%;margin:0 auto}
 .rounded-images{padding-top:50px;padding-bottom:80px}
 .rounded-images .is-layout-flex{-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}
 .rounded-images .is-layout-flex .wp-block-group{max-width:450px;width:100%}
-.rounded-images .wp-block-buttons .wp-element-button{font-family:"Novatica",sans-serif !important;font-weight:500;padding:8px 30px;background-color:#32845c;letter-spacing:.05em}
+.rounded-images .wp-block-buttons .wp-element-button{font-family:"Gotham",sans-serif !important;font-weight:600;padding:8px 30px;background-color:#32845c;letter-spacing:.05em}
 .rounded-images .wp-block-buttons .wp-element-button:hover,.rounded-images .wp-block-buttons .wp-element-button:focus{background-color:#fcb405 !important;-webkit-box-shadow:0 6px 20px rgba(0,0,0,.15);box-shadow:0 6px 20px rgba(0,0,0,.15);-webkit-transform:translateY(-2px);transform:translateY(-2px)}
+.rounded-images .wp-block-buttons .wp-block-button.blue .wp-element-button{background-color:#3d5588}
 .wp-block-group.FeaturedStory{background-color:#3d5588;color:#fff;padding:0 20px !important}
 .wp-block-group.FeaturedStory .wp-block-group__inner-container{max-width:1300px;width:100%;margin:0 auto}
 .featured-story-wrap{padding:50px 0}
@@ -1618,7 +1619,8 @@ body.logged-in.admin-bar header.site-header.sticky{top:31px}
 .repeatable-image-text-block.block-type-full .flexwrap.half .textCol{padding:5vw 4vw}
 .repeatable-image-text-block.block-type-full.img_right .flexwrap.half{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 .repeatable-image-text-block.block-type-full.img_right .flexwrap.half .imageCol{left:unset;right:0}
-}@media screen and (min-width:1300px){.repeatable-columns .rcolumn{margin-bottom:70px}
+}@media screen and (min-width:1300px){.rounded-images .wp-container-core-group-layout-5.wp-container-core-group-layout-5{gap:5rem}
+.repeatable-columns .rcolumn{margin-bottom:70px}
 .repeatable-columns .rcolumn .inside{padding:20px 3vw 3vw}
 .repeatable-columns .rcolumn.feat-image{margin-bottom:80px;margin-top:80px}
 }@media screen and (min-width:1400px){.wp-block-columns.involved,.wp-block-columns.involved .wp-block-columns{gap:5vw}
