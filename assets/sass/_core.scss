@@ -296,12 +296,12 @@ h6 {font-size: 28px;}
 
 .rounded-images {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
   .is-layout-flex {
     flex-wrap: wrap;
     justify-content: space-evenly;
     .wp-block-group {
-      max-width: 330px;
+      max-width: 450px;
       width: 100%;
     }
   }
