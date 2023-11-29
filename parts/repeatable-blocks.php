@@ -71,6 +71,8 @@
           <div class="rcolumns">
           <?php while( have_rows('columns') ) : the_row(); 
             $icon = get_sub_field('icon');
+            $icon_type = get_sub_field('icon_type');
+            $icon_type = ($icon_type) ? $icon_type : 'icon';
             $bgcolor = get_sub_field('icon_bgcolor');
             $title = get_sub_field('title');
             $content = get_sub_field('content');
@@ -80,7 +82,7 @@
             $btnLink = (isset($btn['url']) && $btn['url']) ? $btn['url'] : '';
             $styleColor = ($bgcolor) ? $bgcolor : '#81C674';
             ?>
-            <div class="rcolumn">
+            <div class="rcolumn feat-<?php echo $icon_type?>">
               <div class="inside">
                 <?php if($icon) { ?>
                 <div class="icondiv" style="background:<?php echo $styleColor?>"><span style="background-image:url('<?php echo $icon['url']?>')"></span></div>

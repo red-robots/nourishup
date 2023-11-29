@@ -300,15 +300,21 @@ function ea_disable_editor( $id = false ) {
    *
    */
   function ea_disable_gutenberg( $can_edit, $post_type ) {
+
+    $exclude_posttypes = array('team','events');
+    $ptype = get_post_type($_GET['post']);
   
     if( ! ( is_admin() && !empty( $_GET['post'] ) ) )
       return $can_edit;
   
     if( ea_disable_editor( $_GET['post'] ) )
       $can_edit = false;
-  
-    if( get_post_type($_GET['post'])=='team' )
+    
+    if( in_array($ptype, $exclude_posttypes) )
       $can_edit = false;
+
+    // if( get_post_type($_GET['post'])=='team' )
+    //   $can_edit = false;
   
     // if( $_GET['post']==15 ) /* Contact page */
     //   $can_edit = false;
@@ -319,3 +325,10 @@ function ea_disable_editor( $id = false ) {
   add_filter( 'gutenberg_can_edit_post_type', 'ea_disable_gutenberg', 10, 2 );
   add_filter( 'use_block_editor_for_post_type', 'ea_disable_gutenberg', 10, 2 );
 
+  add_filter('use_block_editor_for_post_type', 'prefix_disable_gutenberg', 10, 2);
+  function prefix_disable_gutenberg($current_status, $post_type)
+  {
+      // Use your post type key instead of 'product'
+      if ($post_type === 'events') return false;
+      return $current_status;
+  }
