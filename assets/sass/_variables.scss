@@ -139,6 +139,29 @@ $wrapper: 1300px;
 	line-height: 1.5;
 }
 
+@mixin roundedButton($bgcolor:#F26522) {
+	display: inline-block;
+  text-decoration: none;
+  background: $bgcolor;
+  color: #FFF!important;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 11px 30px 10px !important;
+  border-radius: 100px;
+	border: none!important;
+	appearance: none;
+  &:hover, &:focus {
+    background: $yellow!important;
+    box-shadow: 0 6px 20px rgba(0,0,0,.15);
+  }
+	&:focus {
+		outline: 1px dotted #000;
+	}
+}
+
 @mixin fontHeadingBlock($color:#FFF) {
 	font-family: $font-secondary;
 	font-size: 20px;

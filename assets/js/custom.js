@@ -163,8 +163,10 @@ jQuery(document).ready(function ($) {
   $(window).scroll(function () {
     if ($(this).scrollTop() > siteHeader) {
       $('header.site-header').addClass('sticky');
+      $('body').addClass('sticky-header');
     } else {
       $('header.site-header').removeClass('sticky');
+      $('body').removeClass('sticky-header');
     }
   });
 
@@ -217,4 +219,9 @@ jQuery(document).ready(function ($) {
   //     console.log(data);
   // });
 
+
+  if ($('.subpage-banner h1').length) {
+    $('body').addClass('has-hero');
+    $('h1.page-title').remove();
+  }
 });
