@@ -1342,6 +1342,12 @@ footer.site-footer {
       margin-top: 30px;
       margin-bottom: 30px;
     }
+    .text a {
+      color: #cb4a0d;
+      &:hover, &:focus {
+        color: #df9e0a;
+      }
+    }
     .inside {
       padding: 20px;
       background: #FAF3D6;

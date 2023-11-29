@@ -1542,6 +1542,8 @@ footer.site-footer .footer-partners .footerInner img{width:auto;height:auto}
 .repeatable-columns{margin:30px 0;padding-top:30px}
 .repeatable-columns .rcolumns{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-left:-20px;margin-right:-20px;margin-top:-50px;margin-bottom:-50px}
 .repeatable-columns .rcolumn{width:33.333%;padding:20px;margin:50px 0}
+.repeatable-columns .rcolumn .text a{color:#cb4a0d}
+.repeatable-columns .rcolumn .text a:hover,.repeatable-columns .rcolumn .text a:focus{color:#df9e0a}
 .repeatable-columns .rcolumn .inside{padding:20px;background:#faf3d6;color:#3d5588;height:100%;text-align:center}
 .repeatable-columns .rcolumn .coltitle{margin:0;font-size:20px;font-weight:500;line-height:1.2}
 .repeatable-columns .rcolumn .text{font-size:16px;margin:20px 0}
