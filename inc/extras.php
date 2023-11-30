@@ -332,3 +332,25 @@ function ea_disable_editor( $id = false ) {
       if ($post_type === 'events') return false;
       return $current_status;
   }
+
+
+
+// add new buttons
+add_filter( 'mce_buttons', 'myplugin_register_buttons' );
+
+function myplugin_register_buttons( $buttons ) {
+	array_push( $buttons, '|', 'custom_class');
+
+	return $buttons;
+}
+ 
+// Load the TinyMCE plugin : editor_plugin.js (wp2.5)
+add_filter( 'mce_external_plugins', 'myplugin_register_tinymce_javascript' );
+
+function myplugin_register_tinymce_javascript( $plugin_array ) {
+
+   $plugin_array['checklistbutton'] = get_stylesheet_directory_uri() . '/assets/js/custom/custom-tinymce.js';
+
+   return $plugin_array;
+}
+

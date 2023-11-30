@@ -22,3 +22,6 @@
 [data-name="repeatable_blocks"] [data-name="content"] iframe {
   height: 200px!important;
 }
+[data-name="repeatable_blocks"] [data-name="text_content"] .mce-last.mce-btn-group {
+  border-left: none!important;
+}

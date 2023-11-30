@@ -11,3 +11,27 @@
   color: #000;
   margin: 0 15px 0 0;
 }
+.ChecklistWrap {
+  column-count: 2;
+}
+.ChecklistWrap p {
+  margin: 0 0;
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  border-bottom: 1px solid #888787;
+  break-inside: avoid-column;
+}
+.ChecklistWrap p:before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 9px;
+  border-bottom: 2px solid #4c4b4b;
+  border-right: 2px solid #4c4b4b;
+  position: absolute;
+  top: 9px;
+  left: 8px;
+  transform: rotate(42deg);
+}
