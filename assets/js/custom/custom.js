@@ -204,6 +204,35 @@ jQuery(document).ready(function ($) {
       success: function(data) {
         if(data) {
           flexibleContainer.html(data);
+          if( $('.repeatable-fullwidth-text-block').length ) {
+            $('.repeatable-fullwidth-text-block').each(function(){
+              if( $(this).find('ul').length ) {
+                $(this).find('ul').each(function(){
+                  var targetUL = $(this);
+                  var list = $(this).find('li');
+                  var countList = list.length;
+                  var colNum = 2;
+                  if(countList>3) {
+                    var newULR = '<div class="checklist"><ul class="check">';
+                    var offset = Math.round(countList/colNum);
+                    var offsetKey = offset-1;
+                    list.eq(offsetKey).addClass('end');
+                    var i=1;
+                    list.each(function(){
+                      if(i % offset==0 && i!=countList) {
+                        newULR += '<li>'+$(this).html()+'</li></ul><ul class="check">';
+                      } else {
+                        newULR += '<li>'+$(this).html()+'</li>';
+                      }
+                      i++;
+                    });
+                    newULR +="</ul></div>";
+                    targetUL.replaceWith(newULR);
+                  }
+                });
+              }
+            });
+          }
         }
       }
     },function(data, status){
@@ -223,6 +252,37 @@ jQuery(document).ready(function ($) {
   if( $('.subpage-banner h1').length ) {
     $('body').addClass('has-hero');
     $('h1.page-title').remove();
+  }
+
+  function splitUL(container,numCols) {
+    console.log(numCols);
+    var num_cols = numCols,
+    listItem = 'li',
+    listClass = 'sub-list';
+    container.each(function() {
+        var items_per_col = new Array(),
+        items = $(this).find(listItem),
+        min_items_per_col = Math.floor(items.length / num_cols),
+        difference = items.length - (min_items_per_col * num_cols);
+        for (var i = 0; i < num_cols; i++) {
+            if (i < difference) {
+                items_per_col[i] = min_items_per_col + 1;
+            } else {
+                items_per_col[i] = min_items_per_col;
+            }
+        }
+        for (var i = 0; i < num_cols; i++) {
+            $(this).append($('<ul ></ul>').addClass(listClass));
+            for (var j = 0; j < items_per_col[i]; j++) {
+                var pointer = 0;
+                for (var k = 0; k < i; k++) {
+                    pointer += items_per_col[k];
+                }
+                $(this).find('.' + listClass).last().append(items[j + pointer]);
+            }
+        }
+    });
+    container.replaceWith('<div class="columns-split">'+ container.html() +'</div>');
   }
 
 }); 

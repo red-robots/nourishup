@@ -212,5 +212,19 @@
     <?php } ?>
 
 
+    <?php /* FULLWIDTH TEXT BLOCK */
+    if( get_row_layout() == 'fullwidth_textblock' ) { 
+      $text_content = get_sub_field('text_content');
+      $bgcolor = get_sub_field('section_bgcolor');
+      $bgcolor = ($bgcolor) ? $bgcolor : '#32845c';
+      if($text_content) { ?>
+      <div class="repeatable-fullwidth-text-block repeatable-block-<?php echo $i?>  repeatable">
+        <div class="wrapper" style="background:<?php echo $bgcolor?>">
+          <div class="inside"><?php echo $text_content; ?></div>
+        </div>
+      </div>
+      <?php } ?>
+    <?php } ?>
+
   <?php $i++; endwhile; ?>
 <?php } ?>
