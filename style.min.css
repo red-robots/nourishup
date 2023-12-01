@@ -1542,6 +1542,11 @@ footer.site-footer .footer-partners .footerInner img{width:auto;height:auto}
 .repeatable-intro h2{color:#282f6f;font-size:42px;font-weight:bold;line-height:1.2;margin:0}
 .repeatable-intro .wrapper{max-width:1000px;padding-top:50px;padding-bottom:50px}
 .repeatable-intro .textwrap p:last-child{margin-bottom:0;padding-bottom:0}
+a.link-arrow{display:inline-block;text-decoration:none;position:relative;color:#fff;font-weight:500;letter-spacing:.02em;border-bottom:1px solid #fff}
+a.link-arrow:after{content:"";display:inline-block;width:0;height:0;border-left:8px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent;position:absolute;top:6px;right:-15px;-webkit-transition:-webkit-transform ease .3s;transition:-webkit-transform ease .3s;transition:transform ease .3s;transition:transform ease .3s,-webkit-transform ease .3s}
+a.link-arrow:hover,a.link-arrow:focus{color:#fcb405 !important;border-bottom-color:#fcb405 !important}
+a.link-arrow:hover:after,a.link-arrow:focus:after{border-left-color:#fcb405 !important;-webkit-transform:translateX(3px);transform:translateX(3px)}
+.flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .repeatable-columns{margin:30px 0;padding-top:30px}
 .repeatable-columns .rcolumns{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-left:-20px;margin-right:-20px;margin-top:-50px;margin-bottom:-50px}
 .repeatable-columns .rcolumn{width:33.333%;padding:20px;margin:50px 0}
@@ -1590,6 +1595,20 @@ footer.site-footer .footer-partners .footerInner img{width:auto;height:auto}
 .repeatable-fullwidth-text-block div.ChecklistWrap p:before{content:"";display:block;width:10px;height:18px;border-bottom:3px solid #f8f5d6;border-right:3px solid #f8f5d6;position:absolute;top:24px;left:20px;-webkit-transform:rotate(42deg);transform:rotate(42deg)}
 .repeatable-fullwidth-text-block div.checklist{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-top:20px;margin-bottom:40px}
 .repeatable-fullwidth-text-block div.checklist ul{display:block;-webkit-column-count:1;-moz-column-count:1;column-count:1;width:46%}
+.repeatable-fullwidth-text-block div.buttons{margin-top:30px;text-align:center}
+.repeatable-fullwidth-text-block div.buttons a.link-arrow{margin:6px 20px}
+.repeatable-fullwidth-text-block div.buttons a.link-arrow:after{top:11px}
+.repeatable-twocol-text-block{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:50px 20px;margin-bottom:70px}
+.repeatable-twocol-text-block .flexwrap{-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+.repeatable-twocol-text-block.half .textLeft,.repeatable-twocol-text-block.half .textRight{width:46%}
+.repeatable-twocol-text-block h2{font-size:35px;line-height:1.2;margin:0 0 30px}
+.repeatable-twocol-text-block div.ChecklistWrap p{position:relative;display:table;width:100%;padding-top:20px;padding-bottom:20px;padding-left:50px;border-bottom:1px solid rgba(248,245,214,.5);margin:0;text-align:left}
+.repeatable-twocol-text-block div.ChecklistWrap p:before{content:"";display:block;width:10px;height:18px;border-bottom:3px solid #f8f5d6;border-right:3px solid #f8f5d6;position:absolute;top:24px;left:20px;-webkit-transform:rotate(42deg);transform:rotate(42deg)}
+.repeatable-twocol-text-block div.ChecklistWrap p:last-child{padding-bottom:0;border-bottom:none !important}
+.repeatable-twocol-text-block div.ChecklistWrap p:last-child .textRight{width:800%}
+.repeatable-twocol-text-block.full .ChecklistWrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.repeatable-twocol-text-block.full .textLeft{max-width:1000px;width:100%;margin:0 auto}
+.repeatable-twocol-text-block.full .textRight{max-width:900px;width:100%;margin:0 auto}
 body:not(.home) .site-header .site-logo{background:transparent;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:280px}
 body:not(.home) .site-header .site-logo a{padding:10px}
 body:not(.home) #main h1.page-title{display:none}
@@ -1641,6 +1660,7 @@ body.logged-in.admin-bar header.site-header.sticky{top:31px}
 }@media screen and (min-width:1400px){.wp-block-columns.involved,.wp-block-columns.involved .wp-block-columns{gap:5vw}
 .repeatable-columns .rcolumn .inside{padding:20px 5vw 3vw}
 .repeatable-image-text-block .inner-block{padding:3.5vw}
+.repeatable-twocol-text-block{padding-top:5vw;padding-bottom:6vw}
 }@media screen and (max-width:1470px){.featured-story-wrap{padding-left:30px;padding-right:30px}
 }@media screen and (max-width:1400px){#AboutNourishUp .wp-block-columns .wp-block-column:nth-child(2){padding-left:2vw}
 }@media screen and (max-width:1100px){.wp-block-group.impact .wp-block-group.numbers{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
@@ -1700,6 +1720,8 @@ body:not(.home).page-template-default .subpage-banner h1{font-size:3.5rem}
 .footerTextBlock:after{right:-27%}
 .repeatable-hero{min-height:430px}
 .repeatable-fullwidth-text-block div.checklist ul{width:100%}
+.repeatable-twocol-text-block.half .textLeft,.repeatable-twocol-text-block.half .textRight{width:100%}
+.repeatable-twocol-text-block div.ChecklistWrap{margin-top:10px}
 }@media screen and (max-width:782px){body.logged-in.admin-bar header.site-header.sticky{top:0}
 }@media screen and (max-width:768px){.repeatable-columns .rcolumn{width:100%;margin-top:30px;margin-bottom:30px}
 body:not(.home) .site-header .site-logo{width:220px}
