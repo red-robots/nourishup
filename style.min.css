@@ -1422,7 +1422,6 @@ h6{font-size:28px}
 .wp-block-cover.hero .wp-block-cover__inner-container{max-width:1300px;width:100%;margin:0 auto}
 .wp-block-cover.hero p{font-size:2.2em !important;font-weight:500;color:#fff;margin:0}
 .wp-block-cover.hero h2{font-size:3.8em;line-height:1.1;margin:0;color:#fff}
-.wp-block-cover.hero .wp-block-cover__inner-container{-webkit-transform:translateY(4vw);transform:translateY(4vw)}
 .wp-block-group.alignwide{max-width:1400px;width:100%;margin:0 auto;padding-left:20px;padding-right:20px}
 .wp-block-columns.involved,.wp-block-columns.involved .wp-block-columns{gap:3rem}
 .wp-block-columns.involved .wp-block-column .wp-block-group.icon,.wp-block-columns.involved .wp-block-columns .wp-block-column .wp-block-group.icon{position:relative;min-height:unset !important;margin-bottom:20px}
