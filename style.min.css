@@ -1385,8 +1385,8 @@ h6{font-size:28px}
 .site-header.sticky .site-logo{background:transparent !important}
 .site-header.sticky .site-logo .logo-shrink{display:block;width:120px;position:relative;top:-13px}
 .site-header.sticky .site-logo img.logo-full{display:none}
-.repeatable-button,.button-round{display:inline-block;text-decoration:none;background:#f26522;color:#fff !important;font-size:16px;font-weight:600;line-height:1.1;letter-spacing:.04em;text-transform:uppercase;padding:9px 25px 8px !important;border-radius:100px}
-.repeatable-button:hover,.repeatable-button:focus,.button-round:hover,.button-round:focus{background:#fcb405 !important;-webkit-box-shadow:0 6px 20px rgba(0,0,0,.15);box-shadow:0 6px 20px rgba(0,0,0,.15)}
+.button,.repeatable-button,.button-round{display:inline-block;text-decoration:none;background:#f26522;color:#fff !important;font-size:16px;font-weight:600;line-height:1.1;letter-spacing:.04em;text-transform:uppercase;padding:9px 25px 8px !important;border-radius:100px}
+.button:hover,.button:focus,.repeatable-button:hover,.repeatable-button:focus,.button-round:hover,.button-round:focus{background:#fcb405 !important;-webkit-box-shadow:0 6px 20px rgba(0,0,0,.15);box-shadow:0 6px 20px rgba(0,0,0,.15)}
 .repeatable-button{margin:5px 10px;padding:12px 25px 11px !important}
 .repeatable div.buttons{margin-top:30px}
 .wp-block-group.intro{color:#282f6f;margin:0 auto}
@@ -1586,17 +1586,20 @@ a.link-arrow:hover:after,a.link-arrow:focus:after{border-left-color:#fcb405 !imp
 .repeatable-fullwidth-text-block .inside{padding:50px 20px 40px}
 .repeatable-fullwidth-text-block .inside p:last-child{margin-bottom:0;padding-bottom:0}
 .repeatable-fullwidth-text-block h2{margin-top:0;margin-bottom:.5em;font-size:35px}
+.repeatable-fullwidth-text-block h3{margin-top:0}
 .repeatable-fullwidth-text-block ul{margin:0;padding:0;list-style:none;text-align:left;-webkit-column-count:2;-moz-column-count:2;column-count:2}
 .repeatable-fullwidth-text-block ul>li{position:relative;page-break-inside:avoid;-webkit-column-break-inside:avoid;-moz-column-break-inside:avoid;break-inside:avoid-column;display:table;width:100%;padding-top:20px;padding-bottom:20px;padding-left:50px;border-bottom:1px solid rgba(248,245,214,.5)}
 .repeatable-fullwidth-text-block ul>li:before{content:"";display:block;width:10px;height:18px;border-bottom:3px solid #f8f5d6;border-right:3px solid #f8f5d6;position:absolute;top:24px;left:20px;-webkit-transform:rotate(42deg);transform:rotate(42deg)}
 .repeatable-fullwidth-text-block div.ChecklistWrap{-webkit-column-count:2;-moz-column-count:2;column-count:2}
 .repeatable-fullwidth-text-block div.ChecklistWrap p{position:relative;page-break-inside:avoid;-webkit-column-break-inside:avoid;-moz-column-break-inside:avoid;break-inside:avoid-column;display:table;width:100%;padding-top:20px;padding-bottom:20px;padding-left:50px;border-bottom:1px solid rgba(248,245,214,.5);margin:0;text-align:left}
 .repeatable-fullwidth-text-block div.ChecklistWrap p:before{content:"";display:block;width:10px;height:18px;border-bottom:3px solid #f8f5d6;border-right:3px solid #f8f5d6;position:absolute;top:24px;left:20px;-webkit-transform:rotate(42deg);transform:rotate(42deg)}
-.repeatable-fullwidth-text-block div.checklist{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-top:20px;margin-bottom:40px}
-.repeatable-fullwidth-text-block div.checklist ul{display:block;-webkit-column-count:1;-moz-column-count:1;column-count:1;width:46%}
 .repeatable-fullwidth-text-block div.buttons{margin-top:30px;text-align:center}
 .repeatable-fullwidth-text-block div.buttons a.link-arrow{margin:6px 20px}
 .repeatable-fullwidth-text-block div.buttons a.link-arrow:after{top:11px}
+div.checklist{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-top:20px;margin-bottom:40px}
+div.checklist ul{display:block;-webkit-column-count:1;-moz-column-count:1;column-count:1;width:46%}
+div.checklist ul li{position:relative;page-break-inside:avoid;-webkit-column-break-inside:avoid;-moz-column-break-inside:avoid;break-inside:avoid-column;display:table;width:100%;padding-top:20px;padding-bottom:20px;padding-left:50px;border-bottom:1px solid rgba(248,245,214,.5)}
+div.checklist ul li:before{content:"";display:block;width:10px;height:18px;border-bottom:3px solid #f8f5d6;border-right:3px solid #f8f5d6;position:absolute;top:24px;left:20px;-webkit-transform:rotate(42deg);transform:rotate(42deg)}
 .repeatable-twocol-text-block{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:50px 20px;margin-bottom:70px}
 .repeatable-twocol-text-block .flexwrap{-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .repeatable-twocol-text-block.half .textLeft,.repeatable-twocol-text-block.half .textRight{width:46%}
@@ -1640,6 +1643,17 @@ body.logged-in.admin-bar header.site-header.sticky{top:31px}
 .menu-toggle.active span.bar{-webkit-transform:rotate(45deg);transform:rotate(45deg)}
 .menu-toggle.active span:before{-webkit-transform:translateY(9px);transform:translateY(9px);opacity:0}
 .menu-toggle.active span:after{-webkit-transform:translateY(-9px) rotate(90deg);transform:translateY(-9px) rotate(90deg)}
+.repeatable-flexible-blocks{margin-top:20px;margin-bottom:60px}
+.repeatable-flexible-blocks .wrapper{padding-top:20px;padding-bottom:30px}
+.repeatable-flexible-blocks .button{display:inline-block;margin:5px 0;padding:14px 25px 13px !important}
+.repeatable-flexible-blocks h3{margin-bottom:0 !important}
+.repeatable-flexible-blocks div.checklist{margin-top:0 !important}
+.repeatable-flexible-blocks div.checklist ul.check{margin-top:0 !important;margin-bottom:0 !important}
+.repeatable-flexible-blocks div.checklist ul.check li{padding-top:20px;padding-bottom:20px;border-bottom:1px solid #3a5788}
+.repeatable-flexible-blocks .twocolumn{padding:20px 0}
+.repeatable-flexible-blocks .twocolumn .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+.repeatable-flexible-blocks .twocolumn .fxcol{width:100%}
+.repeatable-flexible-blocks .twocolumn .fxcol ul.check{width:100%}
 @media screen and (min-width:800px){.repeatable-image-text-block .flexwrap.half{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .repeatable-image-text-block .flexwrap.half .imageCol{width:40%;margin-bottom:0}
 .repeatable-image-text-block .flexwrap.half .textCol{width:55%}
@@ -1651,6 +1665,7 @@ body.logged-in.admin-bar header.site-header.sticky{top:31px}
 .repeatable-image-text-block.block-type-full .flexwrap.half .textCol{padding:5vw 4vw}
 .repeatable-image-text-block.block-type-full.img_right .flexwrap.half{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 .repeatable-image-text-block.block-type-full.img_right .flexwrap.half .imageCol{left:unset;right:0}
+}@media screen and (min-width:1025px){.repeatable-flexible-blocks .twocolumn.twocol .fxcol{width:48%}
 }@media screen and (min-width:1300px){.rounded-images .wp-block-group__inner-container .wp-block-group-is-layout-flex{gap:5rem}
 .repeatable-columns .rcolumn{margin-bottom:70px}
 .repeatable-columns .rcolumn .inside{padding:20px 3vw 3vw}
@@ -1718,7 +1733,7 @@ body:not(.home).page-template-default .subpage-banner h1{font-size:3.5rem}
 .footerTextBlock:before{left:-27%}
 .footerTextBlock:after{right:-27%}
 .repeatable-hero{min-height:430px}
-.repeatable-fullwidth-text-block div.checklist ul{width:100%}
+div.checklist ul{width:100%}
 .repeatable-twocol-text-block.half .textLeft,.repeatable-twocol-text-block.half .textRight{width:100%}
 .repeatable-twocol-text-block div.ChecklistWrap{margin-top:10px}
 }@media screen and (max-width:782px){body.logged-in.admin-bar header.site-header.sticky{top:0}

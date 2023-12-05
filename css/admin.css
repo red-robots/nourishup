@@ -25,3 +25,21 @@
 [data-name="repeatable_blocks"] [data-name="text_content"] .mce-last.mce-btn-group {
   border-left: none!important;
 }
+.acf-flexible-content [data-layout="flexible_blocks"] [data-layout="twocolumn"] .acf-fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.acf-flexible-content [data-layout="flexible_blocks"] [data-layout="twocolumn"] .acf-fields .acf-field-wysiwyg {
+  width: 50%;
+}
+.acf-flexible-content [data-layout="flexible_blocks"] > .acf-fields {
+  display: flex;
+  flex-wrap: wrap;
+}
+.acf-flexible-content [data-layout="flexible_blocks"] > .acf-fields .acf-field-flexible-content {
+  width: 100%;
+}
+.acf-flexible-content [data-layout="flexible_blocks"] > .acf-fields .acf-field-color-picker {
+  border-top: none!important;
+}
