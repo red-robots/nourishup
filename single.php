@@ -39,7 +39,7 @@ get_header(); ?>
           <?php if ( get_the_content() ) { ?>
           <div class="entry-content padtop">
               <?php if($heading) { ?>
-                <h1 class="page-title"><?php the_title(); ?></h1>
+                <h2 class="page-title"><?php the_title(); ?></h2>
               <?php } ?>
             <?php the_content(); ?>
           </div>
