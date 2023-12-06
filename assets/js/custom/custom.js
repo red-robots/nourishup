@@ -266,23 +266,26 @@ jQuery(document).ready(function ($) {
               var list = $(this).find('p');
               var countList = list.length;
               var colNum = 2;
-              //if(countList>3) {
-                var newULR = '<div class="checklist"><ul class="check">';
-                var offset = Math.round(countList/colNum);
-                var offsetKey = offset-1;
-                list.eq(offsetKey).addClass('end');
-                var i=1;
-                list.each(function(){
-                  if(i % offset==0 && i!=countList) {
-                    newULR += '<li>'+$(this).html()+'</li></ul><ul class="check">';
-                  } else {
-                    newULR += '<li>'+$(this).html()+'</li>';
-                  }
-                  i++;
-                });
-                newULR +="</ul></div>";
-                targetUL.replaceWith(newULR);
-              //}
+
+              if( $(this).parents('.repeatable-fullwidth-text-block').length ) {
+                if(countList>3) {
+                  var newULR = '<div class="checklist"><ul class="check">';
+                  var offset = Math.round(countList/colNum);
+                  var offsetKey = offset-1;
+                  list.eq(offsetKey).addClass('end');
+                  var i=1;
+                  list.each(function(){
+                    if(i % offset==0 && i!=countList) {
+                      newULR += '<li>'+$(this).html()+'</li></ul><ul class="check">';
+                    } else {
+                      newULR += '<li>'+$(this).html()+'</li>';
+                    }
+                    i++;
+                  });
+                  newULR +="</ul></div>";
+                  targetUL.replaceWith(newULR);
+                }
+              }
             });
           }
         }
