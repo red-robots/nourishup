@@ -1654,6 +1654,9 @@ body.logged-in.admin-bar header.site-header.sticky{top:31px}
 .repeatable-flexible-blocks .twocolumn .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .repeatable-flexible-blocks .twocolumn .fxcol{width:100%}
 .repeatable-flexible-blocks .twocolumn .fxcol ul.check{width:100%}
+body.single-stories #main h1{font-size:2.3rem !important}
+body.single-stories #main .flexwrap.full{padding:80px 0}
+body.single-stories #main .flexwrap.full .fxcol{width:100%}
 body.single-stories #main .twocol{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:80px 0}
 body.single-stories #main .twocol .titlediv{margin-bottom:2em}
 body.single-stories #main .twocol .fxcol{width:100%}
