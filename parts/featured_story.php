@@ -3,11 +3,12 @@ if( isset($result) && $result ) { ?>
 <div class="featured-story-wrap">
   <?php
     $pid = $result->ID;
-    $title =  $result->post_title;;
+    $title =  $result->post_title;
     //$excerpt = get_field('excerpt', $pid);
     $image = get_the_post_thumbnail($pid);
     $content = $result->post_content;
-    $excerpt = getParagraph($content, 3);
+    $numpara = 2;
+    $excerpt = getParagraph($content, $numpara);
 
     if( get_field('excerpt', $pid) ) {
       $excerpt = get_field('excerpt', $pid);
@@ -25,7 +26,12 @@ if( isset($result) && $result ) { ?>
 
       <div class="featuredSectionTitle"></div>
       <?php if($excerpt) { ?>
-      <div class="excerpt"><?php echo $excerpt ?></div>
+      <div class="excerpt">
+      <?php if($title) { ?>
+      <h3 class="title"><?php echo $title; ?></h3>
+      <?php } ?>  
+      <?php echo $excerpt ?>
+      </div>
       <div class="readmore"><a href="<?php echo get_permalink($pid); ?>" class="more">Read More</a></div>
       <?php } ?>
     </div>

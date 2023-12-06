@@ -35,22 +35,12 @@ get_header(); ?>
       <?php if( has_post_thumbnail() ) { ?>
         
         <div class="flexwrap twocol">
-          <div class="fxcol full">
-          <?php if( get_page_template_slug( get_the_ID() ) ) { ?>
-            <div class="titlediv is-template">
-              <?php if($heading) { ?>
-                <h1 class="page-title"><?php the_title(); ?></h1>
-              <?php } ?>
-            </div>
-          <?php } else { ?>
-            <!-- <div class="titlediv typical">
-              <h1 class="page-title"><span><?php //the_title(); ?></span></h1>
-            </div> -->
-          <?php } ?>
-          </div>
           <div class="fxcol left">
           <?php if ( get_the_content() ) { ?>
           <div class="entry-content padtop">
+              <?php if($heading) { ?>
+                <h1 class="page-title"><?php the_title(); ?></h1>
+              <?php } ?>
             <?php the_content(); ?>
           </div>
           <?php } ?>
