@@ -2039,7 +2039,11 @@ body:not(.home) {
 }
 
 
-
+body:not(.home) {
+  .site-header.sticky .site-logo .logo-shrink {
+    top: 0;
+  }
+}
 body.logged-in.admin-bar {
   header.site-header.sticky {
     top: 31px;

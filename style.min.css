@@ -1633,6 +1633,7 @@ body:not(.home).page-template-default .gform_wrapper li.gchoice [type=checkbox]:
 body:not(.home).page-template-default .gform_wrapper .gform_button{cursor:pointer;display:inline-block;text-decoration:none;background:#f26522;color:#fff !important;font-size:16px;font-weight:600;line-height:1.1;letter-spacing:.04em;text-transform:uppercase;padding:11px 30px 10px !important;border-radius:100px;border:none !important;-webkit-appearance:none;-moz-appearance:none;appearance:none}
 body:not(.home).page-template-default .gform_wrapper .gform_button:hover,body:not(.home).page-template-default .gform_wrapper .gform_button:focus{background:#fcb405 !important;-webkit-box-shadow:0 6px 20px rgba(0,0,0,.15);box-shadow:0 6px 20px rgba(0,0,0,.15)}
 body:not(.home).page-template-default .gform_wrapper .gform_button:focus{outline:1px dotted #000}
+body:not(.home) .site-header.sticky .site-logo .logo-shrink{top:0}
 body.logged-in.admin-bar header.site-header.sticky{top:31px}
 .menu-toggle{display:none;width:30px;height:35px;background:transparent;position:absolute;top:17px;right:22px;z-index:20}
 .menu-toggle span.bar,.menu-toggle span.bar:before,.menu-toggle span.bar:after{display:block;width:100%;height:3px;background:#3d5588;position:absolute;left:0;-webkit-transition:all ease .3s;transition:all ease .3s}
