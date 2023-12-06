@@ -1685,7 +1685,7 @@ body.single-stories #main .twocol .fxcol.right{width:45%}
 .repeatable-columns .rcolumn.feat-image{margin-bottom:80px;margin-top:80px}
 .repeatable-fullwidth-text-block .inside{padding:4vw 5vw}
 }@media screen and (min-width:1400px){.wp-block-columns.involved,.wp-block-columns.involved .wp-block-columns{gap:5vw}
-.repeatable-columns .rcolumn .inside{padding:20px 5vw 3vw}
+.repeatable-columns .rcolumn .inside{padding:20px 4vw 3vw}
 .repeatable-image-text-block .inner-block{padding:3.5vw}
 .repeatable-twocol-text-block{padding-top:5vw;padding-bottom:6vw}
 }@media screen and (min-width:1600px){#RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image a{width:13vw}
