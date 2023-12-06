@@ -1463,7 +1463,7 @@ h6{font-size:28px}
 #RecentNews ul.wp-block-latest-posts .morelink:after{content:"";display:inline-block;width:0;height:0;border-left:8px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent;position:absolute;top:5px;right:0;-webkit-transition:-webkit-transform ease .3s;transition:-webkit-transform ease .3s;transition:transform ease .3s;transition:transform ease .3s,-webkit-transform ease .3s}
 #RecentNews ul.wp-block-latest-posts .morelink:hover,#RecentNews ul.wp-block-latest-posts .morelink:focus{color:#f26522 !important}
 #RecentNews ul.wp-block-latest-posts .morelink:hover:after,#RecentNews ul.wp-block-latest-posts .morelink:focus:after{border-left-color:#f26522;-webkit-transform:translateX(5px);transform:translateX(5px)}
-#AboutNourishUp h2,#GetInvolved h2,#DonateToday h2{font-weight:500 !important;color:#282f6f}
+#AboutNourishUp h2,#GetInvolved h2,#DonateToday h2{font-weight:600 !important;color:#282f6f}
 #GetInvolved{padding-left:20px;padding-right:20px}
 #GetInvolved h2.wp-block-heading{margin-bottom:40px !important}
 #GetInvolved p strong{font-weight:600 !important}
