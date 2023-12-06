@@ -86,7 +86,7 @@
 					$LinkName = (isset($privacy['title']) && $privacy['title']) ? $privacy['title'] : '';
 					$url = (isset($privacy['url']) && $privacy['url']) ? $privacy['url'] : '';
 					if($LinkName && $url) {
-						$footLink .= '<span class="privacy-policy"><a href="href'.$url.'" target="'.$target.'">'.$LinkName.'</a></span>';
+						$footLink .= '<span class="privacy-policy"><a href="'.$url.'" target="'.$target.'">'.$LinkName.'</a></span>';
 					}
 				}
 				$footLink .= '<span class="poweredby"><a href="https://bellaworksweb.com/" target="_blank">Site by Bellaworks</a></span>';
