@@ -14,7 +14,7 @@ function js_custom_init() {
         'plural'    => 'Stories',
         'single'    => 'Story',
         'menu_icon' => 'dashicons-megaphone',
-        'supports'  => array('title','editor'),
+        'supports'  => array('title','editor','thumbnail'),
         'menu_position'=> 5
       ),
       array(

@@ -1455,8 +1455,8 @@ h6{font-size:28px}
 #RecentNews ul.wp-block-latest-posts li{margin:0;padding:20px 2vw;text-align:center;position:relative}
 #RecentNews ul.wp-block-latest-posts .inside{background:#3d5588;color:#fff;padding:20px 2vw;height:100%;color:#fff;font-size:16px;line-height:1.2}
 #RecentNews ul.wp-block-latest-posts .inside .posttitle{margin-top:25px;margin-bottom:40px;padding:0 1vw;font-size:15px;line-height:1.4}
-#RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image{width:100%;padding:0 2vw;margin-top:-60px}
-#RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image a{display:block;width:100%;background-size:cover;background-position:center;background-repeat:no-repeat}
+#RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image{width:100%;padding:0;margin-top:-60px;right:2vw;position:relative;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+#RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image a{display:block;width:11vw;background-size:cover;background-position:center;background-repeat:no-repeat}
 #RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image img.wp-post-image{display:none}
 #RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image img.resizer{width:100%;height:auto}
 #RecentNews ul.wp-block-latest-posts .morelink{display:inline-block;border:none !important;padding:0 !important;text-decoration:underline;font-size:16px;line-height:1.2;position:relative;color:#fff;padding-right:15px !important}
