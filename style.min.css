@@ -1459,7 +1459,7 @@ h6{font-size:28px}
 #RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image a{display:block;width:11vw;background-size:cover;background-position:center;background-repeat:no-repeat}
 #RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image img.wp-post-image{display:none}
 #RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image img.resizer{width:100%;height:auto}
-#RecentNews ul.wp-block-latest-posts .morelink{display:inline-block;border:none !important;padding:0 !important;text-decoration:underline;font-size:16px;line-height:1.2;position:relative;color:#fff;padding-right:15px !important}
+#RecentNews ul.wp-block-latest-posts .morelink{display:inline-block;border:none !important;padding:0 !important;text-decoration:underline;font-size:16px;font-weight:500;line-height:1.2;position:relative;color:#fff;padding-right:15px !important}
 #RecentNews ul.wp-block-latest-posts .morelink:after{content:"";display:inline-block;width:0;height:0;border-left:8px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent;position:absolute;top:5px;right:0;-webkit-transition:-webkit-transform ease .3s;transition:-webkit-transform ease .3s;transition:transform ease .3s;transition:transform ease .3s,-webkit-transform ease .3s}
 #RecentNews ul.wp-block-latest-posts .morelink:hover,#RecentNews ul.wp-block-latest-posts .morelink:focus{color:#f26522 !important}
 #RecentNews ul.wp-block-latest-posts .morelink:hover:after,#RecentNews ul.wp-block-latest-posts .morelink:focus:after{border-left-color:#f26522;-webkit-transform:translateX(5px);transform:translateX(5px)}
@@ -1484,7 +1484,7 @@ h6{font-size:28px}
 .footerTextBlock .wrapper,.footerTextBlock .flexwrap{height:100%}
 .footerTextBlock .wrapper{max-width:800px;position:relative;z-index:10}
 .footerTextBlock .buttonwrap{margin-top:30px}
-.footerTextBlock .buttonwrap a{display:inline-block;text-decoration:none;font-size:16px;font-weight:500;line-height:1.2;padding:12px 30px;background:#f26522;text-transform:uppercase;border-radius:200px;color:#fff !important}
+.footerTextBlock .buttonwrap a{display:inline-block;text-decoration:none;font-size:18px;font-weight:600;line-height:1.2;letter-spacing:.03em;padding:12px 30px;background:#f26522;text-transform:uppercase;border-radius:200px;color:#fff !important}
 .footerTextBlock .buttonwrap a:hover,.footerTextBlock .buttonwrap a:focus{background:#fcb405;color:#fff !important}
 .footerTextBlock .flexwrap .textwrap,.footerTextBlock .flexwrap .buttonwrap{width:100%;text-align:center}
 .footerTextBlock .flexwrap .textwrap{font-size:2.3em;font-weight:500;line-height:1.2;color:#fff}
