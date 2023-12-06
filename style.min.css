@@ -1539,7 +1539,7 @@ footer.site-footer .footer-partners .footerInner img{width:auto;height:auto}
 .repeatable-intro{color:#282f6f;text-align:center}
 .repeatable-intro h2,.repeatable-intro p{color:#282f6f}
 .repeatable-intro h2{color:#282f6f;font-size:42px;font-weight:bold;line-height:1.2;margin:0}
-.repeatable-intro .wrapper{max-width:1000px;padding-top:50px;padding-bottom:50px}
+.repeatable-intro .wrapper{max-width:1000px;padding-top:65px;padding-bottom:50px}
 .repeatable-intro .textwrap p:last-child{margin-bottom:0;padding-bottom:0}
 a.link-arrow{display:inline-block;text-decoration:none;position:relative;color:#fff;font-weight:500;letter-spacing:.02em;border-bottom:1px solid #fff}
 a.link-arrow:after{content:"";display:inline-block;width:0;height:0;border-left:8px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent;position:absolute;top:6px;right:-15px;-webkit-transition:-webkit-transform ease .3s;transition:-webkit-transform ease .3s;transition:transform ease .3s;transition:transform ease .3s,-webkit-transform ease .3s}
@@ -1654,6 +1654,12 @@ body.logged-in.admin-bar header.site-header.sticky{top:31px}
 .repeatable-flexible-blocks .twocolumn .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .repeatable-flexible-blocks .twocolumn .fxcol{width:100%}
 .repeatable-flexible-blocks .twocolumn .fxcol ul.check{width:100%}
+body.single-stories #main .twocol{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:80px 0}
+body.single-stories #main .twocol .titlediv{margin-bottom:2em}
+body.single-stories #main .twocol .fxcol{width:100%}
+body.single-stories #main .twocol p:first-child{margin-top:0}
+body.single-stories #main .twocol .fxcol.right figure{margin:0}
+body.single-stories #main .twocol .fxcol.right img{width:100%;height:auto}
 @media screen and (min-width:800px){.repeatable-image-text-block .flexwrap.half{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .repeatable-image-text-block .flexwrap.half .imageCol{width:40%;margin-bottom:0}
 .repeatable-image-text-block .flexwrap.half .textCol{width:55%}
@@ -1665,6 +1671,8 @@ body.logged-in.admin-bar header.site-header.sticky{top:31px}
 .repeatable-image-text-block.block-type-full .flexwrap.half .textCol{padding:5vw 4vw}
 .repeatable-image-text-block.block-type-full.img_right .flexwrap.half{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 .repeatable-image-text-block.block-type-full.img_right .flexwrap.half .imageCol{left:unset;right:0}
+}@media screen and (min-width:1024px){body.single-stories #main .twocol .fxcol.left{width:50%}
+body.single-stories #main .twocol .fxcol.right{width:45%}
 }@media screen and (min-width:1025px){.repeatable-flexible-blocks .twocolumn.twocol .fxcol{width:48%}
 }@media screen and (min-width:1300px){.rounded-images .wp-block-group__inner-container .wp-block-group-is-layout-flex{gap:5rem}
 .repeatable-columns .rcolumn{margin-bottom:70px}
@@ -1684,6 +1692,8 @@ body.logged-in.admin-bar header.site-header.sticky{top:31px}
 #DonateToday:before{background-position:center right}
 #DonateToday:after{background-position:center left}
 #DonateToday .wp-block-group.textwrap{max-width:500px;width:100%;margin:0 auto}
+}@media screen and (max-width:1023px){body.single-stories #main .twocol .fxcol.right{width:100%;height:auto}
+body.single-stories #main .twocol .fxcol.right{margin-top:30px}
 }@media screen and (max-width:1000px){.site-header{height:70px}
 .site-header .site-logo{width:95px}
 .site-header .site-logo a{padding:10px}

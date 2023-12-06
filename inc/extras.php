@@ -250,17 +250,21 @@ function my_acf_save_post( $post_id ) {
 add_shortcode( 'featured_story', 'featured_story_func' );
 function featured_story_func( $atts ) {
   global $wpdb;
-  $query = "SELECT meta_id, post_id FROM ".$wpdb->prefix."postmeta WHERE meta_key='featured_story' AND meta_value='1'";
+  $query = "SELECT p.*, pm.post_id, pm.meta_id FROM ".$wpdb->prefix."posts p, ".$wpdb->prefix."postmeta pm WHERE p.ID=pm.post_id AND p.post_status='publish' AND pm.meta_key='featured_story' AND pm.meta_value='1'";
   $result = $wpdb->get_row($query);
   $output = '';
   if($result) {
       $postid = $result->post_id;
-      if( $featured = get_post($postid) ) {            
-          ob_start();
-          include( locate_template('parts/featured_story.php') ); 
-          $output = ob_get_contents();
-          ob_end_clean();
-      }
+    //   if( $featured = get_post($postid) ) {            
+    //       ob_start();
+    //       include( locate_template('parts/featured_story.php') ); 
+    //       $output = ob_get_contents();
+    //       ob_end_clean();
+    //   }
+    ob_start();
+    include( locate_template('parts/featured_story.php') ); 
+    $output = ob_get_contents();
+    ob_end_clean();
   }
   return $output;
 }
@@ -354,3 +358,18 @@ function myplugin_register_tinymce_javascript( $plugin_array ) {
    return $plugin_array;
 }
 
+
+
+function getParagraph($content, $num=0) {
+    $post_content = apply_filters('the_content', $content);
+    $post_content = str_replace('</p>', '', $post_content);
+    $paras = explode('<p>', $post_content);
+    array_shift($paras);
+    $output = '';
+    if($num) {
+        for($i=0; $i<$num; $i++) {
+            $output .= '<p>'. $paras[$i] .'</p>';
+        }
+    }
+    return $output; 
+}

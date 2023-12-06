@@ -9,6 +9,15 @@ add_action('init', 'js_custom_init', 1);
 function js_custom_init() {
     $post_types = array(
       array(
+        'post_type' => 'stories',
+        'menu_name' => 'Stories',
+        'plural'    => 'Stories',
+        'single'    => 'Story',
+        'menu_icon' => 'dashicons-megaphone',
+        'supports'  => array('title','editor'),
+        'menu_position'=> 5
+      ),
+      array(
         'post_type' => 'activities',
         'menu_name' => 'Activities',
         'plural'    => 'Activities',
