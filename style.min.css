@@ -1450,7 +1450,7 @@ h6{font-size:28px}
 .wp-block-group.impact .wp-block-group.numbers .wp-block-group{width:20%;padding:35px 10px;position:relative;border-left:2px solid #00b2cd}
 .wp-block-group.impact .wp-block-group.numbers .wp-block-group:first-child{border-left:none !important}
 #RecentNews{padding:20px 20px 30px}
-#RecentNews h2.wp-block-heading{margin-bottom:70px !important;color:#282f6f}
+#RecentNews h2.wp-block-heading{margin-bottom:70px !important;color:#282f6f;font-size:45px}
 #RecentNews ul.wp-block-latest-posts{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-left:-25px;margin-right:-25px}
 #RecentNews ul.wp-block-latest-posts li{margin:0;padding:20px 2vw;text-align:center;position:relative}
 #RecentNews ul.wp-block-latest-posts .inside{background:#3d5588;color:#fff;padding:20px 2vw;height:100%;color:#fff;font-size:16px;line-height:1.2}
