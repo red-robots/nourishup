@@ -746,6 +746,9 @@ h6 {font-size: 28px;}
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        @media screen and (min-width:1600px) {
+          width: 13vw;
+        }
       }
       img.wp-post-image {
         display: none;

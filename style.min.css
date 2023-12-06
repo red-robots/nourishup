@@ -1687,6 +1687,7 @@ body.single-stories #main .twocol .fxcol.right{width:45%}
 .repeatable-columns .rcolumn .inside{padding:20px 5vw 3vw}
 .repeatable-image-text-block .inner-block{padding:3.5vw}
 .repeatable-twocol-text-block{padding-top:5vw;padding-bottom:6vw}
+}@media screen and (min-width:1600px){#RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image a{width:13vw}
 }@media screen and (max-width:1470px){.featured-story-wrap{padding-left:30px;padding-right:30px}
 }@media screen and (max-width:1400px){#AboutNourishUp .wp-block-columns .wp-block-column:nth-child(2){padding-left:2vw}
 }@media screen and (max-width:1100px){.wp-block-group.impact .wp-block-group.numbers{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
