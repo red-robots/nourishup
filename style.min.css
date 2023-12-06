@@ -1536,7 +1536,7 @@ footer.site-footer .footer-partners .footerInner img{width:auto;height:auto}
 .repeatable-hero .heroText{position:absolute;top:0;left:0;width:100%;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;z-index:10;text-align:center}
 .repeatable-hero .heroText h1{font-size:5rem;font-weight:500;line-height:1.2;letter-spacing:.05em;text-transform:uppercase;margin:0;color:#fff}
 .repeatable-hero .overlay-background{position:absolute;top:0;left:0;width:100%;height:100%;background-color:#051027;opacity:.6;z-index:2}
-.repeatable-intro{color:#282f6f;text-align:center}
+.repeatable-intro{color:#282f6f;text-align:center;padding-bottom:30px}
 .repeatable-intro h2,.repeatable-intro p{color:#282f6f}
 .repeatable-intro h2{color:#282f6f;font-size:42px;font-weight:bold;line-height:1.2;margin:0}
 .repeatable-intro .wrapper{max-width:1000px;padding-top:65px;padding-bottom:50px}
@@ -1680,7 +1680,7 @@ body.single-stories #main .twocol .fxcol.right img{width:100%;height:auto}
 body.single-stories #main .twocol .fxcol.right{width:45%}
 }@media screen and (min-width:1025px){.repeatable-flexible-blocks .twocolumn.twocol .fxcol{width:48%}
 }@media screen and (min-width:1300px){.rounded-images .wp-block-group__inner-container .wp-block-group-is-layout-flex{gap:5rem}
-.repeatable-columns .rcolumn{margin-bottom:70px}
+.repeatable-columns .rcolumn{margin-bottom:110px}
 .repeatable-columns .rcolumn .inside{padding:20px 3vw 3vw}
 .repeatable-columns .rcolumn.feat-image{margin-bottom:80px;margin-top:80px}
 .repeatable-fullwidth-text-block .inside{padding:4vw 5vw}
