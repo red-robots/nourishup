@@ -1452,11 +1452,11 @@ h6{font-size:28px}
 #RecentNews{padding:20px 20px 30px}
 #RecentNews h2.wp-block-heading{margin-bottom:70px !important;color:#282f6f;font-size:45px}
 #RecentNews ul.wp-block-latest-posts{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-left:-25px;margin-right:-25px}
-#RecentNews ul.wp-block-latest-posts li{margin:0;padding:20px 2vw;text-align:center;position:relative}
+#RecentNews ul.wp-block-latest-posts li{margin:0;padding:20px 15px;text-align:center;position:relative}
 #RecentNews ul.wp-block-latest-posts .inside{background:#3d5588;color:#fff;padding:20px 2vw;height:100%;color:#fff;font-size:16px;line-height:1.2}
 #RecentNews ul.wp-block-latest-posts .inside .posttitle{margin-top:25px;margin-bottom:40px;padding:0 1vw;font-size:15px;line-height:1.4}
 #RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image{width:100%;padding:0;margin-top:-60px;right:2vw;position:relative;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
-#RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image a{display:block;width:11vw;background-size:cover;background-position:center;background-repeat:no-repeat}
+#RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image a{display:block;width:150px;background-size:cover;background-position:center;background-repeat:no-repeat}
 #RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image img.wp-post-image{display:none}
 #RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image img.resizer{width:100%;height:auto}
 #RecentNews ul.wp-block-latest-posts .morelink{display:inline-block;border:none !important;padding:0 !important;text-decoration:underline;font-size:16px;font-weight:500;line-height:1.2;position:relative;color:#fff;padding-right:15px !important}
@@ -1685,10 +1685,11 @@ body.single-stories #main .twocol .fxcol.right{width:45%}
 .repeatable-columns .rcolumn.feat-image{margin-bottom:80px;margin-top:80px}
 .repeatable-fullwidth-text-block .inside{padding:4vw 5vw}
 }@media screen and (min-width:1400px){.wp-block-columns.involved,.wp-block-columns.involved .wp-block-columns{gap:5vw}
+#RecentNews ul.wp-block-latest-posts li{padding-left:25px;padding-right:25px}
 .repeatable-columns .rcolumn .inside{padding:20px 4vw 3vw}
 .repeatable-image-text-block .inner-block{padding:3.5vw}
 .repeatable-twocol-text-block{padding-top:5vw;padding-bottom:6vw}
-}@media screen and (min-width:1600px){#RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image a{width:13vw}
+}@media screen and (min-width:1600px){#RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image a{width:240px}
 }@media screen and (max-width:1470px){.featured-story-wrap{padding-left:30px;padding-right:30px}
 }@media screen and (max-width:1400px){#AboutNourishUp .wp-block-columns .wp-block-column:nth-child(2){padding-left:2vw}
 }@media screen and (max-width:1100px){.wp-block-group.impact .wp-block-group.numbers{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
@@ -1724,6 +1725,9 @@ body.home .site-header.sticky .site-logo{width:95px}
 body.home .site-header.sticky .site-logo .logo-shrink{top:2px}
 body:not(.home) .site-header.sticky img.logo-shrink{display:none}
 body:not(.home) .site-header.sticky img.logo-full{display:block}
+}@media screen and (max-width:992px){#RecentNews ul.wp-block-latest-posts{-ms-flex-wrap:wrap;flex-wrap:wrap;padding:0 20px}
+#RecentNews ul.wp-block-latest-posts li{width:50%;margin-top:20px;margin-bottom:20px}
+#RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image a{width:200px}
 }@media screen and (max-width:960px){footer.site-footer .footer-partners .footerInner{-ms-flex-wrap:wrap;flex-wrap:wrap;gap:0}
 footer.site-footer .footer-partners .footerInner img{margin:10px 10px}
 .footerNavigation ul.menu{-ms-flex-wrap:wrap;flex-wrap:wrap}
@@ -1742,7 +1746,7 @@ body:not(.home).page-template-default .subpage-banner h1{font-size:3.5rem}
 .wp-block-columns.involved .wp-block-column,.wp-block-columns.involved .wp-block-columns .wp-block-column{margin:10px 0}
 .wp-block-columns.involved .wp-block-group.icon,.wp-block-columns.involved .wp-block-columns .wp-block-group.icon{max-width:360px;width:100%;margin:0 auto}
 .wp-block-group.impact .wp-block-group.numbers .wp-block-group{width:50%;border-left:0}
-#RecentNews ul.wp-block-latest-posts li{margin-top:40px;width:100%}
+#RecentNews ul.wp-block-latest-posts li{margin-top:40px;margin-top:0;width:100%}
 #RecentNews ul.wp-block-latest-posts li:first-child{margin-top:0}
 #RecentNews ul.wp-block-latest-posts .inside{padding:30px 7vw}
 #RecentNews li{max-width:500px;width:100%;margin:0 auto}
