@@ -1669,6 +1669,8 @@ body.single-stories #main .twocol .fxcol{width:100%}
 body.single-stories #main .twocol p:first-child{margin-top:0}
 body.single-stories #main .twocol .fxcol.right figure{margin:0}
 body.single-stories #main .twocol .fxcol.right img{width:100%;height:auto}
+.tribe-common .tribe-common-c-btn-border,.tribe-common a.tribe-common-c-btn-border{border:1px solid #3d5588 !important;color:#3d5588 !important}
+.tribe-common .tribe-common-c-btn-border:hover,.tribe-common .tribe-common-c-btn-border:focus,.tribe-common a.tribe-common-c-btn-border:hover,.tribe-common a.tribe-common-c-btn-border:focus{color:#fff !important;background-color:#3d5588 !important}
 @media screen and (min-width:800px){.repeatable-image-text-block .flexwrap.half{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .repeatable-image-text-block .flexwrap.half .imageCol{width:40%;margin-bottom:0}
 .repeatable-image-text-block .flexwrap.half .textCol{width:55%}

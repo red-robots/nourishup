@@ -2390,6 +2390,17 @@ body.single-stories {
   }
 }
 
+//TRIBE STYLES
+.tribe-common .tribe-common-c-btn-border,
+.tribe-common a.tribe-common-c-btn-border {
+  border: 1px solid $primary!important;
+  color: $primary!important;
+  &:hover, &:focus {
+    color: #FFF!important;
+    background-color: $primary!important;
+  }
+}
+
 @media screen and (max-width: 768px) {
   body:not(.home) {
     .site-header .site-logo {
