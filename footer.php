@@ -58,7 +58,7 @@
 					$LinkName = (isset($mail['title']) && $mail['title']) ? $mail['title'] : '';
 					$url = (isset($mail['url']) && $mail['url']) ? $mail['url'] : '';
 					if($LinkName && $url) {
-						$contact_info .= '<span class="maillist"><a href="href'.$url.'" target="'.$target.'">'.$LinkName.'</a></span>';
+						$contact_info .= '<span class="maillist"><a href="'.$url.'" target="'.$target.'">'.$LinkName.'</a></span>';
 					}
 				}
 				if($contact_info) { ?>
