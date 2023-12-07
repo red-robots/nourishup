@@ -1442,18 +1442,13 @@ a.link-arrow {
       margin-top: 30px;
       margin-bottom: 30px;
     }
-    .text a {
-      color: #cb4a0d;
-      &:hover, &:focus {
-        color: #df9e0a;
-      }
-    }
     .inside {
       padding: 20px;
       background: #FAF3D6;
       color: $primary;
       height: 100%;
       text-align: center;
+      position: relative;
       @media screen and (min-width:1300px) {
         padding: 20px 3vw 3vw;
       }
@@ -1470,6 +1465,13 @@ a.link-arrow {
     .text {
       font-size: 16px;
       margin: 20px 0;
+      padding-bottom: 30px;
+      a {
+        color: #cb4a0d;
+        &:hover, &:focus {
+          color: #df9e0a;
+        }
+      }
     }
     .icondiv {
       width: 15vw;
@@ -1495,6 +1497,10 @@ a.link-arrow {
       }
     }
     .morelink {
+      position: absolute;
+      bottom: 35px;
+      left: 50%;
+      transform: translateX(-50%);
       a {
         display: inline-block;
         padding: 5px 17px 5px 10px;
