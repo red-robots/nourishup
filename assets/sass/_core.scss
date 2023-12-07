@@ -1467,9 +1467,10 @@ a.link-arrow {
       margin: 20px 0;
       padding-bottom: 30px;
       a {
-        color: #cb4a0d;
+        color: #3d5588;
         &:hover, &:focus {
-          color: #df9e0a;
+          color: #3d5588;
+          text-decoration: none!important;
         }
       }
     }

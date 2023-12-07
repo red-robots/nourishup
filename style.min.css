@@ -1553,8 +1553,8 @@ a.link-arrow:hover:after,a.link-arrow:focus:after{border-left-color:#fcb405 !imp
 .repeatable-columns .rcolumn .inside{padding:20px;background:#faf3d6;color:#3d5588;height:100%;text-align:center;position:relative}
 .repeatable-columns .rcolumn .coltitle{margin:0;font-size:20px;font-weight:600;line-height:1.2}
 .repeatable-columns .rcolumn .text{font-size:16px;margin:20px 0;padding-bottom:30px}
-.repeatable-columns .rcolumn .text a{color:#cb4a0d}
-.repeatable-columns .rcolumn .text a:hover,.repeatable-columns .rcolumn .text a:focus{color:#df9e0a}
+.repeatable-columns .rcolumn .text a{color:#3d5588}
+.repeatable-columns .rcolumn .text a:hover,.repeatable-columns .rcolumn .text a:focus{color:#3d5588;text-decoration:none !important}
 .repeatable-columns .rcolumn .icondiv{width:15vw;height:15vw;position:relative;margin:-6vw auto 40px}
 .repeatable-columns .rcolumn .icondiv span{display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-size:contain;background-position:center;background-repeat:no-repeat;-webkit-transform:scale(0.65);transform:scale(0.65)}
 .repeatable-columns .rcolumn .morelink{position:absolute;bottom:35px;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}
