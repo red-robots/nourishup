@@ -1837,8 +1837,15 @@ div.checklist {
   padding: 50px 20px;
   margin-bottom: 70px;
   @media screen and (min-width:1400px) {
-    padding-top: 5vw;
-    padding-bottom: 6vw;
+    // padding-top: 5vw;
+    // padding-bottom: 6vw;
+  }
+  .wrapper {
+    max-width: 1360px;
+    padding: 30px;
+    @media screen and (min-width:1600px) {
+      padding: 40px;
+    }
   }
   .flexwrap {
     flex-wrap: wrap;
@@ -2065,8 +2072,12 @@ body:not(.home) {
 
 
 body:not(.home) {
+  .site-header.sticky .site-logo {
+    justify-content: flex-start;
+  }
   .site-header.sticky .site-logo .logo-shrink {
     top: 0;
+    left: -11px;
   }
 }
 body.logged-in.admin-bar {
@@ -2255,9 +2266,14 @@ body.logged-in.admin-bar {
 .repeatable-flexible-blocks {
   margin-top: 20px;
   margin-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
   .wrapper {
-    padding-top: 20px;
-    padding-bottom: 30px;
+    max-width: 1360px;
+    padding: 30px;
+    @media screen and (min-width:1600px) {
+      padding: 40px;
+    }
   }
   .button {
     display: inline-block;

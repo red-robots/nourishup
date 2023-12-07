@@ -267,8 +267,8 @@
       $bgcolor = get_sub_field('bgcolor'); 
       $bclass = ( $textLeft && $textRight ) ? 'half':'full';
       ?>
-      <div class="repeatable-twocol-text-block repeatable-twocol-text-block-<?php echo $i?>  repeatable <?php echo $bclass?>" style="background:<?php echo $bgcolor?>;color:<?php echo $textcolor?>">
-        <div class="wrapper">
+      <div class="repeatable-twocol-text-block repeatable-twocol-text-block-<?php echo $i?>  repeatable <?php echo $bclass?>">
+        <div class="wrapper" style="background:<?php echo $bgcolor?>;color:<?php echo $textcolor?>">
           <div class="flexwrap">
             <?php if($textLeft) { ?>
               <div class="textLeft"><?php echo $textLeft?></div>
@@ -293,8 +293,8 @@
           border-right-color: #3A5788;
         }
       </style>
-      <div class="repeatable-flexible-blocks repeatable-flexible-blocks<?php echo $i?> repeatable" style="background:<?php echo $bgcolor?>;color:<?php echo $textcolor?>">
-        <div class="wrapper">
+      <div class="repeatable-flexible-blocks repeatable-flexible-blocks<?php echo $i?> repeatable">
+        <div class="wrapper" style="background:<?php echo $bgcolor?>;color:<?php echo $textcolor?>;">
         <?php foreach($flexible as $a) { 
           $layout = $a['acf_fc_layout'];
           $fullwidth = (isset($a['fullwidth_content']) && $a['fullwidth_content']) ? $a['fullwidth_content'] : '';
