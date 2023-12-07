@@ -1392,6 +1392,7 @@ h6{font-size:28px}
 .wp-block-group.intro{color:#282f6f;margin:0 auto}
 .wp-block-group.intro .wp-block-heading{color:#282f6f;font-size:42px;font-weight:bold;line-height:1.2}
 .wp-block-group.intro .wp-block-group__inner-container{max-width:940px;width:100%;margin:0 auto}
+body.home .wp-block-group.intro{padding-top:40px !important;padding-bottom:20px !important}
 .rounded-images{padding-top:50px;padding-bottom:80px}
 .rounded-images .is-layout-flex{-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}
 .rounded-images .is-layout-flex .wp-block-group{max-width:450px;width:100%}
