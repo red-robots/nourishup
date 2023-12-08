@@ -1770,6 +1770,8 @@ footer.site-footer .footer-partners .footerInner img{margin:10px 10px}
 .repeatable-columns .rcolumn .icondiv{width:160px;height:160px;margin-top:-70px}
 .repeatable-columns .rcolumn.feat-image .icondiv{width:230px;height:230px}
 body:not(.home).page-template-default .subpage-banner h1{font-size:3.5rem}
+}@media screen and (max-width:900px){#primary.post-type-post #main.wrapper,#primary.post-type-post #single-post-widget{width:100%}
+#primary.post-type-post #single-post-widget{margin-top:40px}
 }@media screen and (max-width:820px){.featured-story-wrap{padding:30px 30px}
 .featured-story-wrap .flexwrap .textcol,.featured-story-wrap .flexwrap .imagecol{width:100% !important}
 .featured-story-wrap .flexwrap .imagecol{margin-top:40px}

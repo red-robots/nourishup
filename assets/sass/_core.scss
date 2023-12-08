@@ -2511,6 +2511,15 @@ body.single-stories {
       }
     }
   } 
+  @media screen and (max-width: 900px) {
+    #main.wrapper,
+    #single-post-widget {
+      width: 100%;
+    }
+    #single-post-widget {
+      margin-top: 40px;
+    }
+  }
 }
 
 //TRIBE STYLES
