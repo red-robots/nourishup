@@ -2419,6 +2419,14 @@ body.single-stories {
   }
 }
 
+body.single-stories,
+body.single-post {
+  h1.big-title {
+    font-size: 3.85rem;
+  }
+}
+
+#primary.post-type-stories,
 #primary.post-type-post {
   max-width: 1400px;
   width: 100%;
@@ -2440,8 +2448,15 @@ body.single-stories {
         height: auto;
       }
     }
+    .flexwrap {
+      margin: 0 0!important;
+      padding: 0 0!important;
+    }
     .fxcol {
       width: 100%;
+      &.image {
+        margin-bottom: 30px;
+      }
     }
   }
   #single-post-widget {
