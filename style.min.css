@@ -1533,12 +1533,12 @@ footer.site-footer .footer-partners .footerInner img{width:auto;height:auto}
 .footer-privacy a:after{content:"";display:block;width:100%;-webkit-transition:-webkit-transform ease .3s;transition:-webkit-transform ease .3s;transition:transform ease .3s;transition:transform ease .3s,-webkit-transform ease .3s;border-bottom:1px solid rgba(250,243,214,.4)}
 .footer-privacy a:hover,.footer-privacy a:focus{color:#fcb405}
 .footer-privacy a:focus{outline:1px dotted #fcb405}
-.repeatable-hero{position:relative;min-height:400px}
-.repeatable-hero .hero-image{height:100%;left:0;margin:0;max-height:none;max-width:none;-o-object-fit:cover;object-fit:cover;outline:0;padding:0;position:absolute;right:0;top:0;width:100%}
-.repeatable-hero .sm-title{font-size:1.4em;font-weight:500;line-height:1.3;color:#fff}
-.repeatable-hero .heroText{position:absolute;top:0;left:0;width:100%;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;z-index:10;text-align:center}
-.repeatable-hero .heroText h1{font-size:5rem;font-weight:500;line-height:1.2;letter-spacing:.05em;text-transform:uppercase;margin:0;color:#fff}
-.repeatable-hero .overlay-background{position:absolute;top:0;left:0;width:100%;height:100%;background-color:#051027;opacity:.6;z-index:2}
+.subpageHero,.repeatable-hero{position:relative;min-height:400px}
+.subpageHero img.wp-post-image,.subpageHero .hero-image,.repeatable-hero img.wp-post-image,.repeatable-hero .hero-image{height:100%;left:0;margin:0;max-height:none;max-width:none;-o-object-fit:cover;object-fit:cover;outline:0;padding:0;position:absolute;right:0;top:0;width:100%}
+.subpageHero .sm-title,.repeatable-hero .sm-title{font-size:1.4em;font-weight:500;line-height:1.3;color:#fff}
+.subpageHero .heroText,.repeatable-hero .heroText{position:absolute;top:0;left:0;width:100%;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;z-index:10;text-align:center}
+.subpageHero .heroText h1,.repeatable-hero .heroText h1{font-size:5rem;font-weight:500;line-height:1.2;letter-spacing:.05em;text-transform:uppercase;margin:0;color:#fff}
+.subpageHero .overlay-background,.repeatable-hero .overlay-background{position:absolute;top:0;left:0;width:100%;height:100%;background-color:#051027;opacity:.6;z-index:2}
 .repeatable-intro{color:#282f6f;text-align:center;padding-bottom:30px}
 .repeatable-intro h2,.repeatable-intro p{color:#282f6f}
 .repeatable-intro h2{color:#282f6f;font-size:42px;font-weight:bold;line-height:1.2;margin:0}
@@ -1744,7 +1744,7 @@ footer.site-footer .footer-partners .footerInner img{margin:10px 10px}
 .footer-contact-info .footerInner span{position:relative}
 .footer-contact-info .footerInner span i{position:absolute;top:8px;left:0;margin-right:0}
 .footer-contact-info .footerInner span i.fa-location-dot{left:5px}
-.repeatable-hero .heroText h1{font-size:3.5rem}
+.subpageHero .heroText h1,.repeatable-hero .heroText h1{font-size:3.5rem}
 .repeatable-columns .rcolumn{width:50%}
 .repeatable-columns .rcolumn .icondiv{width:160px;height:160px;margin-top:-70px}
 .repeatable-columns .rcolumn.feat-image .icondiv{width:230px;height:230px}
@@ -1762,7 +1762,7 @@ body:not(.home).page-template-default .subpage-banner h1{font-size:3.5rem}
 #RecentNews li{max-width:500px;width:100%;margin:0 auto}
 .footerTextBlock:before{left:-27%}
 .footerTextBlock:after{right:-27%}
-.repeatable-hero{min-height:430px}
+.subpageHero,.repeatable-hero{min-height:430px}
 div.checklist ul{width:100%}
 .repeatable-twocol-text-block.half .textLeft,.repeatable-twocol-text-block.half .textRight{width:100%}
 .repeatable-twocol-text-block div.ChecklistWrap{margin-top:10px}

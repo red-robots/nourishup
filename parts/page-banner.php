@@ -6,7 +6,7 @@ if($is_tribe_events) {
   $hero = get_field('pantries_hero_image','option');  
   $pageTitle = get_field('pantries_page_title','option');  
   if($hero) { ?>
-  <div class="repeatable-hero repeatable">
+  <div class="subpageHero">
     <?php if($pageTitle) { ?>
     <div class="heroText">
       <div class="wrapper">
@@ -19,3 +19,23 @@ if($is_tribe_events) {
   </div>
 <?php } ?>
 <?php } ?>
+
+<?php
+//Default Page
+if( is_page() ) { 
+  if(get_the_post_thumbnail()) { 
+    $imageUrl = get_the_post_thumbnail_url();
+    ?>
+
+    <div class="subpageHero">
+      <div class="heroText">
+        <div class="wrapper">
+        <h1 class="big-title"><?php echo get_the_title()?></h1>
+        </div>
+      </div>
+      <span class="overlay-background"></span>
+      <?php the_post_thumbnail(); ?>
+    </div>
+  <?php } ?>
+<?php } ?>
+

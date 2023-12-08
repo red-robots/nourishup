@@ -1299,12 +1299,14 @@ footer.site-footer {
   }
 }
 
+.subpageHero,
 .repeatable-hero  {
   position: relative;
   min-height: 400px;
   @media screen and (max-width:820px) {
     min-height: 430px;
   }
+  img.wp-post-image,
   .hero-image {
     height: 100%;
     left: 0;
