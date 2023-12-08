@@ -11,31 +11,23 @@ $placeholder = THEMEURI . 'images/rectangle.png';
 $banner = get_field("banner_image");
 $has_banner = ($banner) ? 'hasbanner':'nobanner';
 global $post;
+$postType = get_post_type();
 $hero = get_field('stories_hero','option');
 $heading = get_field('stories_title','option');
 get_header(); ?>
 
-<div id="primary" class="content-area-full content-default page-default-template <?php echo $has_banner ?>">
-  <?php if($hero) { ?>
-    <div class="repeatable-hero repeatable">
-      <div class="heroText">
-        <div class="wrapper">
-        <?php if($heading) { ?>
-        <h1 class="big-title"><?php echo $heading; ?></h1>
-        <?php } ?>
-        </div>
-      </div>
-    <span class="overlay-background"></span>
-    <img src="https://nourishup.flywheelsites.com/wp-content/uploads/2023/11/banner2.jpg" alt="banner2" class="hero-image">
-    </div>
-  <?php } ?>
-
+<div id="primary" class="content-area-full content-default page-default-template post-type-<?php echo $postType ?> <?php echo $has_banner ?>">
+  
   <main id="main" class="site-main wrapper" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
       <?php if( has_post_thumbnail() ) { ?>
         
         <div class="flexwrap twocol">
-          <div class="fxcol left">
+          <div class="fxcol image">
+            <figure class="wp-featured-img"><?php the_post_thumbnail() ?></figure>
+          </div>
+
+          <div class="fxcol text">
           <?php if ( get_the_content() ) { ?>
           <div class="entry-content padtop">
               <?php if($heading) { ?>
@@ -44,10 +36,6 @@ get_header(); ?>
             <?php the_content(); ?>
           </div>
           <?php } ?>
-          </div>
-
-          <div class="fxcol right">
-            <figure class="wp-featured-img"><?php the_post_thumbnail() ?></figure>
           </div>
         </div>
 
@@ -71,13 +59,17 @@ get_header(); ?>
           <?php } ?>
         </div>
 
-      <?php } ?>
-
-			
+      <?php } ?>			
 
 		<?php endwhile; ?>
 
 	</main><!-- #main -->
+
+  <?php if($postType=='post') { ?>
+  <aside id="single-post-widget">
+    <?php get_template_part('parts/recent-news-widget'); ?>
+  </aside>
+  <?php } ?>			
 </div><!-- #primary -->
 
 <?php

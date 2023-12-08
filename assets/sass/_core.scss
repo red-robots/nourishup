@@ -1314,6 +1314,7 @@ footer.site-footer {
     max-height: none;
     max-width: none;
     object-fit: cover;
+    object-position: center;
     outline: none;
     padding: 0;
     position: absolute;
@@ -2362,22 +2363,26 @@ body.single-stories {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 80px 0;
+    @media screen and (min-width: 1024px) {
+      flex-direction: row-reverse;
+    }
     .titlediv {
       margin-bottom: 2em;
     }
     .fxcol {
       width: 100%;
-      &.right {
+      &.image {
         @media screen and (max-width: 1023px) {
           width: 100%;
           height: auto;
+          margin-bottom: 30px;
         }
       }
     }
     p:first-child {
       margin-top: 0;
     }
-    .fxcol.right {
+    .fxcol.image {
       figure {
         margin: 0 0;
       }
@@ -2390,10 +2395,10 @@ body.single-stories {
       }
     }
     @media screen and (min-width:1024px) {
-      .fxcol.left {
+      .fxcol.text {
         width: 50%;
       }
-      .fxcol.right {
+      .fxcol.image {
         width: 45%;
       }
     }
@@ -2412,6 +2417,100 @@ body.single-stories {
   .wp-block-group__inner-container .wp-block-heading:first-child {
     margin-top: 0;
   }
+}
+
+#primary.post-type-post {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  #main.wrapper {
+    max-width: unset;
+    width: 62%;
+    padding: 0 0;
+    margin: 0 0;
+    .wp-featured-img {
+      margin: 0 0;
+      img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .fxcol {
+      width: 100%;
+    }
+  }
+  #single-post-widget {
+    width: 33%;
+    background: $lightyellow;
+    padding: 20px;
+    @media screen and (min-width:1300px) {
+      padding: 40px;
+    }
+    h3 {
+      font-size: 35px;
+      line-height: 1.2;
+      margin: 0 0 20px;
+      color: $blue;
+    }
+    ul {
+      margin: 0 0;
+      padding: 0 0;
+      list-style: none;
+      li {
+        margin: 20px 0;
+      }
+      a {
+        color: $blue;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.25em;
+        line-height: 1.4;
+        &:hover, &:focus {
+          color: $secondary!important;
+        }
+      }
+    }
+    .morelink {
+      margin-top: 40px;
+    }
+    .morelink a {
+      display: inline-block;
+      border: none!important;
+      padding: 0!important;
+      text-decoration: underline;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.2;
+      position: relative;
+      color: $blue;
+      padding-right: 15px!important;
+      &:after {
+        content:"";
+        display:inline-block;
+        width: 0;
+        height: 0;
+        border-left: 8px solid $blue;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        position: absolute;
+        top: 5px;
+        right: 0;
+        transition: transform ease .3s;
+      }
+      &:hover, &:focus {
+        color: $secondary!important;
+        &:after {
+          border-left-color: $secondary;
+          transform: translateX(5px);
+        }
+      }
+    }
+  } 
 }
 
 //TRIBE STYLES
