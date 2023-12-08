@@ -2401,6 +2401,19 @@ body.single-stories {
   }
 }
 
+.wp-block-group.wrapper-middle,
+.wrapper-middle {
+  max-width: 1000px;
+  padding-top: 0;
+  padding-bottom: 0;
+  h2,h3,h4,h5,h6 {
+    color: $blue;
+  }
+  .wp-block-group__inner-container .wp-block-heading:first-child {
+    margin-top: 0;
+  }
+}
+
 //TRIBE STYLES
 .tribe-common .tribe-common-c-btn-border,
 .tribe-common a.tribe-common-c-btn-border {

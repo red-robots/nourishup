@@ -1672,6 +1672,9 @@ body.single-stories #main .twocol .fxcol{width:100%}
 body.single-stories #main .twocol p:first-child{margin-top:0}
 body.single-stories #main .twocol .fxcol.right figure{margin:0}
 body.single-stories #main .twocol .fxcol.right img{width:100%;height:auto}
+.wp-block-group.wrapper-middle,.wrapper-middle{max-width:1000px;padding-top:0;padding-bottom:0}
+.wp-block-group.wrapper-middle h2,.wp-block-group.wrapper-middle h3,.wp-block-group.wrapper-middle h4,.wp-block-group.wrapper-middle h5,.wp-block-group.wrapper-middle h6,.wrapper-middle h2,.wrapper-middle h3,.wrapper-middle h4,.wrapper-middle h5,.wrapper-middle h6{color:#282f6f}
+.wp-block-group.wrapper-middle .wp-block-group__inner-container .wp-block-heading:first-child,.wrapper-middle .wp-block-group__inner-container .wp-block-heading:first-child{margin-top:0}
 .tribe-common .tribe-common-c-btn-border,.tribe-common a.tribe-common-c-btn-border{border:1px solid #3d5588 !important;color:#3d5588 !important}
 .tribe-common .tribe-common-c-btn-border:hover,.tribe-common .tribe-common-c-btn-border:focus,.tribe-common a.tribe-common-c-btn-border:hover,.tribe-common a.tribe-common-c-btn-border:focus{color:#fff !important;background-color:#3d5588 !important}
 @media screen and (min-width:800px){.repeatable-image-text-block .flexwrap.half{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
