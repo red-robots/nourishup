@@ -18,6 +18,12 @@ html, body, *, ::before, ::after  {
 a,input,button,textarea {
   transition: all ease .3s;
 }
+a {
+  color: $primary;
+  &:hover {
+    text-decoration: none;
+  }
+}
 .sr {
   position: absolute;
   width: 1px;
@@ -2284,7 +2290,10 @@ body.logged-in.admin-bar {
     max-width: 1360px;
     padding: 30px;
     @media screen and (min-width:1600px) {
-      padding: 40px;
+      padding: 60px;
+    }
+    .fullwidth h3:first-child {
+      margin-top: 0;
     }
   }
   .button {

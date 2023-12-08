@@ -87,3 +87,5 @@ const params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v
 
 
   <div id="content" class="site-content">
+
+  <?php get_template_part('parts/page-banner'); ?>
