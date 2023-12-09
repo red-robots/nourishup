@@ -1539,7 +1539,7 @@ footer.site-footer .footer-partners .footerInner img{width:auto;height:auto}
 .subpageHero .heroText,.repeatable-hero .heroText{position:absolute;top:0;left:0;width:100%;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;z-index:10;text-align:center}
 .subpageHero .heroText h1,.repeatable-hero .heroText h1{font-size:5rem;font-weight:500;line-height:1.2;letter-spacing:.05em;text-transform:uppercase;margin:0;color:#fff}
 .subpageHero .overlay-background,.repeatable-hero .overlay-background{position:absolute;top:0;left:0;width:100%;height:100%;background-color:#051027;opacity:.6;z-index:2}
-.repeatable-intro{color:#282f6f;text-align:center;padding-bottom:30px}
+.repeatable-intro{color:#282f6f;text-align:center;padding-bottom:20px}
 .repeatable-intro h2,.repeatable-intro p{color:#282f6f}
 .repeatable-intro h2{color:#282f6f;font-size:42px;font-weight:bold;line-height:1.2;margin:0}
 .repeatable-intro .wrapper{max-width:1000px;padding-top:65px;padding-bottom:50px}
@@ -1651,7 +1651,7 @@ body.logged-in.admin-bar header.site-header.sticky{top:31px}
 .menu-toggle.active span:before{-webkit-transform:translateY(9px);transform:translateY(9px);opacity:0}
 .menu-toggle.active span:after{-webkit-transform:translateY(-9px) rotate(90deg);transform:translateY(-9px) rotate(90deg)}
 .repeatable-flexible-blocks{margin-top:20px;margin-bottom:60px;padding-left:20px;padding-right:20px}
-.repeatable-flexible-blocks .wrapper{max-width:1360px;padding:30px}
+.repeatable-flexible-blocks .wrapper{max-width:1360px;padding:40px}
 .repeatable-flexible-blocks .wrapper .fullwidth h3:first-child{margin-top:0}
 .repeatable-flexible-blocks .button{display:inline-block;margin:5px 0;padding:14px 25px 13px !important}
 .repeatable-flexible-blocks h3{margin-bottom:0 !important}
@@ -1711,6 +1711,7 @@ body.single-stories h1.big-title,body.single-post h1.big-title{font-size:3.85rem
 body.single-stories #main .twocol .fxcol.text{width:50%}
 body.single-stories #main .twocol .fxcol.image{width:45%}
 }@media screen and (min-width:1025px){.repeatable-flexible-blocks .twocolumn.twocol .fxcol{width:48%}
+}@media screen and (min-width:1200px){.repeatable-flexible-blocks .wrapper{padding:3vw 4vw}
 }@media screen and (min-width:1300px){.rounded-images .wp-block-group__inner-container .wp-block-group-is-layout-flex{gap:5rem}
 .repeatable-columns .rcolumn{margin-bottom:110px}
 .repeatable-columns .rcolumn .inside{padding:20px 3vw 3vw}
@@ -1724,7 +1725,6 @@ body.single-stories #main .twocol .fxcol.image{width:45%}
 }@media screen and (min-width:1600px){#RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image a{width:240px}
 #RecentNews ul.wp-block-latest-posts.columns-3 li{padding-left:40px;padding-right:40px}
 .repeatable-twocol-text-block .wrapper{padding:40px}
-.repeatable-flexible-blocks .wrapper{padding:60px}
 }@media screen and (max-width:1470px){.featured-story-wrap{padding-left:30px;padding-right:30px}
 }@media screen and (max-width:1400px){#AboutNourishUp .wp-block-columns .wp-block-column:nth-child(2){padding-left:2vw}
 }@media screen and (max-width:1100px){.wp-block-group.impact .wp-block-group.numbers{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}

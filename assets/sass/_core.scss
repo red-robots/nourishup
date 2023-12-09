@@ -1368,7 +1368,7 @@ footer.site-footer {
 .repeatable-intro {
   color: $blue;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   h2, p {
     color: $blue;
   }
@@ -2291,9 +2291,9 @@ body.logged-in.admin-bar {
   padding-right: 20px;
   .wrapper {
     max-width: 1360px;
-    padding: 30px;
-    @media screen and (min-width:1600px) {
-      padding: 60px;
+    padding: 40px;
+    @media screen and (min-width:1200px) {
+      padding: 3vw 4vw;
     }
     .fullwidth h3:first-child {
       margin-top: 0;
