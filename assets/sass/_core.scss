@@ -2407,7 +2407,8 @@ body.single-stories {
 }
 
 .wp-block-group.wrapper-middle,
-.wrapper-middle {
+.wp-block-group.wrapper-narrow,
+.wrapper-middle, .wrapper-narrow {
   max-width: 1000px;
   padding-top: 0;
   padding-bottom: 0;

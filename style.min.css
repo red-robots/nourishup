@@ -1672,9 +1672,9 @@ body.single-stories #main .twocol .fxcol{width:100%}
 body.single-stories #main .twocol p:first-child{margin-top:0}
 body.single-stories #main .twocol .fxcol.image figure{margin:0}
 body.single-stories #main .twocol .fxcol.image img{width:100%;height:auto}
-.wp-block-group.wrapper-middle,.wrapper-middle{max-width:1000px;padding-top:0;padding-bottom:0}
-.wp-block-group.wrapper-middle h2,.wp-block-group.wrapper-middle h3,.wp-block-group.wrapper-middle h4,.wp-block-group.wrapper-middle h5,.wp-block-group.wrapper-middle h6,.wrapper-middle h2,.wrapper-middle h3,.wrapper-middle h4,.wrapper-middle h5,.wrapper-middle h6{color:#282f6f}
-.wp-block-group.wrapper-middle .wp-block-group__inner-container .wp-block-heading:first-child,.wrapper-middle .wp-block-group__inner-container .wp-block-heading:first-child{margin-top:0}
+.wp-block-group.wrapper-middle,.wp-block-group.wrapper-narrow,.wrapper-middle,.wrapper-narrow{max-width:1000px;padding-top:0;padding-bottom:0}
+.wp-block-group.wrapper-middle h2,.wp-block-group.wrapper-middle h3,.wp-block-group.wrapper-middle h4,.wp-block-group.wrapper-middle h5,.wp-block-group.wrapper-middle h6,.wp-block-group.wrapper-narrow h2,.wp-block-group.wrapper-narrow h3,.wp-block-group.wrapper-narrow h4,.wp-block-group.wrapper-narrow h5,.wp-block-group.wrapper-narrow h6,.wrapper-middle h2,.wrapper-middle h3,.wrapper-middle h4,.wrapper-middle h5,.wrapper-middle h6,.wrapper-narrow h2,.wrapper-narrow h3,.wrapper-narrow h4,.wrapper-narrow h5,.wrapper-narrow h6{color:#282f6f}
+.wp-block-group.wrapper-middle .wp-block-group__inner-container .wp-block-heading:first-child,.wp-block-group.wrapper-narrow .wp-block-group__inner-container .wp-block-heading:first-child,.wrapper-middle .wp-block-group__inner-container .wp-block-heading:first-child,.wrapper-narrow .wp-block-group__inner-container .wp-block-heading:first-child{margin-top:0}
 body.single-stories h1.big-title,body.single-post h1.big-title{font-size:3.85rem}
 #primary.post-type-stories,#primary.post-type-post{max-width:1400px;width:100%;margin:0 auto;padding:100px 20px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 #primary.post-type-stories #main.wrapper,#primary.post-type-post #main.wrapper{max-width:unset;width:62%;padding:0;margin:0}
