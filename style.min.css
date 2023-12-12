@@ -1604,9 +1604,9 @@ div.checklist{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap
 div.checklist ul{display:block;-webkit-column-count:1;-moz-column-count:1;column-count:1;width:46%}
 div.checklist ul li{position:relative;page-break-inside:avoid;-webkit-column-break-inside:avoid;-moz-column-break-inside:avoid;break-inside:avoid-column;display:table;width:100%;padding-top:20px;padding-bottom:20px;padding-left:50px;border-bottom:1px solid rgba(248,245,214,.5)}
 div.checklist ul li:before{content:"";display:block;width:10px;height:18px;border-bottom:3px solid #f8f5d6;border-right:3px solid #f8f5d6;position:absolute;top:24px;left:20px;-webkit-transform:rotate(42deg);transform:rotate(42deg)}
-.repeatable-twocol-text-block{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:50px 20px;margin-bottom:70px}
+.repeatable-twocol-text-block{padding:50px 20px;margin-bottom:70px}
 .repeatable-twocol-text-block .wrapper{max-width:1360px;padding:30px}
-.repeatable-twocol-text-block .flexwrap{-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+.repeatable-twocol-text-block .flexwrap{-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .repeatable-twocol-text-block.half .textLeft,.repeatable-twocol-text-block.half .textRight{width:46%}
 .repeatable-twocol-text-block h2{font-size:35px;line-height:1.2;margin:0 0 30px}
 .repeatable-twocol-text-block div.ChecklistWrap p{position:relative;display:table;width:100%;padding-top:20px;padding-bottom:20px;padding-left:50px;border-bottom:1px solid rgba(248,245,214,.5);margin:0;text-align:left}
@@ -1675,6 +1675,27 @@ body.single-stories #main .twocol .fxcol.image img{width:100%;height:auto}
 .wp-block-group.wrapper-middle,.wp-block-group.wrapper-narrow,.wrapper-middle,.wrapper-narrow{max-width:1000px;padding-top:0;padding-bottom:0}
 .wp-block-group.wrapper-middle h2,.wp-block-group.wrapper-middle h3,.wp-block-group.wrapper-middle h4,.wp-block-group.wrapper-middle h5,.wp-block-group.wrapper-middle h6,.wp-block-group.wrapper-narrow h2,.wp-block-group.wrapper-narrow h3,.wp-block-group.wrapper-narrow h4,.wp-block-group.wrapper-narrow h5,.wp-block-group.wrapper-narrow h6,.wrapper-middle h2,.wrapper-middle h3,.wrapper-middle h4,.wrapper-middle h5,.wrapper-middle h6,.wrapper-narrow h2,.wrapper-narrow h3,.wrapper-narrow h4,.wrapper-narrow h5,.wrapper-narrow h6{color:#282f6f}
 .wp-block-group.wrapper-middle .wp-block-group__inner-container .wp-block-heading:first-child,.wp-block-group.wrapper-narrow .wp-block-group__inner-container .wp-block-heading:first-child,.wrapper-middle .wp-block-group__inner-container .wp-block-heading:first-child,.wrapper-narrow .wp-block-group__inner-container .wp-block-heading:first-child{margin-top:0}
+#primary.generic-layout .entry-content{max-width:1000px;width:100%;margin:0 auto}
+.donation-form .section.recurring{padding-left:0 !important}
+.donation-form .section.recurring [type=checkbox]{margin-right:5px}
+.field input[type=text],.field input[type=tel],.field input[type=email],.field input[type=number],.field select,.field textarea{-webkit-transition:all ease .3s;transition:all ease .3s}
+.field input[type=text]:focus,.field input[type=tel]:focus,.field input[type=email]:focus,.field input[type=number]:focus,.field select:focus,.field textarea:focus{outline:0;border:1px solid #81c674 !important;-webkit-box-shadow:0 1px 5px rgba(129,198,116,.5);box-shadow:0 1px 5px rgba(129,198,116,.5)}
+#donation-form-container .section h3{width:100%;margin-bottom:10px}
+#donation-form-container input[type=checkbox]{margin-right:4px}
+#donation-form-container .field input[type=text],#donation-form-container .field input[type=tel],#donation-form-container .field input[type=email],#donation-form-container .field input[type=number],#donation-form-container .field select{border:1px solid #5f5f5f;border-radius:0;padding:5px 10px;height:35px;-webkit-box-sizing:border-box;box-sizing:border-box}
+#donation-form-container .field textarea{border:1px solid #5f5f5f;border-radius:0;padding:5px 10px;height:55px;-webkit-box-sizing:border-box;box-sizing:border-box}
+#donation-form-container .section.contact{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+#donation-form-container .section.contact .field{width:48.5%}
+#donation-form-container .section.contact .field input{max-width:100%;width:100%}
+#donation-form-container .section.billing-address{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+#donation-form-container .section.billing-address .field{width:48.5%}
+#donation-form-container .section.billing-address .field input[type=text],#donation-form-container .section.billing-address .field input[type=tel],#donation-form-container .section.billing-address .field input[type=email],#donation-form-container .section.billing-address .field input[type=number],#donation-form-container .section.billing-address .field select,#donation-form-container .section.billing-address .field textarea{max-width:100%;width:100%}
+#donation-form-container .section.billing-address .field.state,#donation-form-container .section.billing-address .field.zip-code{width:22.5%}
+#donation-form-container .section.payment [type=radio]{margin-right:3px}
+#donation-form-container .section.captcha{margin-top:15px;margin-bottom:15px}
+#donation-form-container .field.payment #card-element{border-radius:6px;padding:10px}
+#donation-form-container .btn-group .btn-submit{border:0;background-color:#f26522;letter-spacing:.04em;text-transform:uppercase;padding:13px 35px 13px !important;border-radius:100px;color:#fff;font-size:17px;font-weight:600;line-height:1.2}
+#donation-form-container .btn-group .btn-submit:hover,#donation-form-container .btn-group .btn-submit:focus{background:#fcb405 !important;-webkit-box-shadow:0 6px 20px rgba(0,0,0,.15);box-shadow:0 6px 20px rgba(0,0,0,.15)}
 body.single-stories h1.big-title,body.single-post h1.big-title{font-size:3.85rem}
 #primary.post-type-stories,#primary.post-type-post{max-width:1400px;width:100%;margin:0 auto;padding:100px 20px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 #primary.post-type-stories #main.wrapper,#primary.post-type-post #main.wrapper{max-width:unset;width:62%;padding:0;margin:0}
@@ -1773,6 +1794,7 @@ footer.site-footer .footer-partners .footerInner img{margin:10px 10px}
 .repeatable-columns .rcolumn .icondiv{width:160px;height:160px;margin-top:-70px}
 .repeatable-columns .rcolumn.feat-image .icondiv{width:230px;height:230px}
 body:not(.home).page-template-default .subpage-banner h1{font-size:3.5rem}
+#donation-form-container .section.billing-address .field.state,#donation-form-container .section.billing-address .field.zip-code{width:48.5%}
 }@media screen and (max-width:900px){#primary.post-type-stories #main.wrapper,#primary.post-type-stories #single-post-widget,#primary.post-type-post #main.wrapper,#primary.post-type-post #single-post-widget{width:100%}
 #primary.post-type-stories #single-post-widget,#primary.post-type-post #single-post-widget{margin-top:40px}
 }@media screen and (max-width:820px){.featured-story-wrap{padding:30px 30px}
@@ -1802,6 +1824,7 @@ body:not(.home) .site-header .site-logo{width:220px}
 #DonateToday:before,#DonateToday:after{width:100%}
 #DonateToday:before{left:0;background-position:top center;background-size:cover}
 #DonateToday:after{display:none}
+}@media screen and (max-width:500px){#donation-form-container .field{width:100% !important}
 }@media screen and (max-width:480px){.footerTextBlock:before{left:-70vw}
 .footerTextBlock:after{right:-70vw}
 .footerTextBlock .flexwrap .textwrap{font-size:1.5em}

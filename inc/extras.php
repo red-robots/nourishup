@@ -373,3 +373,193 @@ function getParagraph($content, $num=0) {
     }
     return $output; 
 }
+
+add_action('rest_api_init', function () {
+    register_rest_route( 'myquery/v1', 'latest-posts',array(
+        'methods'  => 'GET',
+        'callback' => 'get_latest_posts'
+    ));
+});
+function get_latest_posts($request) {
+    $postType = $request['ptype'];
+    $posts_per_page = -1;
+    $args = array(
+        'posts_per_page'  => $posts_per_page,
+        'post_type'       => $postType,
+        'orderby'         => 'date',
+        'order'           => 'desc',
+        'post_status'     => 'publish'
+    );
+    
+    if (empty($postType)) {
+    return new WP_Error( 'post_type', 'No post type indicated', array('status' => 404) );
+    }
+
+    $posts = get_posts($args);
+    $extractedImages = array();
+    if($posts) {
+        foreach($posts as $row) {
+            $id = $row->ID;
+            $imageUrl = get_the_post_thumbnail_url($id);
+            $row->featured_image = $imageUrl;
+            $content = $row->post_content;
+            // $htmlDom = new DOMDocument;
+            // $htmlDom->loadHTML($content);
+            // $imageTags = $htmlDom->getElementsByTagName('img');
+            // $extractedImages = array();
+            // foreach($imageTags as $imageTag){
+            //     $extractedImages[] = $imageTag->getAttribute('src');
+            // }
+            preg_match_all('~<img.*?src=["\']+(.*?)["\']+~', $content, $urls);
+            $extractedImages = $urls[1];
+            //$extractedImages[] = $urls;
+
+        }
+    }
+
+    $res['count'] = ($posts) ? count($posts) : 0;
+    $res['posts'] = $posts;
+
+    $response = new WP_REST_Response($extractedImages);
+    $response->set_status(200);
+
+    return $response;
+}
+
+// if( isset($_GET['test']) && $_GET['test']='query' ) {
+//     $upload =  wp_upload_dir();
+//     $upload_abspath = $upload['basedir'];
+//     $upload_url = $upload['baseurl'];
+//     $temp_folder = $upload_abspath . '/allposts/'; 
+//     if (!file_exists($temp_folder)) {
+//         // mkdir($temp_folder, 0777, true);
+//         mkdir($temp_folder, 0755, true);
+//     }
+
+//     // $json = file_get_contents('https://nourishup.test/wp-json/myquery/v1/latest-posts/?ptype=post');
+//     // $object = json_decode($json);
+//     // echo "<pre>";
+//     // print_r($object);
+//     // echo "</pre>";
+//     //copy('http://www.google.co.in/intl/en_com/images/srpr/logo1w.png', '/tmp/file.png');
+
+//     $url = 'https://loavesandfishes.org/wp-content/uploads/2023/12/Scrooge-300x300.png';
+//     $fileName = basename($url);
+//     $dir = $temp_folder . $baseName;
+//     $parts = explode('wp-content/uploads/', $url);
+//     if($parts && count($parts)>1) {
+//         $path = $parts[1];
+//         $folders = str_replace('/'.$fileName,'', $path);
+//         $strings = explode('/', $folders);
+//         $storage = $temp_folder . $folders;
+//         if (!file_exists($storage)) {
+//             mkdir($storage, 0755, true);
+//         }
+//         $tmp = $storage . '/' . $fileName;
+//         if( copy($url, $tmp) ) {
+//             echo "SUCCESS!";
+//         }
+//     }
+   
+// }   
+
+if( isset($_GET['runquery']) && $_GET['runquery']='yes' ) {
+    // $perpage = $_GET['perpage'];
+    // $paged = $_GET['page'];
+    // $url = 'https://loavesandfishes.org/wp-json/wp/v2/posts/?per_page='.$perpage.'&page='.$paged;
+    $url = 'https://loavesandfishes.org/wp-json/wp/v2/posts/?per_page=100&page=4';
+    //https://loavesandfishes.org/wp-json/wp/v2/posts/?per_page=100
+    $json = file_get_contents($url);
+    if($json) {
+        $obj = json_decode($json);
+        $extractedImages = array();
+        $entries = array();
+        $entries_test = array();
+
+        $upload =  wp_upload_dir();
+        $upload_abspath = $upload['basedir'];
+        $upload_url = $upload['baseurl'];
+        $temp_folder = $upload_abspath . '/allposts/'; 
+
+
+        if( $json ) {
+            $items = json_decode($json);
+            foreach($items as $item) {
+                $content = $item->content;
+                $rendered = $content->rendered;
+                preg_match_all('~<img.*?src=["\']+(.*?)["\']+~', $rendered, $urls);
+                // $extractedImages[] = $urls[1];
+                foreach($urls[1] as $img) {
+                    $extractedImages[] = $img;
+                }
+                $guid = $item->guide;
+                $arg = array(
+                    'ID'=> $item->id,
+                    'post_date'=>$item->date,
+                    'post_date_gmt'=>$item->date_gmt,
+                    'post_title'=>$item->title,
+                    'post_content'=>$rendered,
+                    'post_excerpt'=>$item->excerpt,
+                    'post_author'=>$item->author,
+                    'post_modified'=>$item->modified,
+                    'post_modified_gmt'=>$item->modified_gmt,
+                    'post_type'=>$item->type,
+                    'post_status'=>$item->status,
+                    'post_name '=>$item->slug,
+                    'guid'=>$item->guid,
+                );
+                $entries[] = $arg;
+                $entries_test[] = $item->title;
+                
+            }
+
+            
+        }
+
+
+        // if( $entries ) {
+        //     $content = json_encode($entries);
+        //     $dirPath = $temp_folder . 'posts.json';
+        //     $fp = fopen($dirPath, "a");
+        //     fwrite($fp, $content);
+        //     fclose($fp);
+        // }
+
+        //Extract Images
+    // if($extractedImages) {
+    //     foreach($extractedImages as $imgUrl) {
+    //         copyImage($imgUrl);
+    //     }
+    // }
+    }
+
+    
+}
+
+
+
+function copyImage($url) {
+    $upload =  wp_upload_dir();
+    $upload_abspath = $upload['basedir'];
+    $upload_url = $upload['baseurl'];
+    $temp_folder = $upload_abspath . '/allposts/'; 
+    if (!file_exists($temp_folder)) {
+        mkdir($temp_folder, 0755, true);
+    }
+
+    $fileName = basename($url);
+    $parts = explode('wp-content/uploads/', $url);
+    if($parts && count($parts)>1) {
+        $path = $parts[1];
+        $folders = str_replace('/'.$fileName,'', $path);
+        $storage = $temp_folder . $folders;
+        if (!file_exists($storage)) {
+            mkdir($storage, 0755, true);
+        }
+        $tmp = $storage . '/' . $fileName;
+        if( copy($url, $tmp) ) {
+            return true;
+        }
+    }
+}
+
