@@ -22,13 +22,13 @@ if($is_tribe_events) {
 
 <?php //Default Page
 if( (is_page() || is_single()) && !is_front_page() ) { 
-  // $focalX = get_field('focal_point_x');
-  // $focalY = get_field('focal_point_y');
-  // $x = ($focalX) ? $focalX : 0;
-  // $y = ($focalY) ? $focalY : 0;
-  // if( $focalX || $focalY) { 
-  //   echo '<style>.subpageHero img{object-position:'.$x.'% '.$y.'%!important;}</style>';
-  // }
+  $focalX = get_field('focal_point_x');
+  $focalY = get_field('focal_point_y');
+  $x = ($focalX) ? $focalX : 0;
+  $y = ($focalY) ? $focalY : 0;
+  if( $focalX || $focalY) { 
+    echo '<style>.subpageHero img{object-position:'.$x.'% '.$y.'%!important;}</style>';
+  }
 
   if( is_single() ) {
     $img = get_field('large_image');

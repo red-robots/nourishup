@@ -43,3 +43,9 @@
 .acf-flexible-content [data-layout="flexible_blocks"] > .acf-fields .acf-field-color-picker {
   border-top: none!important;
 }
+.acf-field[data-name="focal_point_x"],
+.acf-field[data-name="focal_point_y"] {
+  width: 50%;
+  float: left;
+  clear: none;
+}
