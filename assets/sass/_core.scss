@@ -2578,6 +2578,15 @@ body.single-post {
   h1.big-title {
     font-size: 3.85rem;
   }
+  figure.wp-block-image.size-full {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 2em;
+  }
+  figure.wp-block-gallery.columns-default {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 #primary.post-type-stories,
