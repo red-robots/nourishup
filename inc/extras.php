@@ -269,6 +269,22 @@ function featured_story_func( $atts ) {
   return $output;
 }
 
+
+add_shortcode( 'recent_news', 'recent_news_func' );
+function recent_news_func( $atts ) {
+    $a = shortcode_atts( array(
+        'show' => 3,
+    ), $atts );
+    $perpage = (isset($a['show']) && $a['show']) ? $a['show'] : 3;
+    $output = '';
+    ob_start();
+    include( locate_template('parts/recent-news-home.php') ); 
+    $output = ob_get_contents();
+    ob_end_clean();
+    return $output;
+}
+
+
 // add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
 // function my_wp_nav_menu_objects( $items, $args ) {
 //   foreach( $items as &$item ) {

@@ -20,46 +20,28 @@ get_header(); ?>
   
   <main id="main" class="site-main wrapper" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
-      <?php if( has_post_thumbnail() ) { ?>
-        
-        <div class="flexwrap twocol">
-          <div class="fxcol image">
-            <figure class="wp-featured-img"><?php the_post_thumbnail() ?></figure>
+      
+      <div class="flexwrap full">
+        <?php if( get_page_template_slug( get_the_ID() ) ) { ?>
+          <div class="titlediv is-template">
+            <h1 class="page-title"><?php the_title(); ?></h1>
           </div>
+        <?php } else { ?>
 
-          <div class="fxcol text">
-          <?php if ( get_the_content() ) { ?>
-          <div class="entry-content padtop">
-              <?php if($heading) { ?>
-                <h2 class="page-title"><?php the_title(); ?></h2>
-              <?php } ?>
-            <?php the_content(); ?>
-          </div>
-          <?php } ?>
-          </div>
-        </div>
-
-      <?php } else { ?>
-
-        <div class="flexwrap full">
-          <?php if( get_page_template_slug( get_the_ID() ) ) { ?>
-            <div class="titlediv is-template">
-              <h1 class="page-title"><?php the_title(); ?></h1>
-            </div>
-          <?php } else { ?>
+          <?php if( get_post_type()!="post" ) { ?>
             <div class="titlediv typical">
               <h1 class="page-title"><span><?php the_title(); ?></span></h1>
             </div>
           <?php } ?>
 
-          <?php if ( get_the_content() ) { ?>
-          <div class="entry-content padtop">
-            <?php the_content(); ?>
-          </div>
-          <?php } ?>
-        </div>
+        <?php } ?>
 
-      <?php } ?>			
+        <?php if ( get_the_content() ) { ?>
+        <div class="entry-content padtop">
+          <?php the_content(); ?>
+        </div>
+        <?php } ?>
+      </div>
 
 		<?php endwhile; ?>
 
