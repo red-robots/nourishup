@@ -384,5 +384,44 @@ jQuery(document).ready(function ($) {
       }
     });
     container.replaceWith('<div class="columns-split">' + container.html() + '</div>');
+  } //Tribe Plugin
+
+
+  if ($('.tribe-events-header__events-bar.tribe-events-c-events-bar').length && $('.teccc-legend #legend li').length) {
+    var currentLink = window.location.href;
+    var resetLink = $('h1.tribe-events-header__title-text').length ? '<a href="' + siteURL + '/pantries/" class="resetLink">Reset</a>' : '';
+    $(resetLink + '<div class="event-category-dropdown"><button class="selectBox categoryFilterBtn" role="button" aria-expanded="false" aria-controls="legend_box"><span class="catlabel">Select A Category</span></button></div>').prependTo('.tribe-events-header__events-bar.tribe-events-c-events-bar');
+    $('#legend_box').appendTo('.event-category-dropdown');
+    $('#legend li[class*="tribe-events-category"]').last().addClass('last');
+    $('.event-category-dropdown li.teccc-reset').prependTo('ul#legend');
+    $(document).on('click', '.categoryFilterBtn', function (e) {
+      e.preventDefault();
+      $('.event-category-dropdown').toggleClass('dropdown-open');
+      $('.event-category-dropdown #legend_box').slideToggle();
+      $(this).toggleClass('open');
+
+      if ($(this).attr('aria-expanded') == 'false') {
+        $(this).attr('aria-expanded', 'true');
+      } else {
+        $(this).attr('aria-expanded', 'false');
+      }
+    });
+  }
+
+  if ($('body.post-type-archive-tribe_events').length && $('h1.tribe-events-header__title-text').length) {
+    var mainUrl = siteURL + '/pantries/';
+    $('<div class="subpageHero"></div>').prependTo('#content');
+    $('.subpageHero').load(mainUrl + ' .subpageHero', function () {
+      $('.subpageHero .big-title').remove();
+      $('h1.tribe-events-header__title-text').appendTo('.subpageHero .heroText .wrapper');
+    });
+    $('.tribe-events-c-breadcrumbs__list-item').eq(0).find('a').text('Find A Pantry');
+    $('ul#legend a').each(function () {
+      var pagelink = $(this).attr('href');
+
+      if (pagelink.includes(currentLink)) {
+        $(this).parent().addClass('active');
+      }
+    });
   }
 });

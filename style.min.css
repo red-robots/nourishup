@@ -1735,6 +1735,26 @@ body.single-stories figure.wp-block-gallery.columns-default,body.single-post fig
 .feeds-wrapper ul.feeds figure img.feat-image{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;position:absolute;top:0;left:0;z-index:5}
 .tribe-common .tribe-common-c-btn-border,.tribe-common a.tribe-common-c-btn-border{border:1px solid #3d5588 !important;color:#3d5588 !important}
 .tribe-common .tribe-common-c-btn-border:hover,.tribe-common .tribe-common-c-btn-border:focus,.tribe-common a.tribe-common-c-btn-border:hover,.tribe-common a.tribe-common-c-btn-border:focus{color:#fff !important;background-color:#3d5588 !important}
+body.post-type-archive-tribe_events .tribe-events-header__breadcrumbs{display:none}
+.tribe-events #legend_box{visibility:hidden}
+.tribe-events-c-events-bar .resetLink{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;text-decoration:underline !important;color:#f26522 !important;position:relative;top:0;padding:0 10px;margin:0 5px;font-size:15px;font-weight:500;height:35px;-webkit-box-sizing:border-box;box-sizing:border-box;line-height:1;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.tribe-events-c-events-bar .resetLink:hover,.tribe-events-c-events-bar .resetLink:focus{text-decoration:none !important}
+.tribe-events-c-events-bar .resetLink:focus{outline:1px dotted #f26522}
+.tribe-events-c-events-bar .event-category-dropdown{display:inline-block;position:relative;width:215px;margin-right:15px}
+.tribe-events-c-events-bar .event-category-dropdown .selectBox{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;border:1px solid #606060;color:#000;padding:10px 12px;width:100%;height:35px;font-size:14px;line-height:1;position:relative;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0;-webkit-box-shadow:none;box-shadow:none}
+.tribe-events-c-events-bar .event-category-dropdown .selectBox:after{content:"";display:block;width:0;height:0;border-top:6px solid #939393;border-left:5px solid transparent;border-right:5px solid transparent;position:absolute;top:14px;right:13px;-webkit-transition:-webkit-transform ease .4s;transition:-webkit-transform ease .4s;transition:transform ease .4s;transition:transform ease .4s,-webkit-transform ease .4s}
+.tribe-events-c-events-bar .event-category-dropdown .selectBox.open:after{-webkit-transform:rotate(180deg);transform:rotate(180deg)}
+.tribe-events-c-events-bar .event-category-dropdown #legend_box{visibility:visible;position:absolute;top:34px;right:0;background:#fff;border:1px solid #606060;padding:2px 4px;width:215px;display:none}
+.tribe-events-c-events-bar .event-category-dropdown #legend_box ul{margin:0 0 !important;overflow:hidden}
+.tribe-events-c-events-bar .event-category-dropdown #legend_box ul,.tribe-events-c-events-bar .event-category-dropdown #legend_box li{width:100%}
+.tribe-events-c-events-bar .event-category-dropdown #legend_box li{margin:3px 0 !important;padding:0 0 !important}
+.tribe-events-c-events-bar .event-category-dropdown #legend_box li a{display:block;background:#fff;padding:8px 8px !important;color:#000;position:relative;left:8px;text-align:left;font-size:15px;font-weight:normal;line-height:1.2;border-bottom:1px solid #ccc}
+.tribe-events-c-events-bar .event-category-dropdown #legend_box li.active a{color:#fff;background-color:transparent;border-bottom:0}
+.tribe-events-c-events-bar .event-category-dropdown #legend_box li.teccc-reset.active a{color:#000 !important}
+.tribe-events-c-events-bar .event-category-dropdown #legend_box li:not(.teccc-reset):hover a{left:15px}
+.tribe-events-c-events-bar .event-category-dropdown #legend_box li.teccc-reset a{left:0 !important;border-bottom:none !important;color:#e35613;text-align:center;padding:5px 0 !important}
+.tribe-events-c-events-bar .event-category-dropdown #legend_box li.teccc-reset{display:none !important}
+.tribe-events-c-events-bar .event-category-dropdown #legend_box #legend li.last a{border-bottom:none !important}
 @media screen and (min-width:800px){.repeatable-image-text-block .flexwrap.half{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .repeatable-image-text-block .flexwrap.half .imageCol{width:40%;margin-bottom:0}
 .repeatable-image-text-block .flexwrap.half .textCol{width:55%}

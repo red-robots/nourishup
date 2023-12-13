@@ -36,7 +36,7 @@ const subpageLogo = '<?php echo ($subPageLogo) ? $subPageLogo['url']:''?>';
 const siteName = '<?php echo get_bloginfo('name') ?>';
 const assetsDir = '<?php echo get_stylesheet_directory_uri() ?>/assets/img';
 const siteURL = '<?php echo get_site_url() ?>';
-const currentPageId = <?php echo (is_page()) ? get_the_ID():'' ?>;
+const currentPageId = <?php echo (is_page()) ? get_the_ID():"''"?>;
 const params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){params[k]=v});
 </script>
 <?php wp_head(); ?>
