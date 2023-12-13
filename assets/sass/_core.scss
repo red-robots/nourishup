@@ -2893,7 +2893,9 @@ body.post-type-archive-tribe_events {
   visibility: hidden;
 }
 
-.tribe-events-c-events-bar {
+.tribe-events .tribe-events-c-events-bar {
+  position: relative;
+  z-index: 20;
   .resetLink {
     display: inline-flex;
     text-decoration: underline !important;
@@ -2935,6 +2937,11 @@ body.post-type-archive-tribe_events {
       appearance: none;
       border-radius: 0;
       box-shadow: none;
+      @media screen and (max-width:500px) {
+        font-size: 12px;
+        width: 160px;
+        float: right;
+      }
       &:after {
         content: "";
         display: block;
