@@ -1621,6 +1621,7 @@ div.checklist ul li:before{content:"";display:block;width:10px;height:18px;borde
 .repeatable-twocol-text-block.full .textRight{max-width:900px;width:100%;margin:0 auto}
 .repeatable-twocol-text-block.hasVerticalDivider.half .flexwrap:after{content:"";display:block;width:2px;height:90%;background:#3d5588;position:absolute;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}
 .repeatable-twocol-text-block.hasVerticalDivider.half .flexwrap .fxcol{padding:0 5vw}
+body.page-id-477 .repeatable-twocol-text-block{margin-bottom:0}
 body:not(.home) .site-header .site-logo{background:transparent;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:280px}
 body:not(.home) .site-header .site-logo a{padding:10px}
 body:not(.home) #main h1.page-title{display:none}
