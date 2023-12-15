@@ -266,15 +266,19 @@
       $textcolor = get_sub_field('textcolor');
       $bgcolor = get_sub_field('bgcolor'); 
       $bclass = ( $textLeft && $textRight ) ? 'half':'full';
+      $hasVerticalDivider = (get_sub_field('vertical_divider')) ? true : false; 
+      if($hasVerticalDivider) {
+        $bclass .= ' hasVerticalDivider';
+      }
       ?>
       <div class="repeatable-twocol-text-block repeatable-twocol-text-block-<?php echo $i?>  repeatable <?php echo $bclass?>">
         <div class="wrapper" style="background:<?php echo $bgcolor?>;color:<?php echo $textcolor?>">
           <div class="flexwrap">
             <?php if($textLeft) { ?>
-              <div class="textLeft"><?php echo $textLeft?></div>
+              <div class="textLeft fxcol"><?php echo $textLeft?></div>
             <?php } ?>
             <?php if($textRight) { ?>
-              <div class="textRight"><?php echo $textRight?></div>
+              <div class="textRight fxcol"><?php echo $textRight?></div>
             <?php } ?>
           </div>
         </div>

@@ -331,6 +331,18 @@ jQuery(document).ready(function ($) {
               }
             });
           }
+
+          if ($('.repeatable-twocol-text-block.half').length) {
+            $('.repeatable-twocol-text-block.half .fxcol').each(function () {
+              if ($(this).find('h3').length) {
+                console.log("found!");
+
+                if ($(this).find('h3').next().prop("nodeName") == 'P') {
+                  $(this).find('h3').css('margin-bottom', '0');
+                }
+              }
+            });
+          }
         }
       }
     }, function (data, status) {//console.log(data);

@@ -1607,8 +1607,9 @@ div.checklist ul{display:block;-webkit-column-count:1;-moz-column-count:1;column
 div.checklist ul li{position:relative;page-break-inside:avoid;-webkit-column-break-inside:avoid;-moz-column-break-inside:avoid;break-inside:avoid-column;display:table;width:100%;padding-top:20px;padding-bottom:20px;padding-left:50px;border-bottom:1px solid rgba(248,245,214,.5)}
 div.checklist ul li:before{content:"";display:block;width:10px;height:18px;border-bottom:3px solid #f8f5d6;border-right:3px solid #f8f5d6;position:absolute;top:24px;left:20px;-webkit-transform:rotate(42deg);transform:rotate(42deg)}
 .repeatable-twocol-text-block{padding:50px 20px;margin-bottom:70px}
-.repeatable-twocol-text-block .wrapper{max-width:1360px;padding:30px}
-.repeatable-twocol-text-block .flexwrap{-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+.repeatable-twocol-text-block .wrapper{max-width:1360px;padding:30px;min-height:300px}
+.repeatable-twocol-text-block .flexwrap{min-height:230px;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;position:relative}
+.repeatable-twocol-text-block.half .flexwrap{-ms-flex-line-pack:center;align-content:center}
 .repeatable-twocol-text-block.half .textLeft,.repeatable-twocol-text-block.half .textRight{width:46%}
 .repeatable-twocol-text-block h2{font-size:35px;line-height:1.2;margin:0 0 30px}
 .repeatable-twocol-text-block div.ChecklistWrap p{position:relative;display:table;width:100%;padding-top:20px;padding-bottom:20px;padding-left:50px;border-bottom:1px solid rgba(248,245,214,.5);margin:0;text-align:left}
@@ -1618,6 +1619,8 @@ div.checklist ul li:before{content:"";display:block;width:10px;height:18px;borde
 .repeatable-twocol-text-block.full .ChecklistWrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .repeatable-twocol-text-block.full .textLeft{max-width:1000px;width:100%;margin:0 auto}
 .repeatable-twocol-text-block.full .textRight{max-width:900px;width:100%;margin:0 auto}
+.repeatable-twocol-text-block.hasVerticalDivider.half .flexwrap:after{content:"";display:block;width:2px;height:90%;background:#3d5588;position:absolute;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}
+.repeatable-twocol-text-block.hasVerticalDivider.half .flexwrap .fxcol{padding:0 5vw}
 body:not(.home) .site-header .site-logo{background:transparent;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:280px}
 body:not(.home) .site-header .site-logo a{padding:10px}
 body:not(.home) #main h1.page-title{display:none}
@@ -1905,6 +1908,7 @@ body:not(.home).page-template-default .subpage-banner h1{font-size:3.5rem}
 div.checklist ul{width:100%}
 .repeatable-twocol-text-block.half .textLeft,.repeatable-twocol-text-block.half .textRight{width:100%}
 .repeatable-twocol-text-block div.ChecklistWrap{margin-top:10px}
+.repeatable-twocol-text-block.hasVerticalDivider.half .flexwrap:after{width:100%;height:2px;top:53%}
 .feeds-wrapper ul.feeds li.feed{width:100%;margin-bottom:50px !important}
 .feeds-wrapper ul.feeds li.feed .posttitle{font-size:18px}
 .feeds-wrapper ul.feeds li.feed .inside{padding-bottom:13px}

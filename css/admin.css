@@ -49,3 +49,26 @@
   float: left;
   clear: none;
 }
+.acf-field-flexible-content [data-layout="two_column_textblock"] .acf-field-wysiwyg {
+  width: 50%;
+  float: left;
+  clear: none;
+}
+.acf-field-flexible-content [data-layout="two_column_textblock"]  .acf-field-color-picker {
+  width: 20%;
+  float: left;
+  clear: none;
+  border-top: none;
+}
+.acf-field-flexible-content [data-layout="two_column_textblock"] [data-name="vertical_divider"] {
+  position: relative;
+}
+.acf-field-flexible-content [data-layout="two_column_textblock"] [data-name="vertical_divider"] .acf-input {
+  display: inline-block;
+  position: absolute;
+  top: 16px;
+  left: 17px;
+}
+.acf-field-flexible-content [data-layout="two_column_textblock"] [data-name="vertical_divider"] .acf-label {
+  padding-left: 25px;
+}
