@@ -1030,22 +1030,67 @@ body.home .wp-block-cover.hero {
       color: #FFF;
     }
   }
+  @media screen and (max-width: 1700px) {
+    .wrapper {
+      max-width: 750px;
+    }
+  }
+  @media screen and (max-width: 1500px) {
+    &:before {
+      left: -10vw;
+    }
+    &:after {
+      right: -10vw;
+    }
+  }
+
+  @media screen and (max-width: 1495px) {
+    .wrapper {
+      max-width: 700px;
+    }
+  }
+  @media screen and (max-width: 1350px) {
+    &:before {
+      left: -20vw;
+    }
+    &:after {
+      right: -20vw;
+    }
+    .wrapper {
+      max-width: 60vw;
+    }
+  }
 
   @media screen and (max-width: 820px) {
     &:before {
-      left: -27%;
+      left: -35vw;
     }
     &:after {
-      right: -27%;
+      right: -35vw;
+    }
+    .wrapper {
+      max-width: 80vw;
+    }
+    .flexwrap .textwrap {
+      font-size: 1.8em;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &:before {
+      left: -48vw;
+    }
+    &:after {
+      right: -48vw;
     }
   }
 
   @media screen and (max-width: 480px) {
     &:before {
-      left: -70vw;
+      left: -75vw;
     }
     &:after {
-      right: -70vw;
+      right: -75vw;
     }
     .flexwrap .textwrap {
       font-size: 1.5em;

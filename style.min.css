@@ -1828,8 +1828,15 @@ body.single-stories #main .twocol .fxcol.image{width:45%}
 }@media screen and (min-width:1600px){#RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image a{width:240px}
 #RecentNews ul.wp-block-latest-posts.columns-3 li{padding-left:40px;padding-right:40px}
 .repeatable-twocol-text-block .wrapper{padding:40px}
+}@media screen and (max-width:1700px){.footerTextBlock .wrapper{max-width:750px}
+}@media screen and (max-width:1500px){.footerTextBlock:before{left:-10vw}
+.footerTextBlock:after{right:-10vw}
+}@media screen and (max-width:1495px){.footerTextBlock .wrapper{max-width:700px}
 }@media screen and (max-width:1470px){.featured-story-wrap{padding-left:30px;padding-right:30px}
 }@media screen and (max-width:1400px){#AboutNourishUp .wp-block-columns .wp-block-column:nth-child(2){padding-left:2vw}
+}@media screen and (max-width:1350px){.footerTextBlock:before{left:-20vw}
+.footerTextBlock:after{right:-20vw}
+.footerTextBlock .wrapper{max-width:60vw}
 }@media screen and (max-width:1100px){.wp-block-group.impact .wp-block-group.numbers{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .wp-block-group.impact .wp-block-group.numbers .wp-block-group{width:33.33%}
 }@media screen and (max-width:1024px){.wp-block-columns.involved,.wp-block-columns.involved .wp-block-columns{gap:1.5rem}
@@ -1890,8 +1897,10 @@ body:not(.home).page-template-default .subpage-banner h1{font-size:3.5rem}
 #RecentNews ul.wp-block-latest-posts li:first-child{margin-top:0}
 #RecentNews ul.wp-block-latest-posts .inside{padding:30px 7vw}
 #RecentNews li{max-width:500px;width:100%;margin:0 auto}
-.footerTextBlock:before{left:-27%}
-.footerTextBlock:after{right:-27%}
+.footerTextBlock:before{left:-35vw}
+.footerTextBlock:after{right:-35vw}
+.footerTextBlock .wrapper{max-width:80vw}
+.footerTextBlock .flexwrap .textwrap{font-size:1.8em}
 .subpageHero,.repeatable-hero{min-height:430px}
 div.checklist ul{width:100%}
 .repeatable-twocol-text-block.half .textLeft,.repeatable-twocol-text-block.half .textRight{width:100%}
@@ -1901,7 +1910,9 @@ div.checklist ul{width:100%}
 .feeds-wrapper ul.feeds li.feed .inside{padding-bottom:13px}
 .feeds-wrapper ul.feeds li.feed figure{padding-left:10vw;padding-right:10vw}
 }@media screen and (max-width:782px){body.logged-in.admin-bar header.site-header.sticky{top:0}
-}@media screen and (max-width:768px){.repeatable-columns .rcolumn{width:100%;margin-top:30px;margin-bottom:30px}
+}@media screen and (max-width:768px){.footerTextBlock:before{left:-48vw}
+.footerTextBlock:after{right:-48vw}
+.repeatable-columns .rcolumn{width:100%;margin-top:30px;margin-bottom:30px}
 body:not(.home) .site-header .site-logo{width:220px}
 .filterWrapper .filterInner{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:100%;position:relative;top:35px;left:38px}
 .filterWrapper .custom-calendar-filter{width:160px}
@@ -1918,8 +1929,8 @@ body:not(.home) .site-header .site-logo{width:220px}
 }@media screen and (max-width:500px){#donation-form-container .field{width:100% !important}
 .custom-calendar-filter .event-category-dropdown .selectBox{font-size:12px;width:160px;float:right}
 .tribe-events .tribe-events-c-events-bar .event-category-dropdown .selectBox{font-size:12px;width:160px;float:right}
-}@media screen and (max-width:480px){.footerTextBlock:before{left:-70vw}
-.footerTextBlock:after{right:-70vw}
+}@media screen and (max-width:480px){.footerTextBlock:before{left:-75vw}
+.footerTextBlock:after{right:-75vw}
 .footerTextBlock .flexwrap .textwrap{font-size:1.5em}
 }@media(print),(prefers-reduced-motion:reduce){.animated{-webkit-animation-duration:1ms !important;animation-duration:1ms !important;-webkit-transition-duration:1ms !important;transition-duration:1ms !important;-webkit-animation-iteration-count:1 !important;animation-iteration-count:1 !important}
 }@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}
