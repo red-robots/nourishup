@@ -1736,6 +1736,42 @@ body.single-stories figure.wp-block-gallery.columns-default,body.single-post fig
 .tribe-common .tribe-common-c-btn-border,.tribe-common a.tribe-common-c-btn-border{border:1px solid #3d5588 !important;color:#3d5588 !important}
 .tribe-common .tribe-common-c-btn-border:hover,.tribe-common .tribe-common-c-btn-border:focus,.tribe-common a.tribe-common-c-btn-border:hover,.tribe-common a.tribe-common-c-btn-border:focus{color:#fff !important;background-color:#3d5588 !important}
 body.post-type-archive-tribe_events .tribe-events-header__breadcrumbs{display:none}
+body.post-type-archive-tribe_events .tribe-events-header .tribe-events-header__title{height:0;overflow:hidden}
+body.post-type-archive-tribe_events .tribe-events-header .tribe-events-header__title h1{opacity:0}
+body.post-type-archive-tribe_events .tribe-common-l-container.tribe-events-l-container{padding-top:70px;max-width:1400px;width:100%;margin:0 auto;padding-left:20px;padding-right:20px}
+body.post-type-archive-tribe_events .tribe-events-c-events-bar{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}
+.filterWrapper{max-width:1400px;width:100%;margin:0 auto;padding-left:20px;padding-right:20px;text-align:right;position:relative;z-index:10}
+.filterWrapper .filterInner{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;position:absolute;top:65px;right:10px}
+.custom-calendar-filter{width:220px;position:relative}
+.custom-calendar-filter .resetLink{display:inline-block;position:absolute;top:7px;left:-62px;color:#f26522;font-size:15px;line-height:1.2}
+.custom-calendar-filter .event-category-dropdown{display:inline-block;position:relative;width:100%;margin-right:15px}
+.custom-calendar-filter .event-category-dropdown .selectBox{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;border:1px solid #606060;color:#000;padding:10px 12px;width:100%;height:35px;font-size:14px;line-height:1;position:relative;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0;-webkit-box-shadow:none;box-shadow:none;appearance:none;background:#fff}
+.custom-calendar-filter .event-category-dropdown .selectBox:after{content:"";display:block;width:0;height:0;border-top:6px solid #939393;border-left:5px solid transparent;border-right:5px solid transparent;position:absolute;top:14px;right:13px;-webkit-transition:-webkit-transform ease .4s;transition:-webkit-transform ease .4s;transition:transform ease .4s;transition:transform ease .4s,-webkit-transform ease .4s}
+.custom-calendar-filter .event-category-dropdown .selectBox.open:after{-webkit-transform:rotate(180deg);transform:rotate(180deg)}
+.custom-calendar-filter .event-category-dropdown #legend_box{visibility:visible;position:absolute;top:34px;right:0;background:#fff;border:1px solid #606060;padding:2px 4px;width:100%;display:none}
+.custom-calendar-filter .event-category-dropdown #legend_box ul{margin:0 0 !important;padding:0 0 !important;overflow:hidden}
+.custom-calendar-filter .event-category-dropdown #legend_box ul,.custom-calendar-filter .event-category-dropdown #legend_box li{width:100%}
+.custom-calendar-filter .event-category-dropdown #legend_box li{margin:3px 0 !important;padding:0 0 !important}
+.custom-calendar-filter .event-category-dropdown #legend_box li a{display:block;background:#fff;padding:8px 8px !important;color:#000;position:relative;left:8px;text-align:left;font-size:15px;font-weight:normal;line-height:1.2;border-bottom:1px solid #ccc}
+.custom-calendar-filter .event-category-dropdown #legend_box li.active a{color:#fff;background-color:transparent;border-bottom:0}
+.custom-calendar-filter .event-category-dropdown #legend_box li.teccc-reset.active a{color:#000 !important}
+.custom-calendar-filter .event-category-dropdown #legend_box li:not(.teccc-reset):hover a{left:15px}
+.custom-calendar-filter .event-category-dropdown #legend_box li.teccc-reset a{left:0 !important;border-bottom:none !important;color:#e35613;text-align:center;padding:5px 0 !important}
+.custom-calendar-filter .event-category-dropdown #legend_box li.teccc-reset{display:none !important}
+.custom-calendar-filter .event-category-dropdown #legend_box #legend li.last a{border-bottom:none !important}
+.otherFilters{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:8px}
+.otherFilters h2,.otherFilters h3{display:none}
+.otherFilters .tribe-events-c-events-bar__filter-button-container,.otherFilters .tribe-events-c-events-bar__views{display:inline-block;width:auto;position:relative;margin-left:6px}
+.otherFilters .tribe-events-c-events-bar__filter-button,.otherFilters .tribe-events-c-view-selector__button{position:relative;width:35px;height:35px;padding:0;background:transparent;border:0;-webkit-appearance:none;-moz-appearance:none;appearance:none;display:inline-block}
+.otherFilters .tribe-events-c-events-bar__filter-button svg,.otherFilters .tribe-events-c-view-selector__button svg{-webkit-transform:scale(0.65);transform:scale(0.65)}
+.otherFilters .tribe-common-a11y-visual-hide{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}
+.otherFilters .tribe-events-c-view-selector__button .tribe-common-c-svgicon--caret-down{display:none}
+.otherFilters .tribe-events-c-view-selector{position:relative}
+.otherFilters .tribe-events-c-view-selector .tribe-events-c-view-selector__content{display:none;position:absolute;top:40px;right:0;background:#fff;border:1px solid #e4e4e4;-webkit-box-shadow:0 2px 12px 0 rgba(0,0,0,.14);box-shadow:0 2px 12px 0 rgba(0,0,0,.14);width:110px;padding:5px 2px;border-radius:6px}
+.otherFilters .tribe-events-c-view-selector ul.tribe-events-c-view-selector__list{margin:0;padding:0;list-style:none}
+.otherFilters .tribe-events-c-view-selector ul.tribe-events-c-view-selector__list li{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.otherFilters .tribe-events-c-view-selector ul.tribe-events-c-view-selector__list a.tribe-events-c-view-selector__list-item-link{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#000;text-decoration:none;font-size:15px;line-height:1.2;width:100%;padding:4px 10px;margin:3px 0}
+.otherFilters .tribe-events-c-view-selector .tribe-events-c-view-selector__list-item-icon{height:18px;margin-right:12px;width:18px}
 .tribe-events #legend_box{visibility:hidden}
 .tribe-events .tribe-events-c-events-bar{position:relative;z-index:20}
 .tribe-events .tribe-events-c-events-bar .resetLink{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;text-decoration:underline !important;color:#f26522 !important;position:relative;top:0;padding:0 10px;margin:0 5px;font-size:15px;font-weight:500;height:35px;-webkit-box-sizing:border-box;box-sizing:border-box;line-height:1;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
@@ -1867,6 +1903,11 @@ div.checklist ul{width:100%}
 }@media screen and (max-width:782px){body.logged-in.admin-bar header.site-header.sticky{top:0}
 }@media screen and (max-width:768px){.repeatable-columns .rcolumn{width:100%;margin-top:30px;margin-bottom:30px}
 body:not(.home) .site-header .site-logo{width:220px}
+.filterWrapper .filterInner{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:100%;position:relative;top:35px;left:38px}
+.filterWrapper .custom-calendar-filter{width:160px}
+.filterWrapper .custom-calendar-filter .event-category-dropdown{width:100%;margin-right:0}
+.filterWrapper .custom-calendar-filter .event-category-dropdown .selectBox{width:100%}
+.filterWrapper .custom-calendar-filter .event-category-dropdown #legend_box{width:244px;right:unset;left:0}
 }@media screen and (max-width:600px){.wp-block-columns.involved,.wp-block-columns.involved .wp-block-columns{max-width:300px;width:100%;margin:0 auto}
 .wp-block-group.impact .wp-block-group.numbers .wp-block-group{width:100%;text-align:center;border-top:1px solid #00b2cd}
 .wp-block-group.impact .wp-block-group.numbers .wp-block-group:first-child{border-top:0}
@@ -1875,6 +1916,7 @@ body:not(.home) .site-header .site-logo{width:220px}
 #DonateToday:before{left:0;background-position:top center;background-size:cover}
 #DonateToday:after{display:none}
 }@media screen and (max-width:500px){#donation-form-container .field{width:100% !important}
+.custom-calendar-filter .event-category-dropdown .selectBox{font-size:12px;width:160px;float:right}
 .tribe-events .tribe-events-c-events-bar .event-category-dropdown .selectBox{font-size:12px;width:160px;float:right}
 }@media screen and (max-width:480px){.footerTextBlock:before{left:-70vw}
 .footerTextBlock:after{right:-70vw}
