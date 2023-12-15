@@ -2,11 +2,19 @@
 $postType = get_post_type();
 $obj = get_queried_object();
 $is_tribe_events = (isset($obj->name) && $obj->name=='tribe_events') ? true : false;
-$taxonomyName = (isset($obj->taxonomy) && $obj->taxonomy) ? $obj->taxonomy : '';
+$taxonomy = (isset($obj->taxonomy) && $obj->taxonomy) ? $obj->taxonomy : '';
+$termTitle = (isset($obj->name) && $obj->name) ? $obj->name : '';
+$is_tribe_taxonomy = ($taxonomy=='tribe_events_cat') ? true : false;
 
-if($is_tribe_events) { 
+if($is_tribe_events || $is_tribe_taxonomy) {
+
   $hero = get_field('pantries_hero_image','option');  
-  $pageTitle = get_field('pantries_page_title','option');  
+  $pageTitle = ''; 
+  if($is_tribe_events) {
+    $pageTitle = get_field('pantries_page_title','option'); 
+  } else if($is_tribe_taxonomy) {
+    $pageTitle = $termTitle;
+  }
   if($hero) { ?>
   <div class="subpageHero">
     <?php if($pageTitle) { ?>
@@ -22,8 +30,8 @@ if($is_tribe_events) {
 <?php } ?>
 <?php } ?>
 
-<?php if( $is_tribe_events || $taxonomyName=='tribe_events_cat' ) { ?>
-<div class="filterWrapper<?php echo ($taxonomyName=='tribe_events_cat') ? ' tribe-tax-page':'';?>">
+<?php if( $is_tribe_events || $is_tribe_taxonomy ) { ?>
+<div class="filterWrapper<?php echo ($is_tribe_taxonomy) ? ' tribe-tax-page':'';?>">
   <div class="filterInner">
     <div class="custom-calendar-filter"></div>
     <div class="otherFilters"></div>

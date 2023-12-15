@@ -1535,7 +1535,7 @@ footer.site-footer .footer-partners .footerInner img{width:auto;height:auto}
 .footer-privacy a:after{content:"";display:block;width:100%;-webkit-transition:-webkit-transform ease .3s;transition:-webkit-transform ease .3s;transition:transform ease .3s;transition:transform ease .3s,-webkit-transform ease .3s;border-bottom:1px solid rgba(250,243,214,.4)}
 .footer-privacy a:hover,.footer-privacy a:focus{color:#fcb405}
 .footer-privacy a:focus{outline:1px dotted #fcb405}
-.subpageHero,.repeatable-hero{position:relative;min-height:400px}
+.subpageHero,.repeatable-hero{position:relative;min-height:400px;background:#ebebeb}
 .subpageHero img.wp-post-image,.subpageHero .hero-image,.repeatable-hero img.wp-post-image,.repeatable-hero .hero-image{height:100%;left:0;margin:0;max-height:none;max-width:none;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;outline:0;padding:0;position:absolute;right:0;top:0;width:100%}
 .subpageHero .sm-title,.repeatable-hero .sm-title{font-size:1.4em;font-weight:500;line-height:1.3;color:#fff}
 .subpageHero .heroText,.repeatable-hero .heroText{position:absolute;top:0;left:0;width:100%;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;z-index:10;text-align:center}

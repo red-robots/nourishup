@@ -427,12 +427,12 @@ jQuery(document).ready(function ($) {
   }
 
   if ($('body.post-type-archive-tribe_events').length && $('h1.tribe-events-header__title-text').length) {
-    var mainUrl = siteURL + '/pantries/';
-    $('<div class="subpageHero"></div>').prependTo('#content');
-    $('.subpageHero').load(mainUrl + ' .subpageHero', function () {
-      $('.subpageHero .big-title').remove();
-      $('h1.tribe-events-header__title-text').appendTo('.subpageHero .heroText .wrapper');
-    });
+    //var mainUrl = siteURL + '/pantries/';
+    //$('<div class="subpageHero"></div>').prependTo('#content'); 
+    // $('.subpageHero').load(mainUrl + ' .subpageHero', function(){
+    //   $('.subpageHero .big-title').remove();
+    //   $('h1.tribe-events-header__title-text').appendTo('.subpageHero .heroText .wrapper');
+    // });
     $('.tribe-events-c-breadcrumbs__list-item').eq(0).find('a').text('Find A Pantry');
     $('ul#legend a').each(function () {
       var pagelink = $(this).attr('href');
