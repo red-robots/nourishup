@@ -412,15 +412,19 @@ jQuery(document).ready(function ($) {
       e.preventDefault();
       $('.tribe-filter-bar.tribe-filter-bar--horizontal').toggleClass('tribe-filter-bar--open');
     });
+    $(document).on('click', '.otherFilters .tribe-events-c-view-selector__content a', function (e) {
+      e.preventDefault();
+      var parentIndex = $(this).parent().index();
+      var svgIcon = $(this).find('.tribe-events-c-view-selector__list-item-icon svg').html();
+      $('.tribe-events-header__events-bar.tribe-events-c-events-bar ul.tribe-events-c-view-selector__list li').eq(parentIndex).find('a').trigger('click');
+      $('.otherFilters .tribe-events-c-view-selector__content').hide();
+      $('.otherFilters .tribe-events-c-view-selector .tribe-events-c-view-selector__button-icon svg').html(svgIcon);
+    });
     $(document).on('click', '.otherFilters .tribe-events-c-view-selector__button', function (e) {
       e.preventDefault();
       $(this).next().slideToggle();
     });
   }
-
-  $(document).on("click", ".tribe-events-c-view-selector__list-item-link", function () {
-    console.log("Hey!");
-  });
 
   if ($('body.post-type-archive-tribe_events').length && $('h1.tribe-events-header__title-text').length) {
     var mainUrl = siteURL + '/pantries/';
