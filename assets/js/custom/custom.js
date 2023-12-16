@@ -292,13 +292,51 @@ jQuery(document).ready(function ($) {
           if( $('.repeatable-twocol-text-block.half').length ) {
             $('.repeatable-twocol-text-block.half .fxcol').each(function(){
               if( $(this).find('h3').length ) {
-                console.log("found!");
                 if( $(this).find('h3').next().prop("nodeName")=='P' ) {
                   $(this).find('h3').css('margin-bottom','0');
                 }
               }
             });
           }
+
+          var timelineBlock = '';
+          if( $('.repeatable.timeline-right').length ) {
+            timelineBlock = '.textRight';
+          }
+          if( $('.repeatable.timeline-left').length ) {
+            timelineBlock = '.textLeft';
+          }
+
+          if( timelineBlock ) {
+            $('[class*="timeline-"].repeatable').each(function(){
+              if( $(this).find(timelineBlock + ' hr').length && $(this).find(timelineBlock).text().trim().replace(/\s+/g,'') ) {
+                var parent = $(this).parents('.textRight');
+                var firstP = parent.find('*').eq(0);
+                $(this).find(timelineBlock + ' hr').each(function(k){
+                  $(this).nextUntil("hr").wrapAll('<div class="TIMELINE_INFO">');
+                  if(k==0) {
+                    $(this).prevUntil(firstP).addBack().wrapAll('<div class="TIMELINE_INFO">');
+                  }
+                });
+              }
+            });
+
+            if( $('.TIMELINE_INFO').length ) {
+              $('.TIMELINE_INFO').each(function(){
+                var target = $(this);
+                var lastElement = $(this).find('*').last();
+                target.wrapInner('<div class="textCol"></div>');
+                if( $(this).find('img').length ) {
+                  $(this).find('img').unwrap().wrapAll('<div class="imageCol"></div>');
+                }
+                if( $(this).find('.imageCol').length ) {
+                  $(this).find('.imageCol').prependTo(target);
+                }
+              });
+              $('.repeatable.timeline-right .textRight hr').remove();
+            }
+          }
+
         }
       }
     },function(data, status){
@@ -399,13 +437,6 @@ jQuery(document).ready(function ($) {
   }
 
   if( $('body.post-type-archive-tribe_events').length && $('h1.tribe-events-header__title-text').length ) {
-    //var mainUrl = siteURL + '/pantries/';
-    //$('<div class="subpageHero"></div>').prependTo('#content'); 
-    // $('.subpageHero').load(mainUrl + ' .subpageHero', function(){
-    //   $('.subpageHero .big-title').remove();
-    //   $('h1.tribe-events-header__title-text').appendTo('.subpageHero .heroText .wrapper');
-    // });
-
     $('.tribe-events-c-breadcrumbs__list-item').eq(0).find('a').text('Find A Pantry');
     $('ul#legend a').each(function(){
       var pagelink = $(this).attr('href');
@@ -414,6 +445,8 @@ jQuery(document).ready(function ($) {
       } 
     });
   }
+
+
 
 
 

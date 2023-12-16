@@ -1621,6 +1621,24 @@ div.checklist ul li:before{content:"";display:block;width:10px;height:18px;borde
 .repeatable-twocol-text-block.full .textRight{max-width:900px;width:100%;margin:0 auto}
 .repeatable-twocol-text-block.hasVerticalDivider.half .flexwrap:after{content:"";display:block;width:2px;height:90%;background:#3d5588;position:absolute;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}
 .repeatable-twocol-text-block.hasVerticalDivider.half .flexwrap .fxcol{padding:0 5vw}
+.repeatable.timeline-left .textLeft{position:relative}
+.repeatable.timeline-left .textLeft hr{opacity:0;margin:0 0 !important;padding:0 0 !important;height:1px !important}
+.repeatable.timeline-right .textRight{position:relative}
+.repeatable.timeline-right .textRight hr{opacity:0;margin:0 0 !important;padding:0 0 !important;height:1px !important}
+[class*=timeline-].repeatable .wrapper{padding:30px}
+[class*=timeline-].repeatable .wrapper h3{margin-top:0}
+.TIMELINE_INFO{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:10px 0;position:relative}
+.TIMELINE_INFO:before{content:"";display:block;width:1px;height:100%;background:#fff;position:absolute;top:0;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}
+.TIMELINE_INFO:after{content:"";display:block;width:15px;height:15px;background:#fff;border-radius:100px;position:absolute;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}
+.TIMELINE_INFO:first-child{padding-top:0}
+.TIMELINE_INFO:last-child{padding-bottom:0}
+.TIMELINE_INFO .imageCol,.TIMELINE_INFO .textCol{width:45%;position:relative;z-index:10}
+.TIMELINE_INFO .imageCol img{width:100%;height:auto;float:left}
+.TIMELINE_INFO .textCol strong{font-size:20px}
+.TIMELINE_INFO .textCol p{margin-bottom:0;margin-top:15px}
+.TIMELINE_INFO .textCol p:first-child{margin-top:0}
+.TIMELINE_INFO:nth-child(even){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
+.TIMELINE_INFO:nth-child(even) .textCol{text-align:right}
 body.page-id-477 .repeatable-twocol-text-block{margin-bottom:0}
 body:not(.home) .site-header .site-logo{background:transparent;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:280px}
 body:not(.home) .site-header .site-logo a{padding:10px}
@@ -1818,6 +1836,7 @@ body.single-stories #main .twocol .fxcol.image{width:45%}
 .repeatable-columns .rcolumn .inside{padding:20px 3vw 3vw}
 .repeatable-columns .rcolumn.feat-image{margin-bottom:80px;margin-top:80px}
 .repeatable-fullwidth-text-block .inside{padding:4vw 5vw}
+[class*=timeline-].repeatable .wrapper{padding:6vw 5vw}
 #primary.post-type-stories #single-post-widget,#primary.post-type-post #single-post-widget{padding:40px}
 .feeds-wrapper{margin-left:-10px;margin-right:-10px}
 .feeds-wrapper ul.feeds li.feed{padding:20px 2vw}

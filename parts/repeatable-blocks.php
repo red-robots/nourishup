@@ -265,11 +265,13 @@
       $textRight = get_sub_field('text_right');
       $textcolor = get_sub_field('textcolor');
       $bgcolor = get_sub_field('bgcolor'); 
+      $custom_class = get_sub_field('custom_class'); 
       $bclass = ( $textLeft && $textRight ) ? 'half':'full';
       $hasVerticalDivider = (get_sub_field('vertical_divider')) ? true : false; 
       if($hasVerticalDivider) {
         $bclass .= ' hasVerticalDivider';
       }
+      $bclass .= ($custom_class) ? ' '.$custom_class:'';
       ?>
       <div class="repeatable-twocol-text-block repeatable-twocol-text-block-<?php echo $i?>  repeatable <?php echo $bclass?>">
         <div class="wrapper" style="background:<?php echo $bgcolor?>;color:<?php echo $textcolor?>">
