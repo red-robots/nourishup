@@ -32,7 +32,7 @@ function js_custom_init() {
         'single'    => 'Event',
         'menu_icon' => 'dashicons-calendar-alt',
         'menu_position'=> 5,
-        'supports'  => array('title','editor')
+        'supports'  => array('title','editor','thumbnail'),
       ),
       array(
         'post_type' => 'upcoming-events',

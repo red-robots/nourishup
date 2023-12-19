@@ -2363,6 +2363,7 @@ body.news {
       a {
         display: block;
         width: 100%;
+        height: 100%;
         float: left;
         position: relative;
       }
@@ -2429,6 +2430,7 @@ body.news {
 }
 
 #pagination {
+  margin-top: 40px;
   span, a {
     display: inline-block;
     text-decoration: none;
