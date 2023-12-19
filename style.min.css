@@ -1665,6 +1665,28 @@ body:not(.home).page-template-default .gform_wrapper .gform_button:focus{outline
 body:not(.home) .site-header.sticky .site-logo{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 body:not(.home) .site-header.sticky .site-logo .logo-shrink{top:0;left:-11px}
 body.logged-in.admin-bar header.site-header.sticky{top:31px}
+body.news .entry-content{max-width:100% !important}
+.newsfeeds-wrapper{margin:20px 0}
+.newsfeeds-wrapper .post-title{color:#3d5588;font-size:2em;font-weight:500;line-height:1.2;margin:0 0 20px}
+.newsfeeds-wrapper .post-item{margin:40px 0}
+.newsfeeds-wrapper .post-item .inside{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+.newsfeeds-wrapper .post-item .textcol{width:100%;margin-bottom:30px}
+.newsfeeds-wrapper .post-item .textcol h2,.newsfeeds-wrapper .post-item .textcol p,.newsfeeds-wrapper .post-item .textcol *{color:#3d5588}
+.newsfeeds-wrapper .post-item .imagecol{width:100%;margin:0;position:relative;background:#e1e1e1}
+.newsfeeds-wrapper .post-item .imagecol a{display:block;width:100%;float:left;position:relative}
+.newsfeeds-wrapper .post-item .imagecol img.resizer{width:100%;height:auto;float:left}
+.newsfeeds-wrapper .post-item .imagecol img.post-image{display:block;-o-object-fit:cover;object-fit:cover;width:100%;height:100%;-o-object-position:50% 50%;object-position:50% 50%;position:absolute;top:0;left:0}
+.newsfeeds-wrapper .post-item:first-child{margin-top:0}
+.newsfeeds-wrapper .post-item:last-child{margin-bottom:0}
+.newsfeeds-wrapper .readmore{margin-top:30px}
+.newsfeeds-wrapper .readmore a.morelink{display:inline-block;border:none !important;padding:5px !important;text-decoration:underline;font-size:18px;font-weight:500;line-height:1.2;letter-spacing:.05em;position:relative;left:-5px;color:#3d5588;padding-right:15px !important}
+.newsfeeds-wrapper .readmore a.morelink:after{content:"";display:inline-block;width:0;height:0;border-left:8px solid #3d5588;border-top:5px solid transparent;border-bottom:5px solid transparent;position:absolute;top:10px;right:0;-webkit-transition:-webkit-transform ease .3s;transition:-webkit-transform ease .3s;transition:transform ease .3s;transition:transform ease .3s,-webkit-transform ease .3s}
+.newsfeeds-wrapper .readmore a.morelink:hover,.newsfeeds-wrapper .readmore a.morelink:focus{color:#f26522 !important}
+.newsfeeds-wrapper .readmore a.morelink:hover:after,.newsfeeds-wrapper .readmore a.morelink:focus:after{border-left-color:#f26522;-webkit-transform:translateX(5px);transform:translateX(5px)}
+#pagination span,#pagination a{display:inline-block;text-decoration:none;font-size:14px;font-weight:500;line-height:1.2;padding:5px 8px 4px}
+#pagination span.current{background:#81c674;color:#fff}
+#pagination a{background:#f26522;color:#fff !important}
+#pagination a:hover,#pagination a:focus{background:#bdbdbd}
 .menu-toggle{display:none;width:30px;height:35px;background:transparent;position:absolute;top:17px;right:22px;z-index:20}
 .menu-toggle span.bar,.menu-toggle span.bar:before,.menu-toggle span.bar:after{display:block;width:100%;height:3px;background:#3d5588;position:absolute;left:0;-webkit-transition:all ease .3s;transition:all ease .3s}
 .menu-toggle span.bar{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
@@ -1721,8 +1743,10 @@ body.single-stories #main .twocol .fxcol.image img{width:100%;height:auto}
 #donation-form-container .btn-group .btn-submit{border:0;background-color:#f26522;letter-spacing:.04em;text-transform:uppercase;padding:13px 35px 13px !important;border-radius:100px;color:#fff;font-size:17px;font-weight:600;line-height:1.2}
 #donation-form-container .btn-group .btn-submit:hover,#donation-form-container .btn-group .btn-submit:focus{background:#fcb405 !important;-webkit-box-shadow:0 6px 20px rgba(0,0,0,.15);box-shadow:0 6px 20px rgba(0,0,0,.15)}
 body.single-stories h1.big-title,body.single-post h1.big-title{font-size:3.85rem}
+body.single-stories h2.wp-block-heading,body.single-post h2.wp-block-heading{font-size:35px;font-weight:500;line-height:1.2;margin:0 0 25px}
 body.single-stories figure.wp-block-image.size-full,body.single-post figure.wp-block-image.size-full{margin-left:0;margin-right:0;margin-top:0;margin-bottom:2em}
 body.single-stories figure.wp-block-gallery.columns-default,body.single-post figure.wp-block-gallery.columns-default{margin-left:0;margin-right:0}
+body.single-stories h2,body.single-post h2{color:#3d5588}
 #primary.post-type-stories,#primary.post-type-post{max-width:1400px;width:100%;margin:0 auto;padding:100px 20px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 #primary.post-type-stories #main.wrapper,#primary.post-type-post #main.wrapper{max-width:unset;width:62%;padding:0;margin:0}
 #primary.post-type-stories #main.wrapper .wp-featured-img,#primary.post-type-post #main.wrapper .wp-featured-img{margin:0}
@@ -1825,7 +1849,10 @@ body.post-type-archive-tribe_events .tribe-events-c-events-bar{border:0;clip:rec
 .repeatable-image-text-block.block-type-full .flexwrap.half .textCol{padding:5vw 4vw}
 .repeatable-image-text-block.block-type-full.img_right .flexwrap.half{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 .repeatable-image-text-block.block-type-full.img_right .flexwrap.half .imageCol{left:unset;right:0}
-}@media screen and (min-width:1024px){body.single-stories #main .twocol{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
+}@media screen and (min-width:1024px){.newsfeeds-wrapper .post-item{margin-top:5.5vw;margin-bottom:5.5vw}
+.newsfeeds-wrapper .post-item .textcol{width:53%;margin-bottom:0}
+.newsfeeds-wrapper .post-item .imagecol{width:42%}
+body.single-stories #main .twocol{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 body.single-stories #main .twocol .fxcol.text{width:50%}
 body.single-stories #main .twocol .fxcol.image{width:45%}
 }@media screen and (min-width:1025px){.repeatable-flexible-blocks .twocolumn.twocol .fxcol{width:48%}

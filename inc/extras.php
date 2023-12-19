@@ -272,17 +272,32 @@ function featured_story_func( $atts ) {
 
 add_shortcode( 'recent_news', 'recent_news_func' );
 function recent_news_func( $atts ) {
-    $a = shortcode_atts( array(
-        'show' => 3,
-    ), $atts );
-    $perpage = (isset($a['show']) && $a['show']) ? $a['show'] : 3;
-    $output = '';
-    ob_start();
-    include( locate_template('parts/recent-news-home.php') ); 
-    $output = ob_get_contents();
-    ob_end_clean();
-    return $output;
+  $a = shortcode_atts( array(
+      'show' => 3,
+  ), $atts );
+  $perpage = (isset($a['show']) && $a['show']) ? $a['show'] : 3;
+  $output = '';
+  ob_start();
+  include( locate_template('parts/recent-news-home.php') ); 
+  $output = ob_get_contents();
+  ob_end_clean();
+  return $output;
 }
+
+add_shortcode( 'newsfeeds', 'newsfeeds_func' );
+function newsfeeds_func( $atts ) {
+  $a = shortcode_atts( array(
+    'perpage' => 3,
+  ), $atts );
+  $perpage = (isset($a['perpage']) && $a['perpage']) ? $a['perpage'] : 3;
+  $output = '';
+  ob_start();
+  include( locate_template('parts/news-feeds.php') ); 
+  $output = ob_get_contents();
+  ob_end_clean();
+  return $output;
+}
+
 
 
 // add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
