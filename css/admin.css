@@ -72,3 +72,70 @@
 .acf-field-flexible-content [data-layout="two_column_textblock"] [data-name="vertical_divider"] .acf-label {
   padding-left: 25px;
 }
+
+body.post-type-tribe_events h1.wp-heading-inline {
+  position: relative;
+  overflow: hidden;
+  color: transparent;
+  min-width: 90px;
+}
+body.post-type-tribe_events h1.wp-heading-inline:before {
+  content: "Pantries";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  z-index: 5;
+  text-indent: 0;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px!important;
+  margin-left: 0!important;
+  background: #f0f0f1;
+  width: 90px;
+  color: #000;
+}
+
+#adminmenu li#menu-posts-tribe_events a.menu-top .wp-menu-name {
+  position: relative;
+  overflow: hidden;
+  text-indent: -99em;
+}
+#adminmenu li#menu-posts-tribe_events a.menu-top .wp-menu-name:before {
+  content: "Pantries";
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: -1px;
+  z-index: 5;
+  text-indent: 0;
+  width: 100%;
+  color: #FFF;
+  padding-left: 0!important;
+  margin-left: 0!important;
+}
+
+#adminmenu li#menu-posts-tribe_events a.menu-top .wp-menu-image {
+  background-image: none!important;
+  position: relative;
+}
+#adminmenu li#menu-posts-tribe_events a.menu-top .wp-menu-image:before {
+  content: "\f230";
+  font-family: dashicons;
+  display: inline-block;
+  line-height: 1;
+  font-weight: 400;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  vertical-align: top;
+  text-align: center;
+  transition: color .1s ease-in;
+}
