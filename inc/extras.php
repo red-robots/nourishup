@@ -13,6 +13,11 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
+
+$date = new DateTime();
+$date->setTimezone(new DateTimeZone('America/Detroit'));
+$fdate = $date->format('Y-m-d H:i:s');
+define('WP_CURRENT_TIME', $fdate);
 define('THEMEURI',get_template_directory_uri() . '/');
 
 function bellaworks_body_classes( $classes ) {
@@ -289,12 +294,26 @@ function newsfeeds_func( $atts ) {
   $perpage = (isset($a['perpage']) && $a['perpage']) ? $a['perpage'] : 3;
   $output = '';
   ob_start();
-  //include( locate_template('parts/events-feeds.php') ); 
   include( locate_template('parts/news-feeds.php') ); 
   $output = ob_get_contents();
   ob_end_clean();
   return $output;
 }
+
+add_shortcode( 'events-feeds', 'events_feeds_func' );
+function events_feeds_func( $atts ) {
+  $a = shortcode_atts( array(
+    'perpage' => 3,
+  ), $atts );
+  $perpage = (isset($a['perpage']) && $a['perpage']) ? $a['perpage'] : 3;
+  $output = '';
+  ob_start();
+  include( locate_template('parts/events-feeds.php') ); 
+  $output = ob_get_contents();
+  ob_end_clean();
+  return $output;
+}
+
 
 add_shortcode( 'eventsfeeds', 'eventsfeeds_func' );
 function eventsfeeds_func( $atts ) {
@@ -606,3 +625,11 @@ function copyImage($url) {
     }
 }
 
+
+
+
+function get_events_list() {
+	global $wpdb;
+	$now = WP_CURRENT_TIME;
+	$query = "SELECT p.* FROM ".$wpdb->prefix."posts p WHERE p.post_type='events' AND p.post_status='publish'";
+}

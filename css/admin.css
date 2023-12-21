@@ -110,6 +110,23 @@ body.post-type-tribe_events h1.wp-heading-inline:before {
   overflow: hidden;
   text-indent: -99em;
 }
+
+#wp-admin-bar-root-default.ab-top-menu li#wp-admin-bar-tribe-events.menupop {
+  position: relative;
+  overflow: hidden;
+  text-indent: -99em;
+  width: 85px;
+}
+#wp-admin-bar-root-default.ab-top-menu li#wp-admin-bar-tribe-events.menupop:before {
+  content: "Pantries";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 28px;
+  z-index: 5;
+  text-indent: 0;
+  color: #FFF;
+}
 #adminmenu li#menu-posts-tribe_events a.menu-top .wp-menu-name:before {
   content: "Pantries";
   display: block;

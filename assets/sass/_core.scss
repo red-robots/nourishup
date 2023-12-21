@@ -2315,7 +2315,13 @@ body.logged-in.admin-bar {
   }
 }
 
-body.news {
+// body.news,
+// body.events {
+//   .entry-content {
+//     max-width: 100%!important;
+//   }
+// }
+body.page-template-default {
   .entry-content {
     max-width: 100%!important;
   }
@@ -3645,4 +3651,197 @@ body.post-type-archive-tribe_events {
       }
     }
   }
+}
+
+.events-feeds {
+  padding-bottom: 40px;
+  .event-title {
+    margin-bottom: 30px;
+    h2 {
+      margin: 0 0;
+    }
+    .event-date {
+      font-size: 22px;
+      font-weight: 600;
+      color: $primary;
+      margin: 10px 0;
+      b {
+        font-weight: normal;
+        display: inline-block;
+        margin: 0 2px;
+      }
+    }
+    
+  }
+
+  #pagination.passed-events {
+    margin-top: 60px;
+    a.morelink.current-events {
+      display: inline-block;
+      color: $primary!important;
+      text-decoration: underline;
+      background: transparent!important;
+      position: relative;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      float: right;
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: 8px solid $primary;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        position: absolute;
+        top: 11px;
+        right: -5px;
+        transition: transform ease .3s;
+      }
+      &:hover, &:focus {
+        color: $secondary!important;
+        &:after {
+          border-left-color: $secondary;
+          transform: translateX(3px);
+        }
+      }
+    }
+  }
+
+  #pagination:not(.passed-events) {
+    width: 100%;
+    display: none;
+    .page-numbers:not(.next) {
+      display: none;
+    }
+    .page-numbers.prev {
+      display: inline-block;
+    }
+    .page-numbers.next,
+    .page-numbers.prev {
+      display: inline-block;
+      position: relative;
+      background-color: transparent;
+      float: right;
+      color: $primary;
+      &:before {
+        content: "Current Events";
+        display: inline-block;
+        color: $primary;
+        margin-right: 8px;
+        margin-top: 2px;
+        margin-bottom: 3px;
+        padding: 5px 0;
+        font-size: 20px;
+        line-height: 1;
+        text-transform: uppercase;
+        border-bottom: 1px solid $primary;
+      }
+      
+
+      &:hover, &:focus {
+        color: $secondary;
+        &:before {
+          color: $secondary;
+          border-bottom-color: $secondary!important;
+        }
+        &:after {
+          border-left-color: $secondary;
+          transform: translateX(3px);
+        }
+      }
+    }
+
+    .page-numbers.next {
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: 8px solid $primary;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        position: absolute;
+        top: 18px;
+        right: 7px;
+        transition: transform ease .3s;
+      }
+    }
+    .page-numbers.prev {
+      &:before {
+        margin-right: 0;
+      }
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-right: 8px solid $primary;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        position: absolute;
+        top: 18px;
+        left: -7px;
+        transition: transform ease .3s;
+      }
+      &:hover, &:focus {
+        &:after {
+          border-right-color: $secondary;
+          transform: translateX(-3px);
+        }
+      }
+    }
+  }
+}
+
+.morelink.prev-post {
+  display: inline-block;
+  text-decoration: underline;
+  position: relative;
+  padding: 5px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-right: 8px solid $primary;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    position: absolute;
+    top: 11px;
+    left: 0;
+    transition: transform ease .3s;
+  }
+  &:hover, &:focus {
+    color: $secondary;
+    &:after {
+      border-right-color: $secondary;
+      transform: translateX(-3px);
+    }
+  }
+}
+
+#wp-admin-bar-root-default.ab-top-menu li#wp-admin-bar-tribe-events.menupop {
+  position: relative;
+  overflow: hidden;
+  text-indent: -99em;
+  width: 85px;
+}
+#wp-admin-bar-root-default.ab-top-menu li#wp-admin-bar-tribe-events.menupop:before {
+  content: "Pantries";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 28px;
+  z-index: 5;
+  text-indent: 0;
+  color: #FFF;
 }

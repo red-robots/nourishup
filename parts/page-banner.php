@@ -5,6 +5,7 @@ $is_tribe_events = (isset($obj->name) && $obj->name=='tribe_events') ? true : fa
 $taxonomy = (isset($obj->taxonomy) && $obj->taxonomy) ? $obj->taxonomy : '';
 $termTitle = (isset($obj->name) && $obj->name) ? $obj->name : '';
 $is_tribe_taxonomy = ($taxonomy=='tribe_events_cat') ? true : false;
+$is_passed_events = ( isset($_GET['status']) && $_GET['status']=='passed-events' ) ? true : false;
 
 if($is_tribe_events || $is_tribe_taxonomy) {
 
@@ -58,11 +59,15 @@ if( (is_page() || is_single()) && !is_front_page() ) {
       $imageUrl = get_the_post_thumbnail_url();
       $imgAlt = ($imageUrl) ? get_post(get_post_thumbnail_id())->post_title : '';
     }
+    $page_title = trim(get_the_title());
+    if($page_title=='Events' && $is_passed_events) {
+      $page_title = 'Passed ' . $page_title;
+    }
     ?>
     <div class="subpageHero single-hero">
       <div class="heroText">
         <div class="wrapper">
-        <h1 class="big-title"><?php echo get_the_title()?></h1>
+        <h1 class="big-title"><?php echo $page_title ?></h1>
         </div>
       </div>
       <span class="overlay-background"></span>

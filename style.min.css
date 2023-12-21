@@ -1665,7 +1665,7 @@ body:not(.home).page-template-default .gform_wrapper .gform_button:focus{outline
 body:not(.home) .site-header.sticky .site-logo{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 body:not(.home) .site-header.sticky .site-logo .logo-shrink{top:0;left:-11px}
 body.logged-in.admin-bar header.site-header.sticky{top:31px}
-body.news .entry-content{max-width:100% !important}
+body.page-template-default .entry-content{max-width:100% !important}
 .newsfeeds-wrapper{margin:20px 0}
 .newsfeeds-wrapper .post-title{color:#3d5588;font-size:2em;font-weight:500;line-height:1.2;margin:0 0 20px}
 .newsfeeds-wrapper .post-item{margin:40px 0}
@@ -1839,6 +1839,34 @@ body.post-type-archive-tribe_events .tribe-events-c-events-bar{border:0;clip:rec
 .tribe-events .tribe-events-c-events-bar .event-category-dropdown #legend_box li.teccc-reset a{left:0 !important;border-bottom:none !important;color:#e35613;text-align:center;padding:5px 0 !important}
 .tribe-events .tribe-events-c-events-bar .event-category-dropdown #legend_box li.teccc-reset{display:none !important}
 .tribe-events .tribe-events-c-events-bar .event-category-dropdown #legend_box #legend li.last a{border-bottom:none !important}
+.events-feeds{padding-bottom:40px}
+.events-feeds .event-title{margin-bottom:30px}
+.events-feeds .event-title h2{margin:0}
+.events-feeds .event-title .event-date{font-size:22px;font-weight:600;color:#3d5588;margin:10px 0}
+.events-feeds .event-title .event-date b{font-weight:normal;display:inline-block;margin:0 2px}
+.events-feeds #pagination.passed-events{margin-top:60px}
+.events-feeds #pagination.passed-events a.morelink.current-events{display:inline-block;color:#3d5588 !important;text-decoration:underline;background:transparent !important;position:relative;font-size:18px;font-weight:500;line-height:1.2;letter-spacing:.05em;text-transform:uppercase;float:right}
+.events-feeds #pagination.passed-events a.morelink.current-events:after{content:"";display:inline-block;width:0;height:0;border-left:8px solid #3d5588;border-top:5px solid transparent;border-bottom:5px solid transparent;position:absolute;top:11px;right:-5px;-webkit-transition:-webkit-transform ease .3s;transition:-webkit-transform ease .3s;transition:transform ease .3s;transition:transform ease .3s,-webkit-transform ease .3s}
+.events-feeds #pagination.passed-events a.morelink.current-events:hover,.events-feeds #pagination.passed-events a.morelink.current-events:focus{color:#f26522 !important}
+.events-feeds #pagination.passed-events a.morelink.current-events:hover:after,.events-feeds #pagination.passed-events a.morelink.current-events:focus:after{border-left-color:#f26522;-webkit-transform:translateX(3px);transform:translateX(3px)}
+.events-feeds #pagination:not(.passed-events){width:100%;display:none}
+.events-feeds #pagination:not(.passed-events) .page-numbers:not(.next){display:none}
+.events-feeds #pagination:not(.passed-events) .page-numbers.prev{display:inline-block}
+.events-feeds #pagination:not(.passed-events) .page-numbers.next,.events-feeds #pagination:not(.passed-events) .page-numbers.prev{display:inline-block;position:relative;background-color:transparent;float:right;color:#3d5588}
+.events-feeds #pagination:not(.passed-events) .page-numbers.next:before,.events-feeds #pagination:not(.passed-events) .page-numbers.prev:before{content:"Current Events";display:inline-block;color:#3d5588;margin-right:8px;margin-top:2px;margin-bottom:3px;padding:5px 0;font-size:20px;line-height:1;text-transform:uppercase;border-bottom:1px solid #3d5588}
+.events-feeds #pagination:not(.passed-events) .page-numbers.next:hover,.events-feeds #pagination:not(.passed-events) .page-numbers.next:focus,.events-feeds #pagination:not(.passed-events) .page-numbers.prev:hover,.events-feeds #pagination:not(.passed-events) .page-numbers.prev:focus{color:#f26522}
+.events-feeds #pagination:not(.passed-events) .page-numbers.next:hover:before,.events-feeds #pagination:not(.passed-events) .page-numbers.next:focus:before,.events-feeds #pagination:not(.passed-events) .page-numbers.prev:hover:before,.events-feeds #pagination:not(.passed-events) .page-numbers.prev:focus:before{color:#f26522;border-bottom-color:#f26522 !important}
+.events-feeds #pagination:not(.passed-events) .page-numbers.next:hover:after,.events-feeds #pagination:not(.passed-events) .page-numbers.next:focus:after,.events-feeds #pagination:not(.passed-events) .page-numbers.prev:hover:after,.events-feeds #pagination:not(.passed-events) .page-numbers.prev:focus:after{border-left-color:#f26522;-webkit-transform:translateX(3px);transform:translateX(3px)}
+.events-feeds #pagination:not(.passed-events) .page-numbers.next:after{content:"";display:inline-block;width:0;height:0;border-left:8px solid #3d5588;border-top:5px solid transparent;border-bottom:5px solid transparent;position:absolute;top:18px;right:7px;-webkit-transition:-webkit-transform ease .3s;transition:-webkit-transform ease .3s;transition:transform ease .3s;transition:transform ease .3s,-webkit-transform ease .3s}
+.events-feeds #pagination:not(.passed-events) .page-numbers.prev:before{margin-right:0}
+.events-feeds #pagination:not(.passed-events) .page-numbers.prev:after{content:"";display:inline-block;width:0;height:0;border-right:8px solid #3d5588;border-top:5px solid transparent;border-bottom:5px solid transparent;position:absolute;top:18px;left:-7px;-webkit-transition:-webkit-transform ease .3s;transition:-webkit-transform ease .3s;transition:transform ease .3s;transition:transform ease .3s,-webkit-transform ease .3s}
+.events-feeds #pagination:not(.passed-events) .page-numbers.prev:hover:after,.events-feeds #pagination:not(.passed-events) .page-numbers.prev:focus:after{border-right-color:#f26522;-webkit-transform:translateX(-3px);transform:translateX(-3px)}
+.morelink.prev-post{display:inline-block;text-decoration:underline;position:relative;padding:5px 15px;font-size:18px;font-weight:500;line-height:1.2;letter-spacing:.03em;text-transform:uppercase}
+.morelink.prev-post:after{content:"";display:inline-block;width:0;height:0;border-right:8px solid #3d5588;border-top:5px solid transparent;border-bottom:5px solid transparent;position:absolute;top:11px;left:0;-webkit-transition:-webkit-transform ease .3s;transition:-webkit-transform ease .3s;transition:transform ease .3s;transition:transform ease .3s,-webkit-transform ease .3s}
+.morelink.prev-post:hover,.morelink.prev-post:focus{color:#f26522}
+.morelink.prev-post:hover:after,.morelink.prev-post:focus:after{border-right-color:#f26522;-webkit-transform:translateX(-3px);transform:translateX(-3px)}
+#wp-admin-bar-root-default.ab-top-menu li#wp-admin-bar-tribe-events.menupop{position:relative;overflow:hidden;text-indent:-99em;width:85px}
+#wp-admin-bar-root-default.ab-top-menu li#wp-admin-bar-tribe-events.menupop:before{content:"Pantries";display:block;position:absolute;top:0;left:28px;z-index:5;text-indent:0;color:#fff}
 @media screen and (min-width:800px){.repeatable-image-text-block .flexwrap.half{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .repeatable-image-text-block .flexwrap.half .imageCol{width:40%;margin-bottom:0}
 .repeatable-image-text-block .flexwrap.half .textCol{width:55%}
