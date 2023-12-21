@@ -289,7 +289,8 @@ function newsfeeds_func( $atts ) {
   $perpage = (isset($a['perpage']) && $a['perpage']) ? $a['perpage'] : 3;
   $output = '';
   ob_start();
-  include( locate_template('parts/events-feeds.php') ); 
+  //include( locate_template('parts/events-feeds.php') ); 
+  include( locate_template('parts/news-feeds.php') ); 
   $output = ob_get_contents();
   ob_end_clean();
   return $output;

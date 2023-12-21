@@ -299,7 +299,7 @@ function custom_post_column( $column, $post_id ) {
         case 'featured' :
           $featured = get_field('featured_story',$post_id);
           if($featured) {
-            echo '<div class="dashicons dashicons-star-filled" style="color: #ecb618; font-size: 27px; position: relative; top: 7px;"></div>';
+            echo '<div title="Featured Story" class="dashicons dashicons-star-filled" style="color: #ecb618; font-size: 27px; position: relative; top: 7px;"></div>';
           }
           break;
       }
