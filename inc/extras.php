@@ -251,7 +251,7 @@ add_action( 'init', 'remove_pages_editor' );
 add_shortcode( 'featured_story', 'featured_story_func' );
 function featured_story_func( $atts ) {
   global $wpdb;
-  $query = "SELECT p.*, pm.post_id, pm.meta_id FROM ".$wpdb->prefix."posts p, ".$wpdb->prefix."postmeta pm WHERE p.ID=pm.post_id AND p.post_status='publish' AND pm.meta_key='featured_story' AND pm.meta_value='1'";
+  $query = "SELECT p.*, pm.post_id, pm.meta_id FROM ".$wpdb->prefix."posts p, ".$wpdb->prefix."postmeta pm WHERE p.ID=pm.post_id AND p.post_status='publish' AND p.post_type='post' AND pm.meta_key='featured_story' AND pm.meta_value='1'";
   $result = $wpdb->get_row($query);
   $output = '';
 //   print_r($result);
