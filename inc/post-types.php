@@ -8,15 +8,15 @@
 add_action('init', 'js_custom_init', 1);
 function js_custom_init() {
     $post_types = array(
-      array(
-        'post_type' => 'stories',
-        'menu_name' => 'Stories',
-        'plural'    => 'Stories',
-        'single'    => 'Story',
-        'menu_icon' => 'dashicons-megaphone',
-        'supports'  => array('title','editor','thumbnail'),
-        'menu_position'=> 5
-      ),
+      // array(
+      //   'post_type' => 'stories',
+      //   'menu_name' => 'Stories',
+      //   'plural'    => 'Stories',
+      //   'single'    => 'Story',
+      //   'menu_icon' => 'dashicons-megaphone',
+      //   'supports'  => array('title','editor','thumbnail'),
+      //   'menu_position'=> 5
+      // ),
       array(
         'post_type' => 'activities',
         'menu_name' => 'Activities',
@@ -229,6 +229,18 @@ function set_custom_cpt_columns($columns) {
         $columns['image'] = __( 'Photo', 'bellaworks' );
         $columns['date'] = __( 'Date', 'bellaworks' );
     }
+    else if($post_type=='post') {
+      unset($columns['author']);
+      unset($columns['categories']);
+      unset($columns['tags']);
+      unset($columns['date']);
+      $columns['title'] = __( 'Title', 'bellaworks' );
+      $columns['featured'] = __( 'Featured Story', 'bellaworks' );
+      $columns['author'] = __( 'Author', 'bellaworks' );
+      $columns['categories'] = __( 'Categories', 'bellaworks' );
+      $columns['tags'] = __( 'Tags', 'bellaworks' );
+      $columns['date'] = __( 'Date', 'bellaworks' );
+    }
     // else if($post_type=='communities') {
     //     unset($columns['date']);
     //     unset($columns['taxonomy-community-status']);
@@ -282,6 +294,16 @@ function custom_post_column( $column, $post_id ) {
             break;
         }
     }
+    else if($post_type=='post') {
+      switch ( $column ) {
+        case 'featured' :
+          $featured = get_field('featured_story',$post_id);
+          if($featured) {
+            echo '<div class="dashicons dashicons-star-filled" style="color: #ecb618; font-size: 27px; position: relative; top: 7px;"></div>';
+          }
+          break;
+      }
+  }
     
 }
 

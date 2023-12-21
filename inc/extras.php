@@ -225,26 +225,27 @@ function remove_pages_editor(){
 add_action( 'init', 'remove_pages_editor' );
 
 
-add_action('acf/save_post', 'my_acf_save_post');
-function my_acf_save_post( $post_id ) {
-  global $wpdb;
-  $posttype = get_post_type($post_id);
-  if($posttype=='stories') {
-      //$values = get_fields( $post_id );
-      $val = get_field('featured_story', $post_id);
-      $query = "SELECT meta_id, post_id FROM ".$wpdb->prefix."postmeta WHERE meta_key='featured_story' AND meta_value='1'";
-      $result = $wpdb->get_results($query);
-      if($result) {
-          foreach($result as $row) {
-              $meta_postid = $row->post_id;
-              if($meta_postid!=$post_id) {
-                  //update_post_meta($meta_postid,'featured_story','','1');
-                  delete_post_meta($meta_postid, 'featured_story');
-              } 
-          }
-      }
-  }
-}
+
+// add_action( 'save_post', 'save_post_with_acf');
+// function save_post_with_acf( $post_id) {
+// 	global $wpdb;
+// 	$posttype = get_post_type($post_id);
+// 	if ( $posttype=='post' ) {
+// 		$val = get_field('featured_story', $post_id);
+// 		if($val) {
+// 			$query = "SELECT meta.meta_id, meta.post_id FROM ".$wpdb->prefix."postmeta meta WHERE meta.meta_key LIKE '%featured_story%' AND meta.post_id!=" . $post_id;
+// 			$result = $wpdb->get_results($query);
+// 			if($result) {
+// 				foreach($result as $row) {
+// 					if($post_id!=$row->post_id) {
+// 						delete_post_meta($row->post_id, 'featured_story');
+// 						delete_post_meta($row->post_id, '_featured_story');
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 
 add_shortcode( 'featured_story', 'featured_story_func' );
@@ -253,14 +254,10 @@ function featured_story_func( $atts ) {
   $query = "SELECT p.*, pm.post_id, pm.meta_id FROM ".$wpdb->prefix."posts p, ".$wpdb->prefix."postmeta pm WHERE p.ID=pm.post_id AND p.post_status='publish' AND pm.meta_key='featured_story' AND pm.meta_value='1'";
   $result = $wpdb->get_row($query);
   $output = '';
+//   print_r($result);
+
   if($result) {
-      $postid = $result->post_id;
-    //   if( $featured = get_post($postid) ) {            
-    //       ob_start();
-    //       include( locate_template('parts/featured_story.php') ); 
-    //       $output = ob_get_contents();
-    //       ob_end_clean();
-    //   }
+    $postid = $result->post_id;
     ob_start();
     include( locate_template('parts/featured_story.php') ); 
     $output = ob_get_contents();

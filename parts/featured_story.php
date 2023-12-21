@@ -1,5 +1,4 @@
-<?php 
-if( isset($result) && $result ) { ?>
+<?php if( isset($result) && $result ) { ?>
 <div class="featured-story-wrap">
   <?php
     $pid = $result->ID;

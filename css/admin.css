@@ -95,7 +95,16 @@ body.post-type-tribe_events h1.wp-heading-inline:before {
   width: 90px;
   color: #000;
 }
-
+.acf-field[data-name="featured_story"] {
+  position: relative;
+  padding-top: 0!important;
+}
+.acf-field[data-name="featured_story"] div.acf-label {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  display: inline-block;
+}
 #adminmenu li#menu-posts-tribe_events a.menu-top .wp-menu-name {
   position: relative;
   overflow: hidden;

@@ -4,7 +4,8 @@ $args = array(
   'post_type'       => 'post',
   'orderby'         => 'date',
   'order'           => 'desc',
-  'post_status'     => 'publish'
+  'post_status'     => 'publish',
+  'category__not_in'=> array(17)
 );
 $recentposts = new WP_Query($args);
 if ( $recentposts->have_posts() ) {  
