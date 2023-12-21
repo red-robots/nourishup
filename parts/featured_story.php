@@ -4,10 +4,13 @@
     $pid = $result->ID;
     $title =  $result->post_title;
     //$excerpt = get_field('excerpt', $pid);
-    $image = get_the_post_thumbnail($pid);
+    //$image = get_the_post_thumbnail($pid);
+    $image = get_field('thumbnail_image', $pid);
     $content = $result->post_content;
     $numpara = 2;
     $excerpt = getParagraph($content, $numpara);
+
+    
 
     if( get_field('excerpt', $pid) ) {
       $excerpt = get_field('excerpt', $pid);
@@ -37,7 +40,7 @@
     
     <?php if($image ) { ?>
     <div class="col imagecol">
-      <figure><?php echo $image ?></figure>
+      <figure><img src="<?php echo $image['url'] ?>" title="<?php echo $image['title'] ?>" class="custom-image"></figure>
     </div>
     <?php } ?>
   </div>
