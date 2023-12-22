@@ -63,6 +63,12 @@ if( (is_page() || is_single()) && !is_front_page() ) {
     if($page_title=='Events' && $is_passed_events) {
       $page_title = 'Passed ' . $page_title;
     }
+
+    $banner_image = get_field('banner_image');
+    if($banner_image) {
+      $imgAlt = $banner_image['title'];
+      $imageUrl = $banner_image['url'];
+    }
     ?>
     <div class="subpageHero single-hero">
       <div class="heroText">

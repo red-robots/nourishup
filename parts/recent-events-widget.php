@@ -5,7 +5,7 @@ $posts_per_page = 10;
 
 $args = array(
   'posts_per_page'  => $posts_per_page,
-  'post_type'       => 'post',
+  'post_type'       => 'events',
   'orderby'         => 'date',
   'order'           => 'desc',
   'post_status'     => 'publish',
