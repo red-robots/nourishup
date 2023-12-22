@@ -2,7 +2,8 @@
 $paged = ( get_query_var( 'pg' ) ) ? absint( get_query_var( 'pg' ) ) : 1;
 
 $is_passed_events = ( isset($_GET['status']) && $_GET['status']=='passed-events' ) ? true : false;
-$current_date = date('Y-m-d', strtotime(WP_CURRENT_TIME));
+// $current_date = date('Y-m-d', strtotime(WP_CURRENT_TIME));
+$current_date = date('Y-m-d H:i:s', strtotime(WP_CURRENT_TIME));
 $current_time = date('H:i:s', strtotime(WP_CURRENT_TIME));
 $args = array(
   'post_type'         => 'events',
@@ -10,8 +11,15 @@ $args = array(
   'post_status'       => 'publish',
   'paged'			        => $paged,
   'meta_query'        => array(
+    'relation' => 'AND',
     [
       'key'       => 'start_date',
+      'compare'   => '<=',
+      'value'     => $current_date,
+      'type'      => 'DATE',
+    ],
+    [
+      'key'       => 'end_date',
       'compare'   => '>=',
       'value'     => $current_date,
       'type'      => 'DATE',
@@ -24,8 +32,15 @@ $args = array(
 
 if( $is_passed_events ) {
   $args['meta_query'] = array(
+    //'relation' => 'OR',
+    // [
+    //   'key'       => 'start_date',
+    //   'compare'   => '<',
+    //   'value'     => $current_date,
+    //   'type'      => 'DATE',
+    // ],
     [
-      'key'       => 'start_date',
+      'key'       => 'end_date',
       'compare'   => '<',
       'value'     => $current_date,
       'type'      => 'DATE',
@@ -91,8 +106,34 @@ if ( $news->have_posts() ) {
         $end_date = ($end_date) ? date('F d, Y', strtotime($end_date)) : '';
 
         if($start_date && $end_date) {
+          $stDate = strtotime($start_date);
+          $endDateStr = strtotime($end_date);
+          $nowTime = strtotime(WP_CURRENT_TIME);
           $event_date = date('F d, Y', strtotime($start_date));
           $event_date .= ' to ' . $end_date;
+
+          if($nowTime < $endDateStr) {
+            $event_date = 'Now through ' . $end_date;
+          }
+          
+          if($is_passed_events) {
+            if($stDate < $nowTime) {
+              if($time_range) {
+                $event_date = date('l, F d, Y', strtotime($start_date))  . ' | ' . $time_range;
+              } else {
+                $event_date = date('l, F d, Y', strtotime($start_date));
+              }
+            }
+          }
+
+          if($stDate==$endDateStr) {
+            if($time_range) {
+              $event_date = date('l, F d, Y', strtotime($start_date)) . ' | ' . $time_range;
+            } else {
+              $event_date = date('l, F d, Y', strtotime($start_date));
+            }
+          }
+
         }
         ?>
         <article class="post-item event-item">
