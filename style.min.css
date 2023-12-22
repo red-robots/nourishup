@@ -1929,9 +1929,9 @@ body.single-stories #main .twocol .fxcol.image{width:45%}
 }@media screen and (max-width:1495px){.footerTextBlock .wrapper{max-width:700px}
 }@media screen and (max-width:1470px){.featured-story-wrap{padding-left:30px;padding-right:30px}
 }@media screen and (max-width:1400px){#AboutNourishUp .wp-block-columns .wp-block-column:nth-child(2){padding-left:2vw}
-}@media screen and (max-width:1350px){.footerTextBlock:before{left:-20vw}
-.footerTextBlock:after{right:-20vw}
-.footerTextBlock .wrapper{max-width:60vw}
+}@media screen and (max-width:1350px){.footerTextBlock:before{left:-10vw}
+.footerTextBlock:after{right:-10vw}
+.footerTextBlock .wrapper{max-width:40vw}
 }@media screen and (max-width:1100px){.wp-block-group.impact .wp-block-group.numbers{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .wp-block-group.impact .wp-block-group.numbers .wp-block-group{width:33.33%}
 }@media screen and (max-width:1024px){.wp-block-columns.involved,.wp-block-columns.involved .wp-block-columns{gap:1.5rem}
@@ -1992,9 +1992,9 @@ body:not(.home).page-template-default .subpage-banner h1{font-size:3.5rem}
 #RecentNews ul.wp-block-latest-posts li:first-child{margin-top:0}
 #RecentNews ul.wp-block-latest-posts .inside{padding:30px 7vw}
 #RecentNews li{max-width:500px;width:100%;margin:0 auto}
-.footerTextBlock:before{left:-35vw}
-.footerTextBlock:after{right:-35vw}
-.footerTextBlock .wrapper{max-width:80vw}
+.footerTextBlock:before{left:-15vw}
+.footerTextBlock:after{right:-15vw}
+.footerTextBlock .wrapper{max-width:40vw}
 .footerTextBlock .flexwrap .textwrap{font-size:1.8em}
 .subpageHero,.repeatable-hero{min-height:430px}
 div.checklist ul{width:100%}
@@ -2025,8 +2025,8 @@ body:not(.home) .site-header .site-logo{width:220px}
 }@media screen and (max-width:500px){#donation-form-container .field{width:100% !important}
 .custom-calendar-filter .event-category-dropdown .selectBox{font-size:12px;width:160px;float:right}
 .tribe-events .tribe-events-c-events-bar .event-category-dropdown .selectBox{font-size:12px;width:160px;float:right}
-}@media screen and (max-width:480px){.footerTextBlock:before{left:-75vw}
-.footerTextBlock:after{right:-75vw}
+}@media screen and (max-width:480px){.footerTextBlock:before{left:-65vw}
+.footerTextBlock:after{right:-65vw}
 .footerTextBlock .flexwrap .textwrap{font-size:1.5em}
 }@media(print),(prefers-reduced-motion:reduce){.animated{-webkit-animation-duration:1ms !important;animation-duration:1ms !important;-webkit-transition-duration:1ms !important;transition-duration:1ms !important;-webkit-animation-iteration-count:1 !important;animation-iteration-count:1 !important}
 }@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}

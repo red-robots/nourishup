@@ -1106,25 +1106,25 @@ body.home .wp-block-cover.hero {
   }
   @media screen and (max-width: 1350px) {
     &:before {
-      left: -20vw;
+      left:-10vw;
     }
     &:after {
-      right: -20vw;
+      right:-10vw;
     }
     .wrapper {
-      max-width: 60vw;
+      max-width: 40vw;
     }
   }
 
   @media screen and (max-width: 820px) {
     &:before {
-      left: -35vw;
+      left: -15vw;
     }
     &:after {
-      right: -35vw;
+      right: -15vw;
     }
     .wrapper {
-      max-width: 80vw;
+      max-width: 40vw;
     }
     .flexwrap .textwrap {
       font-size: 1.8em;
@@ -1142,10 +1142,10 @@ body.home .wp-block-cover.hero {
 
   @media screen and (max-width: 480px) {
     &:before {
-      left: -75vw;
+      left: -65vw;
     }
     &:after {
-      right: -75vw;
+      right: -65vw;
     }
     .flexwrap .textwrap {
       font-size: 1.5em;
