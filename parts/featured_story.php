@@ -40,7 +40,10 @@
     
     <?php if($image ) { ?>
     <div class="col imagecol">
-      <figure><img src="<?php echo $image['url'] ?>" title="<?php echo $image['title'] ?>" class="custom-image"></figure>
+      <figure class="post-image">
+        <img src="<?php echo $image['url'] ?>" title="<?php echo $image['title'] ?>" class="custom-image">
+        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/square.png" alt="" class="resizer" />
+      </figure>
     </div>
     <?php } ?>
   </div>
