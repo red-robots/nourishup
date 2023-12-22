@@ -447,7 +447,15 @@ jQuery(document).ready(function ($) {
   }
 
 
-
+  if( $('#main .wp-block-heading').length ) {
+    $('#main .wp-block-heading').each(function(){
+      var target = $(this);
+      var nextEl = $(this).next().prop('nodeName');
+      if(nextEl=='UL' || nextEl=='P') {
+        target.addClass('no-margin-bottom');
+      }
+    });
+  }
 
 
 }); 

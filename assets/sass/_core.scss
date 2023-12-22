@@ -2330,6 +2330,9 @@ body.page-template-default {
     p {
       color: $blue;
     }
+    .no-margin-bottom {
+      margin-bottom: 0!important;
+    }
   }
 }
 
