@@ -1666,8 +1666,8 @@ body:not(.home) .site-header.sticky .site-logo{-webkit-box-pack:start;-ms-flex-p
 body:not(.home) .site-header.sticky .site-logo .logo-shrink{top:0;left:-11px}
 body.logged-in.admin-bar header.site-header.sticky{top:31px}
 body.page-template-default .entry-content{max-width:100% !important}
-body.page-template-default .entry-content h1,body.page-template-default .entry-content h2,body.page-template-default .entry-content h3,body.page-template-default .entry-content h4,body.page-template-default .entry-content h5,body.page-template-default .entry-content h6{color:#3d5588}
-body.page-template-default .entry-content p{color:#3d5588}
+body.page-template-default .entry-content h1,body.page-template-default .entry-content h2,body.page-template-default .entry-content h3,body.page-template-default .entry-content h4,body.page-template-default .entry-content h5,body.page-template-default .entry-content h6{color:#282f6f}
+body.page-template-default .entry-content p{color:#282f6f}
 .newsfeeds-wrapper{margin:20px 0}
 .newsfeeds-wrapper .post-title{color:#3d5588;font-size:2em;font-weight:500;line-height:1.2;margin:0 0 20px}
 .newsfeeds-wrapper .post-item{margin:40px 0}
