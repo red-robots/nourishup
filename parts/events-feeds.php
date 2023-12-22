@@ -86,6 +86,14 @@ if ( $news->have_posts() ) {
             $event_date .= ' <b>|</b> ' . $time_range;
           }
         }
+
+        $end_date = get_field('end_date', $post_id); 
+        $end_date = ($end_date) ? date('F d, Y', strtotime($end_date)) : '';
+
+        if($start_date && $end_date) {
+          $event_date = date('F d, Y', strtotime($start_date));
+          $event_date .= ' to ' . $end_date;
+        }
         ?>
         <article class="post-item event-item">
           <div class="inside">

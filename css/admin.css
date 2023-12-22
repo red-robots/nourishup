@@ -165,3 +165,11 @@ body.post-type-tribe_events h1.wp-heading-inline:before {
   text-align: center;
   transition: color .1s ease-in;
 }
+
+body.post-type-events .acf-field[data-name="start_date"],
+body.post-type-events .acf-field[data-name="start_time"],
+body.post-type-events .acf-field[data-name="end_time"] {
+  width: 33.333%;
+  float: left;
+  clear: none;
+}
