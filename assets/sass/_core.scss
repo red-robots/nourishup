@@ -179,10 +179,12 @@ h6 {font-size: 28px;}
       position: absolute;
       left: 10px;
       width: 280px;
-      background: $secondary;
+      // background: $secondary;
+      background: $primary;
       display: none;
       animation-fill-mode: both;
       animation-duration: 0.5s;
+      box-shadow: 0 2px 5px rgba(0,0,0,.15);
       a {
         display: block;
         padding: 8px 15px;
@@ -191,7 +193,8 @@ h6 {font-size: 28px;}
       }
     }
     ul.menu ul > li:hover > a {
-      background: $yellow;
+      // background: $yellow;
+      background: $secondary;
     }
     ul.menu > li:hover > ul {
       display: block;
