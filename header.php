@@ -53,6 +53,7 @@ const params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v
       <div class="head-inner">
 
         <?php 
+          $horizontalLogo =  get_field('subpage_logo','option');
           if( is_front_page() || is_home() ) {
             $siteLogo = get_field('homepage_logo','option'); 
           } else {
@@ -71,8 +72,11 @@ const params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v
         <?php if( $siteLogo ) { ?>
         <span class="site-logo">
           <a href="<?php echo get_site_url() ?>">
-            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/logo-plain.png" alt="<?php echo get_bloginfo('name') ?>" class="logo-shrink">
+            <!-- <img src="<?php //echo get_stylesheet_directory_uri() ?>/assets/img/logo-plain.png" alt="<?php //echo get_bloginfo('name') ?>" class="logo-shrink"> -->
             <img src="<?php echo $siteLogo['url'] ?>" alt="<?php echo get_bloginfo('name') ?>" class="logo-full">
+            <?php if( (is_front_page() || is_home())  && $horizontalLogo ) { ?>
+            <img src="<?php echo $horizontalLogo['url'] ?>" alt="<?php echo get_bloginfo('name') ?>" class="logo-full logo-sticky" style="display:none">
+            <?php } ?>
           </a>
         </span>
         <?php } ?>

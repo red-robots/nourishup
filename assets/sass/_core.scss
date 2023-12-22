@@ -3854,3 +3854,28 @@ body.post-type-archive-tribe_events {
   text-indent: 0;
   color: #FFF;
 }
+
+body:not(.home) {
+  .site-header.sticky .site-logo img.logo-full {
+    display: inline-block!important;
+  }
+}
+body.home.sticky-header {
+  .logo-full.logo-sticky {
+    display: inline-block!important;
+  }
+  .site-logo {
+    padding: 0;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    a {
+      display: inline-block!important;
+      padding: 5px;
+    }
+    .logo-full.logo-sticky {
+      top: 8px!important;
+      width: 260px;
+    }
+  }
+}

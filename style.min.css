@@ -1870,6 +1870,11 @@ body.post-type-archive-tribe_events .tribe-events-c-events-bar{border:0;clip:rec
 .morelink.prev-post:hover:after,.morelink.prev-post:focus:after{border-right-color:#f26522;-webkit-transform:translateX(-3px);transform:translateX(-3px)}
 #wp-admin-bar-root-default.ab-top-menu li#wp-admin-bar-tribe-events.menupop{position:relative;overflow:hidden;text-indent:-99em;width:85px}
 #wp-admin-bar-root-default.ab-top-menu li#wp-admin-bar-tribe-events.menupop:before{content:"Pantries";display:block;position:absolute;top:0;left:28px;z-index:5;text-indent:0;color:#fff}
+body:not(.home) .site-header.sticky .site-logo img.logo-full{display:inline-block !important}
+body.home.sticky-header .logo-full.logo-sticky{display:inline-block !important}
+body.home.sticky-header .site-logo{padding:0;height:100%;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+body.home.sticky-header .site-logo a{display:inline-block !important;padding:5px}
+body.home.sticky-header .site-logo .logo-full.logo-sticky{top:8px !important;width:260px}
 @media screen and (min-width:800px){.repeatable-image-text-block .flexwrap.half{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .repeatable-image-text-block .flexwrap.half .imageCol{width:40%;margin-bottom:0}
 .repeatable-image-text-block .flexwrap.half .textCol{width:55%}
