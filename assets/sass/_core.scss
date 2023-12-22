@@ -3252,6 +3252,15 @@ body.single-post {
     }
   }
 }
+body.home {
+  .feeds-wrapper ul.feeds li.feed .readmore .morelink  {
+    font-weight: 400;
+  }
+  .feeds-wrapper ul.feeds li.feed .posttitle {
+    font-weight: 500;
+    line-height: 1.4;
+  }
+}
 
 //TRIBE STYLES
 .tribe-common .tribe-common-c-btn-border,
