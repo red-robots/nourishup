@@ -500,4 +500,18 @@ jQuery(document).ready(function ($) {
       }
     });
   }
+
+  if ($('.wp-block-group.icon figure.wp-block-image').length) {
+    $('.wp-block-group.icon figure.wp-block-image').each(function () {
+      var imageDiv = $(this);
+      var parent = $(this).parent();
+      var imageResizer = parent.find('img.resizer');
+
+      if (parent.next().find('a').length) {
+        var linkTitle = parent.next().find('a').text();
+        var blockLink = parent.next().find('a').attr('href');
+        imageResizer.wrap('<a href="' + blockLink + '" class="pagelink" aria-label="' + linkTitle + '"></a>');
+      }
+    });
+  }
 });
