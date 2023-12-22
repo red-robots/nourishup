@@ -34,15 +34,15 @@ function js_custom_init() {
         'menu_position'=> 5,
         'supports'  => array('title','editor','thumbnail'),
       ),
-      array(
-        'post_type' => 'upcoming-events',
-        'menu_name' => 'Upcoming Events',
-        'plural'    => 'Upcoming Events',
-        'single'    => 'Upcoming Event',
-        'menu_icon' => 'dashicons-calendar-alt',
-        'menu_position'=> 5,
-        'supports'  => array('title','editor')
-      )
+      // array(
+      //   'post_type' => 'upcoming-events',
+      //   'menu_name' => 'Upcoming Events',
+      //   'plural'    => 'Upcoming Events',
+      //   'single'    => 'Upcoming Event',
+      //   'menu_icon' => 'dashicons-calendar-alt',
+      //   'menu_position'=> 5,
+      //   'supports'  => array('title','editor')
+      // )
     );
     
     if($post_types) {
