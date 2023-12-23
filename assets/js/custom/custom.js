@@ -394,7 +394,7 @@ jQuery(document).ready(function ($) {
     var currentLink = window.location.href;
     var resetLink = ( $('h1.tribe-events-header__title-text').length ) ? '<a href="'+siteURL+'/pantries/" class="resetLink">Reset</a>':'';
     //$(resetLink + '<div class="event-category-dropdown"><button class="selectBox categoryFilterBtn" role="button" aria-expanded="false" aria-controls="legend_box"><span class="catlabel">Select A Category</span></button></div>').prependTo('.tribe-events-header__events-bar.tribe-events-c-events-bar');
-    $(resetLink + '<div class="event-category-dropdown"><button class="selectBox categoryFilterBtn" role="button" aria-expanded="false" aria-controls="legend_box"><span class="catlabel">Select A Category</span></button></div>').appendTo('.custom-calendar-filter');
+    $(resetLink + '<div class="event-category-dropdown"></div>').appendTo('.custom-calendar-filter');
 
     $('#legend_box').appendTo('.event-category-dropdown');
     $('#legend li[class*="tribe-events-category"]').last().addClass('last');
