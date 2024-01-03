@@ -44,7 +44,35 @@ jQuery(document).ready(function ($) {
   //     }
   //   }
   // }
+
+
+  //Remove extra 'h1'
+  if( $('.tribe-events-pg-template h1.tribe-events-single-event-title').length ) {
+    $('.tribe-events-pg-template h1.tribe-events-single-event-title').remove(); 
+  }
+
+  //Change HERO background-color based on Event Category
+  if( $('.tribe-events-pro-summary__event h3.tribe-events-pro-summary__event-title').length ) {
+    var tribeBgColor = $("h3.tribe-events-pro-summary__event-title").css("background-color");
+    if( $('.subpageHero').length &&  $('.subpageHero img').length==0 ) {
+      $('.subpageHero .overlay-background').css({
+        'background-color':tribeBgColor,
+        'opacity':'1'
+      });
+    }
+  }
   
+  if( $('body.single-tribe_events').length ) {
+    if( $('.subpageHero').length &&  $('.subpageHero img').length==0 ) {
+      if( $('.tribe-events-event-categories a').length ) {
+        var catLink = $('.tribe-events-event-categories a').attr('href');
+        var catSlug = catLink.slice(0, -1).split('/').reverse()[0];
+        $('.subpageHero').addClass('tribe-events-calendar');
+        $('.subpageHero .overlay-background').addClass('tribe-events-category-' + catSlug);
+        $('.subpageHero .overlay-background').css('opacity',1);
+      }
+    }
+  }
 
   $(document).on('click','#menu-toggle', function(e){
     e.preventDefault();

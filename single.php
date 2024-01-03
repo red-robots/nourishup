@@ -14,7 +14,9 @@ global $post;
 $postType = get_post_type();
 $hero = get_field('stories_hero','option');
 $heading = get_field('stories_title','option');
-get_header(); ?>
+$posttypes_exceptions = ["post","tribe_event_series"];
+get_header(); 
+?>
 
 <div id="primary" class="content-area-full content-default page-default-template post-type-<?php echo $postType ?> <?php echo $has_banner ?>">
   
@@ -28,7 +30,7 @@ get_header(); ?>
           </div>
         <?php } else { ?>
 
-          <?php if( get_post_type()!="post" ) { ?>
+          <?php if( !in_array($postType, $posttypes_exceptions) ) { ?>
             <div class="titlediv typical">
               <h1 class="page-title"><span><?php the_title(); ?></span></h1>
             </div>
@@ -41,7 +43,14 @@ get_header(); ?>
           <?php the_content(); ?>
         </div>
         <?php } ?>
+
+
+        <?php if ($postType=="tribe_event_series") { ?>
+          <div class="tribe-event-content-wrap"><?php the_content(); ?></div>
+        <?php } ?>
       </div>
+
+
 
 		<?php endwhile; ?>
 

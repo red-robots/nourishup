@@ -3831,6 +3831,46 @@ body.post-type-archive-tribe_events {
   }
 }
 
+.tribe-event-content-wrap {
+  width: 100%;
+  padding-top: 50px;
+  .tribe-common--breakpoint-medium.tribe-events .tribe-events-header__top-bar,
+  .tribe-common--breakpoint-medium.tribe-events .tribe-events-header__events-bar {
+    margin-bottom: 0;
+  }
+  .tribe-common--breakpoint-medium.tribe-events .tribe-events-header {
+    margin-bottom: 50px;
+  }
+  .tribe-events #legend_box {
+    visibility: visible;
+    width: unset;
+    #legend li {
+      padding: 0 0!important;
+      margin-bottom: 0;
+      border: none!important;
+      a {
+        display: block;
+        padding: 10px 8px;
+        font-size: 0.75rem;
+      }
+    }
+  }
+  .tribe-common--breakpoint-medium.tribe-events-pro .tribe-events-pro-summary__event-title {
+    font-size: 1rem;
+    a {
+      padding: 3px 5px 0;
+      display: block;
+    }
+  }
+}
+
+.tribe-events-pg-template h1.tribe-events-single-event-title {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  margin: 0 0;
+}
+
 #wp-admin-bar-root-default.ab-top-menu li#wp-admin-bar-tribe-events.menupop {
   position: relative;
   overflow: hidden;

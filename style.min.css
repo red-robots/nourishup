@@ -1866,6 +1866,15 @@ body.post-type-archive-tribe_events .tribe-events-c-events-bar{border:0;clip:rec
 .morelink.prev-post:after{content:"";display:inline-block;width:0;height:0;border-right:8px solid #3d5588;border-top:5px solid transparent;border-bottom:5px solid transparent;position:absolute;top:11px;left:0;-webkit-transition:-webkit-transform ease .3s;transition:-webkit-transform ease .3s;transition:transform ease .3s;transition:transform ease .3s,-webkit-transform ease .3s}
 .morelink.prev-post:hover,.morelink.prev-post:focus{color:#f26522}
 .morelink.prev-post:hover:after,.morelink.prev-post:focus:after{border-right-color:#f26522;-webkit-transform:translateX(-3px);transform:translateX(-3px)}
+.tribe-event-content-wrap{width:100%;padding-top:50px}
+.tribe-event-content-wrap .tribe-common--breakpoint-medium.tribe-events .tribe-events-header__top-bar,.tribe-event-content-wrap .tribe-common--breakpoint-medium.tribe-events .tribe-events-header__events-bar{margin-bottom:0}
+.tribe-event-content-wrap .tribe-common--breakpoint-medium.tribe-events .tribe-events-header{margin-bottom:50px}
+.tribe-event-content-wrap .tribe-events #legend_box{visibility:visible;width:unset}
+.tribe-event-content-wrap .tribe-events #legend_box #legend li{padding:0 0 !important;margin-bottom:0;border:none !important}
+.tribe-event-content-wrap .tribe-events #legend_box #legend li a{display:block;padding:10px 8px;font-size:.75rem}
+.tribe-event-content-wrap .tribe-common--breakpoint-medium.tribe-events-pro .tribe-events-pro-summary__event-title{font-size:1rem}
+.tribe-event-content-wrap .tribe-common--breakpoint-medium.tribe-events-pro .tribe-events-pro-summary__event-title a{padding:3px 5px 0;display:block}
+.tribe-events-pg-template h1.tribe-events-single-event-title{visibility:hidden;height:0;overflow:hidden;margin:0}
 #wp-admin-bar-root-default.ab-top-menu li#wp-admin-bar-tribe-events.menupop{position:relative;overflow:hidden;text-indent:-99em;width:85px}
 #wp-admin-bar-root-default.ab-top-menu li#wp-admin-bar-tribe-events.menupop:before{content:"Pantries";display:block;position:absolute;top:0;left:28px;z-index:5;text-indent:0;color:#fff}
 body:not(.home) .site-header.sticky .site-logo img.logo-full{display:inline-block !important}
