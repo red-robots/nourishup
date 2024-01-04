@@ -367,6 +367,7 @@ body.home .wp-block-cover.hero {
   }
 
   @media screen and (max-width: 768px) {
+    padding-top: 0;
     .wp-block-group-is-layout-flex {
       flex-wrap: wrap!important;
       .wp-block-group {

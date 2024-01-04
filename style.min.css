@@ -2010,7 +2010,8 @@ div.checklist ul{width:100%}
 .feeds-wrapper ul.feeds li.feed .inside{padding-bottom:13px}
 .feeds-wrapper ul.feeds li.feed figure{padding-left:10vw;padding-right:10vw}
 }@media screen and (max-width:782px){body.logged-in.admin-bar header.site-header.sticky{top:0}
-}@media screen and (max-width:768px){.rounded-images .wp-block-group-is-layout-flex{-ms-flex-wrap:wrap !important;flex-wrap:wrap !important}
+}@media screen and (max-width:768px){.rounded-images{padding-top:0}
+.rounded-images .wp-block-group-is-layout-flex{-ms-flex-wrap:wrap !important;flex-wrap:wrap !important}
 .rounded-images .wp-block-group-is-layout-flex .wp-block-group{margin-top:15px;margin-bottom:15px}
 .wp-block-cover.hero .wp-block-group__inner-container{text-align:center}
 .footerTextBlock:before{left:-48vw}
