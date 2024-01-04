@@ -1615,12 +1615,14 @@ div.checklist ul li:before{content:"";display:block;width:10px;height:18px;borde
 .repeatable-twocol-text-block{padding:50px 20px;margin-bottom:70px}
 .repeatable-twocol-text-block .wrapper{max-width:1360px;padding:30px;min-height:300px}
 .repeatable-twocol-text-block .flexwrap{min-height:230px;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;position:relative}
+.repeatable-twocol-text-block .flexwrap .textLeft{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:center;align-content:center}
+.repeatable-twocol-text-block .flexwrap .textLeft p:last-child{margin-bottom:0}
 .repeatable-twocol-text-block.half .flexwrap{-ms-flex-line-pack:center;align-content:center}
 .repeatable-twocol-text-block.half .textLeft,.repeatable-twocol-text-block.half .textRight{width:46%}
-.repeatable-twocol-text-block h2{font-size:35px;line-height:1.2;margin:0 0 30px}
+.repeatable-twocol-text-block h2,.repeatable-twocol-text-block h3{font-size:35px;line-height:1.2;margin:0 0 30px}
 .repeatable-twocol-text-block div.ChecklistWrap p{position:relative;display:table;width:100%;padding-top:20px;padding-bottom:20px;padding-left:50px;border-bottom:1px solid rgba(248,245,214,.5);margin:0;text-align:left}
 .repeatable-twocol-text-block div.ChecklistWrap p:before{content:"";display:block;width:10px;height:18px;border-bottom:3px solid #f8f5d6;border-right:3px solid #f8f5d6;position:absolute;top:24px;left:20px;-webkit-transform:rotate(42deg);transform:rotate(42deg)}
-.repeatable-twocol-text-block div.ChecklistWrap p:last-child{padding-bottom:0;border-bottom:none !important}
+.repeatable-twocol-text-block div.ChecklistWrap p:last-child{border-bottom:none !important}
 .repeatable-twocol-text-block div.ChecklistWrap p:last-child .textRight{width:800%}
 .repeatable-twocol-text-block.full .ChecklistWrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .repeatable-twocol-text-block.full .textLeft{max-width:1000px;width:100%;margin:0 auto}
@@ -1921,7 +1923,7 @@ body.single-stories #main .twocol .fxcol.image{width:45%}
 }@media screen and (min-width:1500px){.feeds-wrapper ul.feeds li.feed{padding:20px 2.3vw}
 }@media screen and (min-width:1600px){#RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image a{width:240px}
 #RecentNews ul.wp-block-latest-posts.columns-3 li{padding-left:40px;padding-right:40px}
-.repeatable-twocol-text-block .wrapper{padding:40px}
+.repeatable-twocol-text-block .wrapper{padding:3vw 4.2vw}
 }@media screen and (max-width:1700px){.footerTextBlock .wrapper{max-width:750px}
 }@media screen and (max-width:1500px){.footerTextBlock:before{left:-10vw}
 .footerTextBlock:after{right:-10vw}

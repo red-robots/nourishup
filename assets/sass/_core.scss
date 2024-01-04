@@ -1973,7 +1973,7 @@ div.checklist {
     padding: 30px;
     min-height: 300px;
     @media screen and (min-width:1600px) {
-      padding: 40px;
+      padding: 3vw 4.2vw;
     }
   }
   .flexwrap {
@@ -1981,6 +1981,14 @@ div.checklist {
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
+    .textLeft {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+    .textLeft p:last-child {
+      margin-bottom: 0;
+    }
   }
   &.half {
     .flexwrap {
@@ -1993,7 +2001,7 @@ div.checklist {
       }
     }
   }
-  h2 {
+  h2, h3 {
     font-size: 35px;
     line-height: 1.2;
     margin: 0 0 30px;
@@ -2022,7 +2030,7 @@ div.checklist {
         transform: rotate(42deg);
       }
       &:last-child {
-        padding-bottom: 0;
+        // padding-bottom: 0;
         border-bottom:none!important;
         .textRight {
           width: 800%;
