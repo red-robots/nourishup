@@ -1482,6 +1482,9 @@ footer.site-footer {
       @media screen and (max-width:960px) {
         font-size: 3.5rem;
       }
+      @media screen and (max-width:768px) {
+        font-size: 2.8rem;
+      }
     }
   }
   .overlay-background {
@@ -1509,6 +1512,9 @@ footer.site-footer {
     font-weight: bold;
     line-height: 1.2;
     margin: 0 0;
+    @media screen and (max-width: 768px) {
+      font-size: 32px;
+    }
   }
   .wrapper {
     max-width: 1000px;
@@ -1725,6 +1731,9 @@ a.link-arrow {
     font-weight: bold;
     line-height: 1.2;
     margin: 0 0 20px;
+    @media screen and (max-width: 768px) {
+      font-size: 32px;
+    }
   }
   h2, h3, h4, h5, h6 {
     margin-top: 0;
@@ -2668,6 +2677,7 @@ body.page-template-default {
         padding-right: 18px;
         padding-bottom: 10px;
         display: none;
+        box-shadow: none!important;
         a {
           color: $primary!important;
           padding: 10px 20px;

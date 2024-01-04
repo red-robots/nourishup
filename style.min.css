@@ -1956,7 +1956,7 @@ body.single-stories #main .twocol .fxcol.image{margin-top:30px}
 .site-header .main-navigation ul.menu>li a.active{color:#f26522}
 .site-header .main-navigation ul.menu>li.header-buttons{margin-top:20px;padding:15px 25px;border-bottom:0;text-align:center}
 .site-header .main-navigation ul.menu>li.header-buttons a{text-align:center}
-.site-header .main-navigation ul.menu>li>ul.sub-menu{display:block;position:relative;-webkit-animation:none !important;animation:none !important;width:100%;left:0;background:#fff;padding-left:18px;padding-right:18px;padding-bottom:10px;display:none}
+.site-header .main-navigation ul.menu>li>ul.sub-menu{display:block;position:relative;-webkit-animation:none !important;animation:none !important;width:100%;left:0;background:#fff;padding-left:18px;padding-right:18px;padding-bottom:10px;display:none;-webkit-box-shadow:none !important;box-shadow:none !important}
 .site-header .main-navigation ul.menu>li>ul.sub-menu a{color:#3d5588 !important;padding:10px 20px}
 .site-header .main-navigation ul.menu>li>ul.sub-menu a:hover{background-color:#fcb405 !important;color:#fff !important}
 .site-header .main-navigation.active{display:block;right:0;-webkit-animation-name:NavSlideOut;animation-name:NavSlideOut}
@@ -2016,7 +2016,10 @@ div.checklist ul{width:100%}
 .wp-block-cover.hero .wp-block-group__inner-container{text-align:center}
 .footerTextBlock:before{left:-48vw}
 .footerTextBlock:after{right:-48vw}
+.subpageHero .heroText h1,.repeatable-hero .heroText h1{font-size:2.8rem}
+.repeatable-intro h2{font-size:32px}
 .repeatable-columns .rcolumn{width:100%;margin-top:30px;margin-bottom:30px}
+.repeatable-image-text-block h2.item-title{font-size:32px}
 body:not(.home) .site-header .site-logo{width:220px}
 .filterWrapper .filterInner .otherFilters{margin-top:20px}
 .filterWrapper .filterInner{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:100%;position:relative;top:35px;left:38px}
