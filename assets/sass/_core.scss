@@ -3980,3 +3980,24 @@ body.home.sticky-header {
     }
   }
 }
+
+body.error404 {
+  #main.wrapper {
+    max-width: 1400px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
+}
+
+#sitemap-wrap {
+  #sitemap > ul {
+    @media screen and (min-width: 960px) {
+      column-count: 3;
+      break-inside: avoid;
+      gap: 3em;
+      li {
+        break-inside: avoid;
+      }
+    }
+  }
+}
