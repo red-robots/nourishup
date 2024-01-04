@@ -1702,6 +1702,9 @@ a.link-arrow {
 .repeatable-image-text-block {
   margin-top: 10px;
   margin-bottom: 60px;
+  @media screen and (max-width:768px) {
+    margin-bottom: 0;
+  }
   .flexwrap {
     display: flex;
     flex-wrap: wrap;
@@ -1712,6 +1715,12 @@ a.link-arrow {
     padding: 30px;
     @media screen and (min-width:1400px) {
       padding: 3.5vw;
+    }
+    &[style="background-color:#ffffff"] {
+      padding: 20px 0 0;
+      @media screen and (max-width: 768px) {
+        padding-bottom: 30px;
+      }
     }
   }
   .imageCol, .textCol  {
@@ -2236,6 +2245,15 @@ div.checklist {
 body.page-id-477 {
   .repeatable-twocol-text-block {
     margin-bottom: 0;
+    @media screen and (max-width: 768px) {
+      padding-top: 0;
+      padding-bottom: 20px;
+    }
+  }
+  .repeatable-intro .wrapper {
+    @media screen and (max-width: 768px) {
+      padding-bottom: 20px;
+    }
   }
 }
 
