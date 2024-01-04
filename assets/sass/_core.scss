@@ -307,6 +307,8 @@ h6 {font-size: 28px;}
     max-width: 940px;
     width: 100%;
     margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -361,6 +363,16 @@ body.home .wp-block-cover.hero {
   @media screen and (min-width:1300px) {
     .wp-block-group__inner-container .wp-block-group-is-layout-flex {
       gap: 5rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .wp-block-group-is-layout-flex {
+      flex-wrap: wrap!important;
+      .wp-block-group {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
     }
   }
 }
@@ -522,6 +534,11 @@ body.home .wp-block-cover.hero {
   // .wp-block-cover__inner-container {
   //   transform: translateY(4vw);
   // }
+  @media screen and (max-width: 768px) {
+    .wp-block-group__inner-container {
+      text-align: center;
+    }
+  }
 }
 
 .wp-block-group.alignwide {

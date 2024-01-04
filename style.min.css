@@ -1393,7 +1393,7 @@ h6{font-size:28px}
 .repeatable div.buttons{margin-top:30px}
 .wp-block-group.intro{color:#282f6f;margin:0 auto}
 .wp-block-group.intro .wp-block-heading{color:#282f6f;font-size:42px;font-weight:bold;line-height:1.2}
-.wp-block-group.intro .wp-block-group__inner-container{max-width:940px;width:100%;margin:0 auto}
+.wp-block-group.intro .wp-block-group__inner-container{max-width:940px;width:100%;margin:0 auto;padding-left:30px;padding-right:30px}
 body.home .wp-block-group.intro{padding-top:40px !important;padding-bottom:20px !important}
 body.home .wp-block-cover.hero{min-height:calc(100vh - 100px) !important}
 body.home .wp-block-cover.hero video{-webkit-transform:scale(1.2);transform:scale(1.2)}
@@ -2010,7 +2010,10 @@ div.checklist ul{width:100%}
 .feeds-wrapper ul.feeds li.feed .inside{padding-bottom:13px}
 .feeds-wrapper ul.feeds li.feed figure{padding-left:10vw;padding-right:10vw}
 }@media screen and (max-width:782px){body.logged-in.admin-bar header.site-header.sticky{top:0}
-}@media screen and (max-width:768px){.footerTextBlock:before{left:-48vw}
+}@media screen and (max-width:768px){.rounded-images .wp-block-group-is-layout-flex{-ms-flex-wrap:wrap !important;flex-wrap:wrap !important}
+.rounded-images .wp-block-group-is-layout-flex .wp-block-group{margin-top:15px;margin-bottom:15px}
+.wp-block-cover.hero .wp-block-group__inner-container{text-align:center}
+.footerTextBlock:before{left:-48vw}
 .footerTextBlock:after{right:-48vw}
 .repeatable-columns .rcolumn{width:100%;margin-top:30px;margin-bottom:30px}
 body:not(.home) .site-header .site-logo{width:220px}
