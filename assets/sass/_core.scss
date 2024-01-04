@@ -2475,8 +2475,11 @@ body.page-template-default {
       width: 100%;
       margin-bottom: 30px;
       @media screen and (min-width: 1024px) {
-        width: 53%;
+        width: 62%;
         margin-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
       }
       h2, p, * {
         // color: $primary;
@@ -2489,7 +2492,7 @@ body.page-template-default {
       position: relative;
       background: #e1e1e1;
       @media screen and (min-width: 1024px) {
-        width: 42%;
+        width: 32%;
       }
       a {
         display: block;

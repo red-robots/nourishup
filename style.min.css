@@ -1900,8 +1900,8 @@ body.error404 #main.wrapper{max-width:1400px;margin-top:50px;margin-bottom:60px}
 }@media screen and (min-width:960px){#sitemap-wrap #sitemap>ul{-webkit-column-count:3;-moz-column-count:3;column-count:3;-webkit-column-break-inside:avoid;-moz-column-break-inside:avoid;break-inside:avoid;gap:3em}
 #sitemap-wrap #sitemap>ul li{-webkit-column-break-inside:avoid;-moz-column-break-inside:avoid;break-inside:avoid}
 }@media screen and (min-width:1024px){.newsfeeds-wrapper .post-item{margin-top:5.5vw;margin-bottom:5.5vw}
-.newsfeeds-wrapper .post-item .textcol{width:53%;margin-bottom:0}
-.newsfeeds-wrapper .post-item .imagecol{width:42%}
+.newsfeeds-wrapper .post-item .textcol{width:62%;margin-bottom:0;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:center;align-content:center}
+.newsfeeds-wrapper .post-item .imagecol{width:32%}
 body.single-stories #main .twocol{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 body.single-stories #main .twocol .fxcol.text{width:50%}
 body.single-stories #main .twocol .fxcol.image{width:45%}
