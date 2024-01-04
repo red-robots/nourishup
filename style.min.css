@@ -2015,6 +2015,7 @@ div.checklist ul{width:100%}
 .rounded-images .wp-block-group-is-layout-flex{-ms-flex-wrap:wrap !important;flex-wrap:wrap !important}
 .rounded-images .wp-block-group-is-layout-flex .wp-block-group{margin-top:15px;margin-bottom:15px}
 .wp-block-cover.hero .wp-block-group__inner-container{text-align:center}
+.footerTextBlock{margin-top:30px}
 .footerTextBlock:before{left:-48vw}
 .footerTextBlock:after{right:-48vw}
 .subpageHero .heroText h1,.repeatable-hero .heroText h1{font-size:2.8rem}
@@ -2025,6 +2026,7 @@ div.checklist ul{width:100%}
 .repeatable-image-text-block h2.item-title{font-size:32px}
 body.page-id-477 .repeatable-twocol-text-block{padding-top:0;padding-bottom:20px}
 body.page-id-477 .repeatable-intro .wrapper{padding-bottom:20px}
+.feeds-wrapper ul.feeds li:last-child{margin-bottom:0 !important;padding-bottom:0 !important}
 body:not(.home) .site-header .site-logo{width:220px}
 .filterWrapper .filterInner .otherFilters{margin-top:20px}
 .filterWrapper .filterInner{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:100%;position:relative;top:35px;left:38px}

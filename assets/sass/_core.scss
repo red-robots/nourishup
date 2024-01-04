@@ -1044,6 +1044,9 @@ body.home .wp-block-cover.hero {
   background: #364B7D;
   padding: 8vw 20px;
   position: relative;
+  @media screen and (max-width: 768px) {
+    margin-top: 30px;
+  }
   &:before, &:after {
     content: "";
     display: block;
@@ -3305,6 +3308,12 @@ body.single-post {
           padding-right: 10vw;
         }
       }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    ul.feeds li:last-child {
+      margin-bottom: 0!important;
+      padding-bottom: 0!important;
     }
   }
 }
