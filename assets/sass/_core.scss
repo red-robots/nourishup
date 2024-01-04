@@ -1488,6 +1488,9 @@ footer.site-footer {
       @media screen and (max-width:768px) {
         font-size: 2.8rem;
       }
+      @media screen and (max-width:480px) {
+        font-size: 10vw;
+      }
     }
   }
   .overlay-background {
