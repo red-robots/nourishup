@@ -40,6 +40,7 @@ a {
 body {
   font-family: $font_primary;
   font-size: 16px;
+  color: $blue;
   line-height: 1.5;
 }
 
@@ -2419,7 +2420,8 @@ body.page-template-default {
         margin-bottom: 0;
       }
       h2, p, * {
-        color: $primary;
+        // color: $primary;
+        color: $blue;
       }
     }
     .imagecol {
@@ -3057,7 +3059,7 @@ body.single-post {
         color: $blue;
         display: inline-block;
         text-decoration: none;
-        font-size: 1.25em;
+        font-size: 16px;
         line-height: 1.4;
         &:hover, &:focus {
           color: $secondary!important;
