@@ -2033,6 +2033,8 @@ div.checklist ul{width:100%}
 .repeatable-image-text-block h2.item-title{font-size:32px}
 body.page-id-477 .repeatable-twocol-text-block{padding-top:0;padding-bottom:20px}
 body.page-id-477 .repeatable-intro .wrapper{padding-bottom:20px}
+body.single-events h1.big-title{font-size:2.35rem}
+body.single-stories h1.big-title,body.single-post h1.big-title{font-size:2.35rem}
 .feeds-wrapper ul.feeds li:last-child{margin-bottom:0 !important;padding-bottom:0 !important}
 body:not(.home) .site-header .site-logo{width:220px}
 .filterWrapper .filterInner .otherFilters{margin-top:20px}
@@ -2045,8 +2047,6 @@ body:not(.home) .site-header .site-logo{width:220px}
 #DonateToday:before{left:0;background-position:top center;background-size:cover}
 #DonateToday:after{display:none}
 }@media screen and (max-width:500px){#donation-form-container .field{width:100% !important}
-body.single-events h1.big-title{font-size:2.35rem}
-body.single-stories h1.big-title,body.single-post h1.big-title{font-size:2.35rem}
 .tribe-events .tribe-events-c-events-bar .event-category-dropdown .selectBox{font-size:12px;width:160px;float:right}
 }@media screen and (max-width:480px){.footerTextBlock:before{left:-65vw}
 .footerTextBlock:after{right:-65vw}
