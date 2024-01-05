@@ -1614,7 +1614,7 @@ div.checklist ul{display:block;-webkit-column-count:1;-moz-column-count:1;column
 div.checklist ul li{position:relative;page-break-inside:avoid;-webkit-column-break-inside:avoid;-moz-column-break-inside:avoid;break-inside:avoid-column;display:table;width:100%;padding-top:20px;padding-bottom:20px;padding-left:50px;border-bottom:1px solid rgba(248,245,214,.5)}
 div.checklist ul li:before{content:"";display:block;width:10px;height:18px;border-bottom:3px solid #f8f5d6;border-right:3px solid #f8f5d6;position:absolute;top:24px;left:20px;-webkit-transform:rotate(42deg);transform:rotate(42deg)}
 .repeatable-twocol-text-block{padding:50px 20px;margin-bottom:70px}
-.repeatable-twocol-text-block .wrapper{max-width:1360px;padding:30px;min-height:300px}
+.repeatable-twocol-text-block .wrapper{max-width:1360px;padding:5vw 5vw;min-height:300px}
 .repeatable-twocol-text-block .flexwrap{min-height:230px;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;position:relative}
 .repeatable-twocol-text-block .flexwrap .textLeft p:last-child{margin-bottom:0}
 .repeatable-twocol-text-block.half .flexwrap{-ms-flex-line-pack:center;align-content:center}
@@ -1906,7 +1906,8 @@ body.single-stories #main .twocol .fxcol.text{width:50%}
 body.single-stories #main .twocol .fxcol.image{width:45%}
 }@media screen and (min-width:1025px){.repeatable-flexible-blocks .twocolumn.twocol .fxcol{width:48%}
 }@media screen and (min-width:1100px){.feeds-wrapper ul.feeds figure{padding-left:5vw;padding-right:5vw}
-}@media screen and (min-width:1200px){.repeatable-flexible-blocks .wrapper{padding:3vw 4vw}
+}@media screen and (min-width:1200px){.repeatable-twocol-text-block .wrapper{padding:5.2vw 6vw}
+.repeatable-flexible-blocks .wrapper{padding:3vw 4vw}
 }@media screen and (min-width:1300px){.rounded-images .wp-block-group__inner-container .wp-block-group-is-layout-flex{gap:5rem}
 .repeatable-columns .rcolumn{margin-bottom:110px}
 .repeatable-columns .rcolumn .inside{padding:20px 3vw 3vw}
@@ -1926,7 +1927,6 @@ body.single-stories #main .twocol .fxcol.image{width:45%}
 }@media screen and (min-width:1500px){.feeds-wrapper ul.feeds li.feed{padding:20px 2.3vw}
 }@media screen and (min-width:1600px){#RecentNews ul.wp-block-latest-posts .wp-block-latest-posts__featured-image a{width:240px}
 #RecentNews ul.wp-block-latest-posts.columns-3 li{padding-left:40px;padding-right:40px}
-.repeatable-twocol-text-block .wrapper{padding:3vw 4.2vw}
 }@media screen and (max-width:1700px){.footerTextBlock .wrapper{max-width:750px}
 }@media screen and (max-width:1500px){.footerTextBlock:before{left:-10vw}
 .footerTextBlock:after{right:-10vw}

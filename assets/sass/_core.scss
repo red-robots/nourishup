@@ -2012,10 +2012,11 @@ div.checklist {
   margin-bottom: 70px;
   .wrapper {
     max-width: 1360px;
-    padding: 30px;
+    // padding: 30px;
+    padding: 5vw 5vw;
     min-height: 300px;
-    @media screen and (min-width:1600px) {
-      padding: 3vw 4.2vw;
+    @media screen and (min-width:1200px) {
+      padding: 5.2vw  6vw;
     }
   }
   .flexwrap {
