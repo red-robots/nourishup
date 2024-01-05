@@ -3088,10 +3088,22 @@ body.single-stories {
   }
 }
 
+body.single-events {
+  h1.big-title {
+    font-size: 3.85rem;
+    @media screen and (max-width:500px) {
+      font-size: 2.35rem;
+    }
+  }
+}
+
 body.single-stories,
 body.single-post {
   h1.big-title {
     font-size: 3.85rem;
+    @media screen and (max-width:500px) {
+      font-size: 2.35rem;
+    }
   }
   h2.wp-block-heading {
     font-size: 35px;
