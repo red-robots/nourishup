@@ -2023,11 +2023,11 @@ div.checklist {
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
-    .textLeft {
-      display: flex;
-      flex-wrap: wrap;
-      align-content: center;
-    }
+    // .textLeft {
+    //   display: flex;
+    //   flex-wrap: wrap;
+    //   align-content: center;
+    // }
     .textLeft p:last-child {
       margin-bottom: 0;
     }

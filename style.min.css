@@ -1616,7 +1616,6 @@ div.checklist ul li:before{content:"";display:block;width:10px;height:18px;borde
 .repeatable-twocol-text-block{padding:50px 20px;margin-bottom:70px}
 .repeatable-twocol-text-block .wrapper{max-width:1360px;padding:30px;min-height:300px}
 .repeatable-twocol-text-block .flexwrap{min-height:230px;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;position:relative}
-.repeatable-twocol-text-block .flexwrap .textLeft{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:center;align-content:center}
 .repeatable-twocol-text-block .flexwrap .textLeft p:last-child{margin-bottom:0}
 .repeatable-twocol-text-block.half .flexwrap{-ms-flex-line-pack:center;align-content:center}
 .repeatable-twocol-text-block.half .textLeft,.repeatable-twocol-text-block.half .textRight{width:46%}
