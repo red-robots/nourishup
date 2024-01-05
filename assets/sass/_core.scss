@@ -2729,14 +2729,56 @@ body.page-template-default {
     }
 
     .main-navigation ul.menu>li.menu-item-has-children>a:after {
-      border-top: 7px solid #f26522;
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      right: 22px;
-      top: 23px;
+      // border-top: 7px solid #f26522;
+      // border-left: 6px solid transparent;
+      // border-right: 6px solid transparent;
+      // right: 22px;
+      // top: 23px;
+      display: none;
     }
     .menu-toggle {
       display: block;
+    }
+
+    .main-navigation ul.menu>li.menu-item-has-children {
+      ul.sub-menu {
+        border-top: 1px solid #e5e5e5;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+      .dropdown-arrow {
+        display: block;
+        width: 70px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        cursor: pointer;
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-top: 10px solid #f26522;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          position: absolute;
+          right: 25px;
+          top: 20px;
+        }
+        // &:after {
+        //   content: "";
+        //   display: block;
+        //   width: 1px;
+        //   height: 60%;
+        //   background: #e5e5e5;
+        //   position: absolute;
+        //   top: 50%;
+        //   left: 0;
+        //   transform: translateY(-50%);
+        // }
+      }
     }
   }
   .wp-block-cover.hero {

@@ -121,7 +121,16 @@ jQuery(document).ready(function ($) {
     $('#site-navigation').toggleClass('active');
     $('body').toggleClass('mobile-nav-active');
   });
-  $(document).on('click', '.main-navigation.active .menu-item-has-children > a ', function (e) {
+
+  if ($('ul#primary-menu li.menu-item-has-children').length) {
+    $('ul#primary-menu li.menu-item-has-children > a').each(function () {
+      var parentlink = $(this);
+      $(this).addClass('parentLink');
+      $('<span class="dropdown-arrow" role="button"><span class="sr">Dropdown</span></span>').insertAfter(parentlink);
+    });
+  }
+
+  $(document).on('click', '.main-navigation.active .menu-item-has-children .dropdown-arrow ', function (e) {
     e.preventDefault();
     $(this).toggleClass('active');
     $(this).parent().toggleClass('active');

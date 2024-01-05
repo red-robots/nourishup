@@ -1963,8 +1963,11 @@ body.single-stories #main .twocol .fxcol.image{margin-top:30px}
 .site-header .main-navigation ul.menu>li>ul.sub-menu a{color:#3d5588 !important;padding:10px 20px}
 .site-header .main-navigation ul.menu>li>ul.sub-menu a:hover{background-color:#fcb405 !important;color:#fff !important}
 .site-header .main-navigation.active{display:block;right:0;-webkit-animation-name:NavSlideOut;animation-name:NavSlideOut}
-.site-header .main-navigation ul.menu>li.menu-item-has-children>a:after{border-top:7px solid #f26522;border-left:6px solid transparent;border-right:6px solid transparent;right:22px;top:23px}
+.site-header .main-navigation ul.menu>li.menu-item-has-children>a:after{display:none}
 .site-header .menu-toggle{display:block}
+.site-header .main-navigation ul.menu>li.menu-item-has-children ul.sub-menu{border-top:1px solid #e5e5e5;padding-top:5px;padding-bottom:5px}
+.site-header .main-navigation ul.menu>li.menu-item-has-children .dropdown-arrow{display:block;width:70px;height:50px;position:absolute;top:0;right:0;z-index:10;cursor:pointer}
+.site-header .main-navigation ul.menu>li.menu-item-has-children .dropdown-arrow:before{content:"";display:inline-block;width:0;height:0;border-top:10px solid #f26522;border-left:8px solid transparent;border-right:8px solid transparent;position:absolute;right:25px;top:20px}
 .wp-block-cover.hero .wp-block-cover__video-background{-webkit-transform:scale(1.2);transform:scale(1.2)}
 .wp-block-cover.hero p{font-size:1.5em !important}
 .wp-block-cover.hero h2{font-size:2.3em}
