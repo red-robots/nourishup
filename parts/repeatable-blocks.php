@@ -13,11 +13,11 @@
         <div class="heroText">
           <div class="wrapper">
             <?php if($small_text) { ?>
-            <div class="sm-title"><?php echo $small_text; ?></div>
+            <div class="sm-title"><?php echo anti_email_spam($small_text); ?></div>
             <?php } ?>
 
             <?php if($large_text) { ?>
-            <h1 class="big-title"><?php echo $large_text; ?></h1>
+            <h1 class="big-title"><?php echo anti_email_spam($large_text); ?></h1>
             <?php } ?>
           </div>
         </div>
@@ -41,7 +41,7 @@
           <h2><?php echo $title ?></h2>
           <?php } ?>
           <?php if ($content) { ?>
-          <div class="textwrap"><?php echo $content ?></div>
+          <div class="textwrap"><?php echo anti_email_spam($content) ?></div>
           <?php } ?>
           <?php if ($buttons) { ?>
           <div class="buttons">
@@ -96,7 +96,7 @@
                   <?php if($title) { ?>
                   <h3 class="coltitle"><?php echo $title?></h3>
                   <?php } ?>
-                  <div class="text"><?php echo $content?></div>
+                  <div class="text"><?php echo anti_email_spam($content)?></div>
                   <?php if($btnName && $btnLink) { ?>
                   <div class="morelink"><a href="<?php echo $btnLink?>" target="<?php echo $btnTarget?>"><?php echo $btnName?></a></div>
                   <?php } ?>
@@ -181,8 +181,8 @@
                 <?php if($title||$content) { ?>
                   <div class="textCol">
                     <div class="inside">
-                      <?php if($title) { ?><h2 class="item-title"><?php echo $title?></h2><?php } ?>  
-                      <?php if($content) { ?><div class="item-text"><?php echo $content?></div><?php } ?>  
+                      <?php if($title) { ?><h2 class="item-title"><?php echo anti_email_spam($title)?></h2><?php } ?>  
+                      <?php if($content) { ?><div class="item-text"><?php echo anti_email_spam($content)?></div><?php } ?>  
                       <?php if($btnLink && $btnName) { ?><div class="item-link"><a href="<?php echo $btnLink?>" target="<?php echo $btnTarget?>"><?php echo $btnName?></a></div><?php } ?>  
                     </div>
                   </div>
@@ -237,7 +237,9 @@
       <div class="repeatable-fullwidth-text-block repeatable-fullwidth-text-block-<?php echo $i?>  repeatable">
         <div class="wrapper">
           <div class="inside" style="background:<?php echo $bgcolor?>;color:<?php echo $textcolor?>">
-            <div class="textwrap"><?php echo $text_content; ?></div>
+            <?php if($text_content) {?>
+            <div class="textwrap"><?php echo anti_email_spam($text_content); ?></div>
+            <?php } ?>
             <?php if($buttons) { ?>
             <div class="buttons">
               <?php foreach($buttons as $b) { 
@@ -277,10 +279,10 @@
         <div class="wrapper" style="background:<?php echo $bgcolor?>;color:<?php echo $textcolor?>">
           <div class="flexwrap">
             <?php if($textLeft) { ?>
-              <div class="textLeft fxcol"><?php echo $textLeft?></div>
+              <div class="textLeft fxcol"><?php echo anti_email_spam($textLeft)?></div>
             <?php } ?>
             <?php if($textRight) { ?>
-              <div class="textRight fxcol"><?php echo $textRight?></div>
+              <div class="textRight fxcol"><?php echo anti_email_spam($textRight)?></div>
             <?php } ?>
           </div>
         </div>
@@ -316,11 +318,11 @@
           <div class="twocolumn <?php echo $colClass?>">
             <div class="flexwrap">
               <?php if($leftcol) { ?>
-                <div class="leftcol fxcol"><?php echo $leftcol?></div>
+                <div class="leftcol fxcol"><?php echo anti_email_spam($leftcol)?></div>
               <?php } ?>
 
               <?php if($rightcol) { ?>
-                <div class="rightcol fxcol"><?php echo $rightcol?></div>
+                <div class="rightcol fxcol"><?php echo anti_email_spam($rightcol)?></div>
               <?php } ?>
             </div>
           </div>

@@ -1733,6 +1733,10 @@ body.single-stories #main .twocol .fxcol.image img{width:100%;height:auto}
 .wp-block-group.wrapper-middle,.wp-block-group.wrapper-narrow,.wrapper-middle,.wrapper-narrow{max-width:1000px;padding-top:0;padding-bottom:0}
 .wp-block-group.wrapper-middle h2,.wp-block-group.wrapper-middle h3,.wp-block-group.wrapper-middle h4,.wp-block-group.wrapper-middle h5,.wp-block-group.wrapper-middle h6,.wp-block-group.wrapper-narrow h2,.wp-block-group.wrapper-narrow h3,.wp-block-group.wrapper-narrow h4,.wp-block-group.wrapper-narrow h5,.wp-block-group.wrapper-narrow h6,.wrapper-middle h2,.wrapper-middle h3,.wrapper-middle h4,.wrapper-middle h5,.wrapper-middle h6,.wrapper-narrow h2,.wrapper-narrow h3,.wrapper-narrow h4,.wrapper-narrow h5,.wrapper-narrow h6{color:#282f6f}
 .wp-block-group.wrapper-middle .wp-block-group__inner-container .wp-block-heading:first-child,.wp-block-group.wrapper-narrow .wp-block-group__inner-container .wp-block-heading:first-child,.wrapper-middle .wp-block-group__inner-container .wp-block-heading:first-child,.wrapper-narrow .wp-block-group__inner-container .wp-block-heading:first-child{margin-top:0}
+.wp-block-group.wrapper-middle,.wp-block-group.wrapper-narrow,.wrapper-middle,.wrapper-narrow{width:100%;margin:0 auto}
+form .section.payment label{display:block;width:100%}
+form .section.payment label input{width:18px !important}
+body.page-id-479 #main hr{margin-bottom:30px}
 #primary.generic-layout .entry-content{max-width:1000px;width:100%;margin:0 auto}
 .donation-form .section.recurring{padding-left:0 !important}
 .donation-form .section.recurring [type=checkbox]{margin-right:5px}
@@ -1893,6 +1897,7 @@ body.post-type-archive-tribe_events .tribe-events-c-events-bar{border:0;clip:rec
 .popUpWrapper #popupClose:before{-webkit-transform:rotate(45deg);transform:rotate(45deg)}
 .popUpWrapper #popupClose:after{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
 .popUpWrapper #popupClose:hover,.popUpWrapper #popupClose:focus{opacity:1}
+.donation-form .field input,.donation-form .field select,.donation-form .field textarea{max-width:438px !important;width:100% !important}
 body:not(.home) .site-header.sticky .site-logo img.logo-full{display:inline-block !important}
 body.home.sticky-header .logo-full.logo-sticky{display:inline-block !important}
 body.home.sticky-header .site-logo{padding:0;height:100%;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
@@ -1920,7 +1925,7 @@ body.single-stories #main .twocol .fxcol.text{width:50%}
 body.single-stories #main .twocol .fxcol.image{width:45%}
 }@media screen and (min-width:1025px){.repeatable-flexible-blocks .twocolumn.twocol .fxcol{width:48%}
 }@media screen and (min-width:1100px){.feeds-wrapper ul.feeds figure{padding-left:5vw;padding-right:5vw}
-}@media screen and (min-width:1200px){.repeatable-twocol-text-block .wrapper{padding:5.2vw 6vw}
+}@media screen and (min-width:1200px){.repeatable-twocol-text-block .wrapper{padding:5vw 6vw}
 .repeatable-flexible-blocks .wrapper{padding:3vw 4vw}
 .popUpWrapper .popupContent{padding:3vw 6vw}
 }@media screen and (min-width:1300px){.rounded-images .wp-block-group__inner-container .wp-block-group-is-layout-flex{gap:5rem}

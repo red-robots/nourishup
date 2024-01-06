@@ -2016,7 +2016,7 @@ div.checklist {
     padding: 5vw 5vw;
     min-height: 300px;
     @media screen and (min-width:1200px) {
-      padding: 5.2vw  6vw;
+      padding: 5vw  6vw;
     }
   }
   .flexwrap {
@@ -2944,6 +2944,25 @@ body.single-stories {
   .wp-block-group__inner-container .wp-block-heading:first-child {
     margin-top: 0;
   }
+}
+
+.wp-block-group.wrapper-middle,
+.wp-block-group.wrapper-narrow,
+.wrapper-middle, .wrapper-narrow {
+  width: 100%;
+  margin: 0 auto;
+}
+form .section.payment {
+  label {
+    display: block;
+    width: 100%;
+    input {
+      width: 18px!important;
+    }
+  }
+}
+body.page-id-479 #main hr {
+  margin-bottom: 30px;
 }
 
 #primary.generic-layout {
@@ -4099,6 +4118,13 @@ body.post-type-archive-tribe_events {
       opacity: 1;
     }
   }
+}
+
+.donation-form .field input, 
+.donation-form .field select,
+.donation-form .field textarea {
+  max-width: 438px!important;
+  width: 100%!important;
 }
 
 body:not(.home) {
