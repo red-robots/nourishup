@@ -4165,7 +4165,11 @@ body.error404 {
   }
 }
 
-
+//Hide Tribe TAGS
+.tribe-event-tags-label,
+.tribe-event-tags {
+  display: none!important;
+}
 
 #sitemap-wrap {
   #sitemap {

@@ -1905,6 +1905,7 @@ body.home.sticky-header .site-logo a{display:inline-block !important;padding:5px
 body.home.sticky-header .site-logo .logo-full.logo-sticky{top:8px !important;width:260px}
 body.error404 #main.wrapper{max-width:1400px;margin-top:50px;margin-bottom:60px}
 body.error404 #sitemap-wrap{margin-top:30px;padding-top:20px;border-top:1px solid #3d5588}
+.tribe-event-tags-label,.tribe-event-tags{display:none !important}
 @media screen and (min-width:800px){.repeatable-image-text-block .flexwrap.half{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .repeatable-image-text-block .flexwrap.half .imageCol{width:40%;margin-bottom:0}
 .repeatable-image-text-block .flexwrap.half .textCol{width:55%}
