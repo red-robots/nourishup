@@ -73,19 +73,6 @@
 })(jQuery);
 
 jQuery(document).ready(function ($) {
-  // if( $('.wp-block-site-logo').length ) {
-  //   if( $('body').hasClass('home') ) {
-  //     if(typeof homepageLogo!=undefined && homepageLogo) {
-  //       $('.wp-block-site-logo a').html('<img src="'+homepageLogo+'" alt="'+siteName+' Logo" class="custom-logo">');
-  //       $('.wp-block-site-logo').addClass('customized');
-  //     }
-  //   } else {
-  //     if(typeof subpageLogo!=undefined && subpageLogo) {
-  //       $('.wp-block-site-logo a').html('<img src="'+subpageLogo+'" alt="'+siteName+' Logo" class="custom-logo">');
-  //       $('.wp-block-site-logo').addClass('customized');
-  //     }
-  //   }
-  // }
   //localStorage.setItem('popState','');
   if (localStorage.getItem('popState') != undefined && localStorage.getItem('popState') == 'hide') {
     console.log("Pop-up Hidden");

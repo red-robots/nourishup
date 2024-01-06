@@ -4064,6 +4064,13 @@ body.post-type-archive-tribe_events {
       width: 235px;
       height: auto;
     }
+
+    a {
+      color: #febc11;
+      &:hover, &:focus {
+        color: #81c674;
+      }
+    }
   }
   #popupClose {
     position: absolute;
