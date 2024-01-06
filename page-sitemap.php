@@ -11,11 +11,6 @@ get_header(); ?>
 <div id="primary" class="content-area-full maxwidth-template <?php echo $has_banner ?>">
   <main id="main" class="site-main wrapper-small" role="main">
     <?php while ( have_posts() ) : the_post(); ?>
-
-      <?php if (empty($banner )) { ?>
-      <header class="entry-title"><h1 class="page-title"><span><?php the_title(); ?></span></h1></header>
-      <?php } ?>
-      
       
       <?php if ( get_the_content() ) { ?>
       <section class="entry-content"><?php the_content(); ?></section>

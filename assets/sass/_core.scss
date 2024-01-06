@@ -4158,10 +4158,15 @@ body.error404 {
     margin-top: 50px;
     margin-bottom: 60px;
   }
+  #sitemap-wrap {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid $primary;
+  }
 }
 
 #sitemap-wrap {
-  #sitemap > ul {
+  #sitemap {
     @media screen and (min-width: 960px) {
       column-count: 3;
       break-inside: avoid;
