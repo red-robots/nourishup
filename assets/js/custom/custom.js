@@ -56,9 +56,11 @@ jQuery(document).ready(function ($) {
         $('#poupContainer').removeClass('show');
       } else {
         $('#poupContainer').addClass('show');
+        $('body').css('overflow','hidden');
       }
     } else {
       $('#poupContainer').addClass('show');
+      $('body').css('overflow','hidden');
     }    
   }
 
