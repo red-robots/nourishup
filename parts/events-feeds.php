@@ -63,7 +63,7 @@ if ( $news->have_posts() ) {
         $imgAlt = ($thumbnailAlt) ? $thumbnailAlt : '';
         $content = get_the_content();
         $content = ($content) ? strip_tags(strip_shortcodes($content))  : '';
-        $excerpt = ($content) ? shortenText( $content, 100, ".", "...") : "";
+        $excerpt = ($content) ? shortenText( $content, 500, ".", "...") : "";
 
         $today = date('Y-m-d', strtotime(WP_CURRENT_TIME));
         $start_date = get_field('start_date', $post_id);  
@@ -154,10 +154,10 @@ if ( $news->have_posts() ) {
               <?php if($imageUrl) { ?>
                 <a href="<?php echo get_permalink() ?>">
                   <img src="<?php echo $imageUrl?>" alt="<?php echo $imgAlt?>" class="post-image" />
-                  <img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/rectangle-lg.png" alt="" class="resizer" />
+                  <img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/square.png" alt="" class="resizer" />
                 </a>
               <?php } else { ?>
-                <img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/rectangle-lg.png" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/square.png" alt="" />
               <?php } ?>
             </figure>
           </div>
