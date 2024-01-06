@@ -4020,6 +4020,80 @@ body.post-type-archive-tribe_events {
   color: #FFF;
 }
 
+.popUpWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.75);
+  padding: 40px 20px;
+  z-index: 999999;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  display: none;
+  &.show {
+    display: flex;
+  }
+  .popupContent {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    background: #364b7e;
+    position: relative;
+    border-radius: 15px;
+    color: #FFF;
+    box-shadow: 0 5px 20px rgba(0,0,0,.35);
+    @media screen and (min-width:1200px) {
+      padding: 3vw 6vw;
+    }
+    p {
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+
+    hr {
+      margin-top: 35px;
+      border-bottom: 1px solid #FFF;
+    }
+    img {
+      margin: 10px 20px;
+      width: 235px;
+      height: auto;
+    }
+  }
+  #popupClose {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    opacity: 0.65;
+    &:before, &:after {
+      content:"";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #FFF;
+      position: absolute;
+      top: 10px;
+      left: 0;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+    &:hover, &:focus {
+      opacity: 1;
+    }
+  }
+}
+
 body:not(.home) {
   .site-header.sticky .site-logo img.logo-full {
     display: inline-block!important;

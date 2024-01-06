@@ -1880,6 +1880,17 @@ body.post-type-archive-tribe_events .tribe-events-c-events-bar{border:0;clip:rec
 .tribe-events-pg-template h1.tribe-events-single-event-title{visibility:hidden;height:0;overflow:hidden;margin:0}
 #wp-admin-bar-root-default.ab-top-menu li#wp-admin-bar-tribe-events.menupop{position:relative;overflow:hidden;text-indent:-99em;width:85px}
 #wp-admin-bar-root-default.ab-top-menu li#wp-admin-bar-tribe-events.menupop:before{content:"Pantries";display:block;position:absolute;top:0;left:28px;z-index:5;text-indent:0;color:#fff}
+.popUpWrapper{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.75);padding:40px 20px;z-index:999999;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;overflow:auto;display:none}
+.popUpWrapper.show{display:-webkit-box;display:-ms-flexbox;display:flex}
+.popUpWrapper .popupContent{max-width:1000px;width:100%;margin:0 auto;padding:40px;background:#364b7e;position:relative;border-radius:15px;color:#fff;-webkit-box-shadow:0 5px 20px rgba(0,0,0,.35);box-shadow:0 5px 20px rgba(0,0,0,.35)}
+.popUpWrapper .popupContent p{font-size:1.25rem;line-height:1.4}
+.popUpWrapper .popupContent hr{margin-top:35px;border-bottom:1px solid #fff}
+.popUpWrapper .popupContent img{margin:10px 20px;width:235px;height:auto}
+.popUpWrapper #popupClose{position:absolute;top:15px;right:15px;width:20px;height:20px;opacity:.65}
+.popUpWrapper #popupClose:before,.popUpWrapper #popupClose:after{content:"";display:block;width:100%;height:2px;background:#fff;position:absolute;top:10px;left:0}
+.popUpWrapper #popupClose:before{-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+.popUpWrapper #popupClose:after{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
+.popUpWrapper #popupClose:hover,.popUpWrapper #popupClose:focus{opacity:1}
 body:not(.home) .site-header.sticky .site-logo img.logo-full{display:inline-block !important}
 body.home.sticky-header .logo-full.logo-sticky{display:inline-block !important}
 body.home.sticky-header .site-logo{padding:0;height:100%;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
@@ -1909,6 +1920,7 @@ body.single-stories #main .twocol .fxcol.image{width:45%}
 }@media screen and (min-width:1100px){.feeds-wrapper ul.feeds figure{padding-left:5vw;padding-right:5vw}
 }@media screen and (min-width:1200px){.repeatable-twocol-text-block .wrapper{padding:5.2vw 6vw}
 .repeatable-flexible-blocks .wrapper{padding:3vw 4vw}
+.popUpWrapper .popupContent{padding:3vw 6vw}
 }@media screen and (min-width:1300px){.rounded-images .wp-block-group__inner-container .wp-block-group-is-layout-flex{gap:5rem}
 .repeatable-columns .rcolumn{margin-bottom:110px}
 .repeatable-columns .rcolumn .inside{padding:20px 3vw 3vw}

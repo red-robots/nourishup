@@ -627,9 +627,18 @@ function copyImage($url) {
 
 
 
+// function get_events_list() {
+// 	global $wpdb;
+// 	$now = WP_CURRENT_TIME;
+// 	$query = "SELECT p.* FROM ".$wpdb->prefix."posts p WHERE p.post_type='events' AND p.post_status='publish'";
+// }
 
-function get_events_list() {
-	global $wpdb;
-	$now = WP_CURRENT_TIME;
-	$query = "SELECT p.* FROM ".$wpdb->prefix."posts p WHERE p.post_type='events' AND p.post_status='publish'";
+
+add_action('wp_footer', 'bellaworks_script_footer'); 
+function bellaworks_script_footer() { 
+  get_template_part('parts/content-popup');
 }
+
+
+
+

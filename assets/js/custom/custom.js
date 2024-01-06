@@ -45,6 +45,30 @@ jQuery(document).ready(function ($) {
   //   }
   // }
 
+  //localStorage.setItem('popState','');
+  if( localStorage.getItem('popState')!=undefined && localStorage.getItem('popState')=='hide' ) {
+    console.log("Pop-up Hidden");
+  }
+
+  if( $('#poupContainer').length ) {
+    if( localStorage.getItem('popState')!=undefined ) {
+      if(localStorage.getItem('popState') == 'hide'){
+        $('#poupContainer').removeClass('show');
+      } else {
+        $('#poupContainer').addClass('show');
+      }
+    } else {
+      $('#poupContainer').addClass('show');
+    }    
+  }
+
+  $('#popupClose').on('click', function(e){
+    e.preventDefault();
+    localStorage.setItem('popState','hide');
+    $('#poupContainer').removeClass('show');
+    $('body').css('overflow','');
+  });
+
 
   //Remove extra 'h1'
   if( $('.tribe-events-pg-template h1.tribe-events-single-event-title').length ) {
