@@ -28,13 +28,13 @@
 
       <div class="featuredSectionTitle"></div>
       <?php if($excerpt) { ?>
-      <div class="excerpt">
-      <?php if($title) { ?>
-      <h3 class="title"><?php echo $title; ?></h3>
-      <?php } ?>  
-      <?php echo $excerpt ?>
-      </div>
-      <div class="readmore"><a href="<?php echo get_permalink($pid); ?>" class="more">Read More</a></div>
+        <div class="excerpt">
+        <?php if($title) { ?>
+        <h3 class="title"><?php echo $title; ?></h3>
+        <?php } ?>  
+        <?php echo anti_email_spam($excerpt); ?>
+        </div>
+        <div class="readmore"><a href="<?php echo get_permalink($pid); ?>" class="more">Read More</a></div>
       <?php } ?>
     </div>
     
