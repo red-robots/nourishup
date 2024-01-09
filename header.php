@@ -42,6 +42,9 @@ const params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+
+<?php get_template_part('parts/announcement'); ?>
+
 <div id="page" class="site cf">
   <div id="overlay"></div>
   <a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>

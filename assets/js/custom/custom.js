@@ -52,10 +52,59 @@ jQuery(document).ready(function ($) {
 
   $('#popupClose').on('click', function(e){
     e.preventDefault();
+    var now = new Date().getTime();
     localStorage.setItem('popState','hide');
+    localStorage.setItem('popStateSetupTime', now);
     $('#poupContainer').removeClass('show');
     $('body').css('overflow','');
   });
+
+  if( $('#announcementbar').length ) {
+    if( localStorage.getItem('announcementBarState')!=undefined ) {
+      if(localStorage.getItem('announcementBarState') == 'hide'){
+        $('#announcementbar').removeClass('show');
+      } else {
+        $('#announcementbar').addClass('show');
+      }
+    } else {
+      $('#announcementbar').addClass('show');
+    }    
+  }
+
+  $('#announcementBarClose').on('click', function(e){
+    e.preventDefault();
+    var now = new Date().getTime();
+    localStorage.setItem('announcementBarState','hide');
+    localStorage.setItem('announcementBarSetupTime', now);
+    $('#announcementbar').removeClass('show');
+  });
+
+
+  //Clear localStorage after 3 hours
+  var hours = 6; // to clear the localStorage after 6 hours
+                 // (if someone want to clear after 8hrs simply change hours=8)
+  var now = new Date().getTime();
+  if( localStorage.getItem('announcementBarState')!=undefined ) {
+    var setupTime = localStorage.getItem('announcementBarSetupTime');
+    if(setupTime) {
+      if(now-setupTime > hours*60*60*1000) {
+        localStorage.clear();
+        localStorage.setItem('announcementBarSetupTime', now);
+        localStorage.setItem('announcementBarState','');
+      }
+    }
+  }
+
+  if( localStorage.getItem('popState')!=undefined ) {
+    var popSetupTime = localStorage.getItem('popStateSetupTime');
+    if(popSetupTime) {
+      if(now-popSetupTime > hours*60*60*1000) {
+        localStorage.clear();
+        localStorage.setItem('popStateSetupTime', now);
+        localStorage.setItem('popState','');
+      }
+    }
+  }
 
 
   //Remove extra 'h1'
@@ -517,6 +566,8 @@ jQuery(document).ready(function ($) {
       }
     });
   }
+
+
 
 
 }); 
