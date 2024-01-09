@@ -1903,6 +1903,7 @@ body.home.sticky-header .logo-full.logo-sticky{display:inline-block !important}
 body.home.sticky-header .site-logo{padding:0;height:100%;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 body.home.sticky-header .site-logo a{display:inline-block !important;padding:5px}
 body.home.sticky-header .site-logo .logo-full.logo-sticky{top:8px !important;width:260px}
+.subpageHero.bluebg{background-color:#3d5588}
 body.error404 #main.wrapper{max-width:1400px;margin-top:50px;margin-bottom:60px}
 body.error404 #sitemap-wrap{margin-top:30px;padding-top:20px;border-top:1px solid #3d5588}
 .tribe-event-tags-label,.tribe-event-tags{display:none !important}

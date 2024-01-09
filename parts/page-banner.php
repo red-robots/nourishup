@@ -7,6 +7,8 @@ $termTitle = (isset($obj->name) && $obj->name) ? $obj->name : '';
 $is_tribe_taxonomy = ($taxonomy=='tribe_events_cat') ? true : false;
 $is_past_events = ( isset($_GET['status']) && $_GET['status']=='past-events' ) ? true : false;
 
+$solidBlueBanner = array('post','events');
+
 if($is_tribe_events || $is_tribe_taxonomy) {
 
   $hero = get_field('pantries_hero_image','option');  
@@ -69,16 +71,20 @@ if( (is_page() || is_single()) && !is_front_page() ) {
       $imgAlt = $banner_image['title'];
       $imageUrl = $banner_image['url'];
     }
+
+    $solidBlueBg = ( in_array($postType, $solidBlueBanner) ) ? ' bluebg':'';
     ?>
-    <div class="subpageHero single-hero">
+    <div class="subpageHero single-hero<?php echo $solidBlueBg ?>">
       <div class="heroText">
         <div class="wrapper">
         <h1 class="big-title"><?php echo $page_title ?></h1>
         </div>
       </div>
-      <span class="overlay-background"></span>
-      <?php if($imageUrl) { ?>
-        <img src="<?php echo $imageUrl?>" alt="<?php echo $imgAlt?>" class="hero-image"/>
+      <?php if(!$solidBlueBg) { ?>
+        <span class="overlay-background"></span>
+        <?php if($imageUrl) { ?>
+          <img src="<?php echo $imageUrl?>" alt="<?php echo $imgAlt?>" class="hero-image"/>
+        <?php } ?>
       <?php } ?>
     </div>
   

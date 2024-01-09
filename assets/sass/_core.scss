@@ -4152,6 +4152,10 @@ body.home.sticky-header {
   }
 }
 
+.subpageHero.bluebg {
+  background-color: $primary;
+}
+
 body.error404 {
   #main.wrapper {
     max-width: 1400px;
