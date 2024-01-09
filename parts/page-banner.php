@@ -73,11 +73,33 @@ if( (is_page() || is_single()) && !is_front_page() ) {
     }
 
     $solidBlueBg = ( in_array($postType, $solidBlueBanner) ) ? ' bluebg':'';
+    $is_parent_title = false;
+    if($postType=='events') {
+      $page_title='Events';
+      $is_parent_title = true;
+    } elseif($postType=='post') {
+      $terms = get_the_terms(get_the_ID(),'category');
+      $is_client_story = '';
+      if($terms) {
+        foreach($terms as $term) {
+          if($term->slug=='client-stories') {
+            $is_client_story = true;
+            $page_title = $term->name;
+          } else {
+            $page_title = 'News';
+          }
+        }
+      }
+    }
     ?>
     <div class="subpageHero single-hero<?php echo $solidBlueBg ?>">
       <div class="heroText">
         <div class="wrapper">
-        <h1 class="big-title"><?php echo $page_title ?></h1>
+          <?php if($is_parent_title) { ?>
+            <div class="big-title"><?php echo $page_title ?></div>
+          <?php } else { ?>
+            <h1 class="big-title"><?php echo $page_title ?></h1>
+          <?php } ?>
         </div>
       </div>
       <?php if(!$solidBlueBg) { ?>
