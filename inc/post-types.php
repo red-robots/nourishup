@@ -18,14 +18,6 @@ function js_custom_init() {
       //   'menu_position'=> 5
       // ),
       array(
-        'post_type' => 'activities',
-        'menu_name' => 'Activities',
-        'plural'    => 'Activities',
-        'single'    => 'Activity',
-        'menu_icon' => 'dashicons-category',
-        'supports'  => array('title')
-      ),
-      array(
         'post_type' => 'events',
         'menu_name' => 'Events',
         'plural'    => 'Events',
