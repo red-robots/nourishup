@@ -1,7 +1,7 @@
 <?php
 $paged = ( get_query_var( 'pg' ) ) ? absint( get_query_var( 'pg' ) ) : 1;
 
-$is_passed_events = ( isset($_GET['status']) && $_GET['status']=='passed-events' ) ? true : false;
+$is_past_events = ( isset($_GET['status']) && $_GET['status']=='past-events' ) ? true : false;
 // $current_date = date('Y-m-d', strtotime(WP_CURRENT_TIME));
 $current_date = date('Y-m-d H:i:s', strtotime(WP_CURRENT_TIME));
 $current_time = date('H:i:s', strtotime(WP_CURRENT_TIME));
@@ -30,7 +30,7 @@ $args = array(
   'order'=>'DESC'
 );
 
-if( $is_passed_events ) {
+if( $is_past_events ) {
   $args['meta_query'] = array(
     //'relation' => 'OR',
     // [
@@ -77,8 +77,6 @@ if ( $news->have_posts() ) {
           }
         }
 
-      
-
         $timings = array();
         if( $start_time = get_field('start_time', $post_id) ) {
           $stime = date('g:ia', strtotime($start_time));
@@ -116,7 +114,7 @@ if ( $news->have_posts() ) {
             $event_date = 'Now through ' . $end_date;
           }
           
-          if($is_passed_events) {
+          if($is_past_events) {
             if($stDate < $nowTime) {
               if($time_range) {
                 $event_date = date('l, F d, Y', strtotime($start_date))  . ' | ' . $time_range;
@@ -165,7 +163,7 @@ if ( $news->have_posts() ) {
       <?php $i++; endwhile; wp_reset_postdata(); ?>
     </div>
 
-    <div id="pagination" class="pagination-wrapper clear<?php echo ($is_passed_events) ? ' passed-events':'' ?>">
+    <div id="pagination" class="pagination-wrapper clear<?php echo ($is_past_events) ? ' past-events':'' ?>">
       <?php
       $total_pages = $news->max_num_pages;
       if ($total_pages > 1) { ?>
@@ -182,16 +180,18 @@ if ( $news->have_posts() ) {
         echo paginate_links($pagination);
         ?>
       <?php } ?>
-      <?php if( $is_passed_events ) { ?>
+
+      <?php if( $is_past_events ) { ?>
         <a href="<?php echo get_permalink()?>" class="morelink current-events">Upcoming Events</a>
       <?php } ?>
+
     </div>
   </div>
 <?php } ?>
 
 
 <?php
-if( !$is_passed_events ) {
+if( !$is_past_events ) {
   $args2 = array(
     'post_type'         => 'events',
     'posts_per_page'    => 1,
@@ -207,7 +207,7 @@ if( !$is_passed_events ) {
   );
 
   $old_posts = get_posts($args2);
-  $currentLink = get_permalink() . '?status=passed-events';
+  $currentLink = get_permalink() . '?status=past-events';
   if($old_posts) { ?>
   <div class="old-posts"><a class="morelink prev-post" href="<?php echo $currentLink?>">Previous Events</a></div>
   <?php } 

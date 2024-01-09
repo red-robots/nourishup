@@ -5,7 +5,7 @@ $is_tribe_events = (isset($obj->name) && $obj->name=='tribe_events') ? true : fa
 $taxonomy = (isset($obj->taxonomy) && $obj->taxonomy) ? $obj->taxonomy : '';
 $termTitle = (isset($obj->name) && $obj->name) ? $obj->name : '';
 $is_tribe_taxonomy = ($taxonomy=='tribe_events_cat') ? true : false;
-$is_passed_events = ( isset($_GET['status']) && $_GET['status']=='passed-events' ) ? true : false;
+$is_past_events = ( isset($_GET['status']) && $_GET['status']=='past-events' ) ? true : false;
 
 if($is_tribe_events || $is_tribe_taxonomy) {
 
@@ -60,8 +60,8 @@ if( (is_page() || is_single()) && !is_front_page() ) {
       $imgAlt = ($imageUrl) ? get_post(get_post_thumbnail_id())->post_title : '';
     }
     $page_title = trim(get_the_title());
-    if($page_title=='Events' && $is_passed_events) {
-      $page_title = 'Passed ' . $page_title;
+    if($page_title=='Events' && $is_past_events) {
+      $page_title = 'Past ' . $page_title;
     }
 
     $banner_image = get_field('banner_image');

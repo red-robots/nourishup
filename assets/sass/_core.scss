@@ -3827,7 +3827,7 @@ body.post-type-archive-tribe_events {
     
   }
 
-  #pagination.passed-events {
+  #pagination.past-events {
     margin-top: 60px;
     a.morelink.current-events {
       display: inline-block;
@@ -3864,7 +3864,7 @@ body.post-type-archive-tribe_events {
     }
   }
 
-  #pagination:not(.passed-events) {
+  #pagination:not(.past-events) {
     width: 100%;
     display: none;
     .page-numbers:not(.next) {
