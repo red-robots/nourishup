@@ -3117,6 +3117,10 @@ body.single-events {
   }
 }
 
+body.single-post div.titlediv {
+  margin-bottom: 20px;
+}
+
 body.single-stories,
 body.single-post {
   h1.big-title {
@@ -3542,6 +3546,8 @@ body.post-type-archive-tribe_events {
   display: inline-flex!important;
   align-items: center;
 }
+
+
 
 @media screen and (max-width: 1080px) {
   .filterWrapper .filterInner {

@@ -640,5 +640,17 @@ function bellaworks_script_footer() {
 }
 
 
-
+function bella_acf_input_admin_footer() { ?>
+<script type="text/javascript">
+(function($) {
+  acf.add_filter('color_picker_args', function( args, $field ){
+    // do something to args
+    args.palettes = ['#3D5588','#F26522','#81C674','#FEBC11','#FAF1DB','#32845C','#00B2CD']
+    return args;
+  });
+})(jQuery); 
+</script>
+<?php
+}
+add_action('acf/input/admin_footer', 'bella_acf_input_admin_footer');
 

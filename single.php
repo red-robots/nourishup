@@ -14,7 +14,7 @@ global $post;
 $postType = get_post_type();
 $hero = get_field('stories_hero','option');
 $heading = get_field('stories_title','option');
-$posttypes_exceptions = ["post","tribe_event_series"];
+$posttypes_exceptions = ["tribe_event_series"];
 get_header(); 
 ?>
 
