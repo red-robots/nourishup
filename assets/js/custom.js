@@ -41,6 +41,18 @@
 })();
 "use strict";
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 /**
  *	Custom jQuery Scripts
  *	Developed by: Lisa DeBona
@@ -615,5 +627,88 @@ jQuery(document).ready(function ($) {
         imageResizer.wrap('<a href="' + blockLink + '" class="pagelink" aria-label="' + linkTitle + '"></a>');
       }
     });
+  }
+
+  $(document).on('click', '.tribe-events-pro-map__event-title', function () {
+    //alert("Open Map!");
+    setTimeout(function () {
+      if ($('.tribe-swiper-slide').length > 1) {
+        var schedules = '';
+        var start = [];
+        var timeRange = [];
+        var timeContainer = $('.tribe-swiper-slide .tribe-events-pro-map__event-tooltip-datetime-wrapper').eq(0);
+        $('.tribe-swiper-slide').each(function () {
+          if ($(this).find('.tribe-events-pro-map__event-tooltip-datetime').length) {
+            var time = $(this).find('.tribe-events-pro-map__event-tooltip-datetime');
+            var start_time = '';
+            var end_time = '';
+            var startDate = '';
+
+            if (time.find('.tribe-event-date-start').length) {
+              var startTime = time.find('.tribe-event-date-start').text();
+              var arrs = startTime.trim().split('@');
+
+              if (arrs.length > 1) {
+                startDate = arrs[0].trim();
+                start.push(startDate);
+                start_time = arrs[1].trim();
+              }
+            }
+
+            if (time.find('.tribe-event-time').length) {
+              end_time = time.find('.tribe-event-time').text().trim();
+            }
+
+            var args = {
+              'date': startDate,
+              'start': start_time,
+              'end': end_time
+            };
+            timeRange.push(args);
+          }
+        }); // var dateArrs = [];
+        // if(start.length>1 && timeRange.length) {
+        //   var unique = start.filter(getUnique);
+        //   for(x=0; x<unique.length; x++) {
+        //     var d = unique[x];
+        //     console.log(d);
+        //   }
+        //   //console.log(unique);
+        //   // if(unique.length==1) {
+        //   //   $('.tribe-events-pro-map__event-tooltip-navigation').hide();
+        //   //   var eventDate = unique[0];
+        //   //   var dateInfo = eventDate + ':<br>';
+        //   //   if(timeRange.length>1) {
+        //   //     for(i=0; i<timeRange.length; i++) {
+        //   //       var obj = timeRange[i];
+        //   //       var start_time_info = obj.start;
+        //   //       var end_time_info = obj.end;
+        //   //       var newLine = (i>0) ? '<br>' : '';
+        //   //       dateInfo += newLine + start_time_info + ' - ' + end_time_info;
+        //   //     }
+        //   //   }
+        //   //   var dateOutput = '<time class="time-range">'+dateInfo+'</time>';
+        //   //   $(dateOutput).insertAfter(timeContainer);
+        //   //   $('.tribe-events-pro-map__event-tooltip-datetime-wrapper').hide();
+        //   // }
+        // }
+      }
+    }, 100);
+  });
+
+  function getUnique(value, index, array) {
+    return array.indexOf(value) === index;
+  }
+
+  function toFindDuplicates(arry) {
+    var uniqueElements = new Set(arry);
+    var filteredElements = arry.filter(function (item) {
+      if (uniqueElements.has(item)) {
+        uniqueElements.delete(item);
+      } else {
+        return item;
+      }
+    });
+    return _toConsumableArray(new Set(uniqueElements));
   }
 });

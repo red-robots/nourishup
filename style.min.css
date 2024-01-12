@@ -1923,6 +1923,7 @@ body.home.sticky-header .site-logo .logo-full.logo-sticky{top:8px !important;wid
 .announcement img{width:auto;height:38px}
 body.error404 #main.wrapper{max-width:1400px;margin-top:50px;margin-bottom:60px}
 body.error404 #sitemap-wrap{margin-top:30px;padding-top:20px;border-top:1px solid #3d5588}
+.tribe-events-pro-map__event-tooltip .tribe-events-calendar-series-archive__container{display:none !important}
 .tribe-event-tags-label,.tribe-event-tags{display:none !important}
 @media screen and (min-width:800px){.repeatable-image-text-block .flexwrap.half{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .repeatable-image-text-block .flexwrap.half .imageCol{width:40%;margin-bottom:0}

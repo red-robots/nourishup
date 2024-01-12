@@ -4258,6 +4258,10 @@ body.error404 {
   }
 }
 
+.tribe-events-pro-map__event-tooltip .tribe-events-calendar-series-archive__container {
+  display: none!important;
+}
+
 //Hide Tribe TAGS
 .tribe-event-tags-label,
 .tribe-event-tags {
