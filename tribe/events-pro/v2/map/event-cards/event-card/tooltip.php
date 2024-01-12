@@ -57,21 +57,28 @@ $classes['tribe-events-pro-map__event-tooltip--has-slider'] = $has_multiple_even
 							continue;
 						}
             if( isset($tooltip_event->start_date) && $tooltip_event->start_date ) {
+              $id = $tooltip_event->ID;
               $start_date_display = date('F d', strtotime($tooltip_event->start_date_utc));
               $start_date = date('F-d-Y', strtotime($tooltip_event->start_date_utc));
               $start_time = date('h:i a', strtotime($tooltip_event->start_date_utc));
               $end_time = date('h:i a', strtotime($tooltip_event->end_date_utc)); 
               $date_range_arr = array($start_time,$end_time);
               $date_range = implode(' - ', $date_range_arr);
-              $eventArrs[$start_date]['date'] = $start_date_display;
-              $eventArrs[$start_date]['times'][] = $date_range;
-              $eventArrs[$start_date]['info'] = $tooltip_event;
+              $post_title = $tooltip_event->post_title;
+              $slug = sanitize_title($post_title);
+              $eventArrs[$slug][$start_date]['ids'][] = $id;
+              $eventArrs[$slug][$start_date]['date'] = $start_date_display;
+              $eventArrs[$slug][$start_date]['times'][] = $date_range;
+              $eventArrs[$slug][$start_date]['info'] = $tooltip_event;
             } 
 
 					endforeach; 
 
-            if($eventArrs) {
-              foreach($eventArrs as $k=>$obj) {
+
+          if($eventArrs) {
+            foreach($eventArrs as $k=>$objects) {
+              foreach($objects as $obj) {
+                $ids = $obj['ids'];
                 $date = $obj['date'];
                 $times = $obj['times'];
                 $time_range = $date . ' @ ';
@@ -85,8 +92,9 @@ $classes['tribe-events-pro-map__event-tooltip--has-slider'] = $has_multiple_even
                     }
                   }
                 }
+                $info = $obj['info'];
+                $info->schedules = $time_range;
                 ?>
-
                 <div
                 class="tribe-events-pro-map__event-tooltip-slide tribe-swiper-slide tribe-common-g-col"
                 data-js="tribe-events-pro-map-event-tooltip-slide"
@@ -94,13 +102,16 @@ $classes['tribe-events-pro-map__event-tooltip--has-slider'] = $has_multiple_even
                 data-slide-index="<?php echo esc_attr( $slide_index ); ?>"
                 data-start-date="<?php echo esc_attr( $start_date ); ?>"
                 >
-                <?php $this->template( 'map/event-cards/event-card/tooltip/date-time', [ 'event' => (object) $tooltip_event, 'custom_dates'=> $time_range ] ); ?>
-                <?php $this->template( 'map/event-cards/event-card/tooltip/title', [ 'event' => (object) $tooltip_event ] ); ?>
-                <?php $this->template( 'map/event-cards/event-card/tooltip/venue', [ 'event' => (object) $tooltip_event ] ); ?>
-                <?php $this->template( 'map/event-cards/event-card/tooltip/cost', [ 'event' => (object) $tooltip_event ] ); ?>
+                  <?php $this->template( 'map/event-cards/event-card/tooltip/date-time', [ 'event' => (object) $info ] ); ?>
+                  <?php $this->template( 'map/event-cards/event-card/tooltip/title', [ 'event' => (object) $info ] ); ?>
+                  <?php $this->template( 'map/event-cards/event-card/tooltip/venue', [ 'event' => (object) $info ] ); ?>
+                  <?php $this->template( 'map/event-cards/event-card/tooltip/cost', [ 'event' => (object) $info ] ); ?>
+
                 </div>
-              <?php }
+                <?php
+              }
             }
+          }
           ?>
 
 				</div>
