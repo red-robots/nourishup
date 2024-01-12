@@ -29,7 +29,8 @@ $event_date_attr = $event->dates->start->format( Dates::DBDATEFORMAT );
 		class="tribe-events-pro-map__event-tooltip-datetime"
 		datetime="<?php echo esc_attr( $event_date_attr ); ?>"
 	>
-		<?php //echo $event->schedule_details->value(); 
+		<?php 
+      //echo $event->schedule_details->value(); 
       echo $custom_dates;
     ?>
 	</time>
