@@ -85,25 +85,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 })(jQuery);
 
 jQuery(document).ready(function ($) {
-  //localStorage.setItem('popState','');
-  if (localStorage.getItem('popState') != undefined && localStorage.getItem('popState') == 'hide') {
-    console.log("Pop-up Hidden");
-  }
-
-  if ($('#poupContainer').length) {
-    if (localStorage.getItem('popState') != undefined) {
-      if (localStorage.getItem('popState') == 'hide') {
-        $('#poupContainer').removeClass('show');
-      } else {
-        $('#poupContainer').addClass('show');
-        $('body').css('overflow', 'hidden');
-      }
-    } else {
-      $('#poupContainer').addClass('show');
-      $('body').css('overflow', 'hidden');
-    }
-  }
-
   $('#popupClose').on('click', function (e) {
     e.preventDefault();
     var now = new Date().getTime();
@@ -112,56 +93,13 @@ jQuery(document).ready(function ($) {
     $('#poupContainer').removeClass('show');
     $('body').css('overflow', '');
   });
-
-  if ($('#announcementbar').length) {
-    if (localStorage.getItem('announcementBarState') != undefined) {
-      if (localStorage.getItem('announcementBarState') == 'hide') {
-        $('#announcementbar').removeClass('show');
-      } else {
-        $('#announcementbar').addClass('show');
-      }
-    } else {
-      $('#announcementbar').addClass('show');
-    }
-  }
-
   $('#announcementBarClose').on('click', function (e) {
     e.preventDefault();
     var now = new Date().getTime();
     localStorage.setItem('announcementBarState', 'hide');
     localStorage.setItem('announcementBarSetupTime', now);
     $('#announcementbar').removeClass('show');
-  }); //Clear localStorage after 3 hours
-
-  var hours = 6; // to clear the localStorage after 6 hours
-  // (if someone want to clear after 8hrs simply change hours=8)
-
-  var now = new Date().getTime();
-
-  if (localStorage.getItem('announcementBarState') != undefined) {
-    var setupTime = localStorage.getItem('announcementBarSetupTime');
-
-    if (setupTime) {
-      if (now - setupTime > hours * 60 * 60 * 1000) {
-        localStorage.clear();
-        localStorage.setItem('announcementBarSetupTime', now);
-        localStorage.setItem('announcementBarState', '');
-      }
-    }
-  }
-
-  if (localStorage.getItem('popState') != undefined) {
-    var popSetupTime = localStorage.getItem('popStateSetupTime');
-
-    if (popSetupTime) {
-      if (now - popSetupTime > hours * 60 * 60 * 1000) {
-        localStorage.clear();
-        localStorage.setItem('popStateSetupTime', now);
-        localStorage.setItem('popState', '');
-      }
-    }
-  } //Remove extra 'h1'
-
+  }); //Remove extra 'h1'
 
   if ($('.tribe-events-pg-template h1.tribe-events-single-event-title').length) {
     $('.tribe-events-pg-template h1.tribe-events-single-event-title').remove();
