@@ -9,7 +9,7 @@ $args = array(
   'post_type'         => 'events',
   'posts_per_page'    => $perpage,
   'post_status'       => 'publish',
-  'paged'			        => $paged,
+  'paged'             => $paged,
   'meta_query'        => array(
     'relation' => 'AND',
     [
@@ -45,6 +45,20 @@ if( $is_past_events ) {
       'value'     => $current_date,
       'type'      => 'DATE',
     ],
+  );
+} else {
+  $args = array(
+    'post_type'         => 'events',
+    'posts_per_page'    => 1,
+    'post_status'       => 'publish',
+    'meta_query'        => array(
+      [
+        'key'       => 'start_date',
+        'compare'   => '>=',
+        'value'     => $current_date,
+        'type'      => 'DATE',
+      ]
+    ),
   );
 }
 $news = new WP_Query($args);
@@ -184,32 +198,15 @@ if ( $news->have_posts() ) {
       <?php if( $is_past_events ) { ?>
         <a href="<?php echo get_permalink()?>" class="morelink current-events">Upcoming Events</a>
       <?php } ?>
-
     </div>
   </div>
 <?php } ?>
 
-
-<?php
-if( !$is_past_events ) {
-  $args2 = array(
-    'post_type'         => 'events',
-    'posts_per_page'    => 1,
-    'post_status'       => 'publish',
-    'meta_query'        => array(
-      [
-        'key'       => 'start_date',
-        'compare'   => '<',
-        'value'     => $current_date,
-        'type'      => 'DATE',
-      ],
-    ),
-  );
-
-  $old_posts = get_posts($args2);
-  $currentLink = get_permalink() . '?status=past-events';
-  if($old_posts) { ?>
+<?php if( !$is_past_events ) { ?>
+  <?php if ( $news->have_posts() ) { 
+  $currentLink = get_permalink() . '?status=past-events'; ?>
   <div class="old-posts"><a class="morelink prev-post" href="<?php echo $currentLink?>">Previous Events</a></div>
-  <?php } 
-}
-?>
+  <?php } ?>
+<?php } ?>
+
+
