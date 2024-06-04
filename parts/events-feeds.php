@@ -77,7 +77,8 @@ if ( $news->have_posts() ) {
         $imgAlt = ($thumbnailAlt) ? $thumbnailAlt : '';
         $content = get_the_content();
         $content = ($content) ? strip_tags(strip_shortcodes($content))  : '';
-        $excerpt = ($content) ? shortenText( $content, 500, ".", "...") : "";
+        // $excerpt = ($content) ? shortenText( $content, 500, ".", "...") : "";
+        $excerpt = get_field('excerpt');
 
         $today = date('Y-m-d', strtotime(WP_CURRENT_TIME));
         $start_date = get_field('start_date', $post_id);  
