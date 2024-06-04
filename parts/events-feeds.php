@@ -49,7 +49,7 @@ if( $is_past_events ) {
 } else {
   $args = array(
     'post_type'         => 'events',
-    'posts_per_page'    => 1,
+    'posts_per_page'    => $perpage1,
     'post_status'       => 'publish',
     'meta_query'        => array(
       [
