@@ -13,7 +13,7 @@ if ( $recentposts->have_posts() ) {
   ?>
   <div class="recents-posts-feeds feeds-wrapper">
     <ul class="feeds recent-posts">
-      <?php $i=1; while ( $recentposts->have_posts() ) : $recentposts->the_post();  
+      <?php $i=1; while ( $recentposts->have_posts() && $recentposts->current_post + 1 < $perpage ) : $recentposts->the_post();  
         $img = get_field('thumbnail_image');
         $imageUrl = ($img) ? $img['url'] : '';
         $imgAlt = ($img) ? $img['title'] : '';
