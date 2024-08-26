@@ -40,6 +40,7 @@
 				$phone = get_field('phone','option');
 				$email = get_field('email','option');
 				$mail = get_field('mailing_list_link','option');
+				$disclaimer = get_field('disclaimer','option');
 				$contact_info = '';
 				if($address) {
 					$contact_info .= '<span class="address"><i class="fa-solid fa-location-dot"></i> '.$address.'</span>';
@@ -63,6 +64,8 @@
 				}
 				if($contact_info) { ?>
 				<div class="footer-contact-info"><div class="footerInner"><?php echo $contact_info ?></div></div>
+				<?php } if($disclaimer) { ?>
+				<div class="footer-contact-info"><div class="footerInner"><?php echo $disclaimer ?></div></div>
 				<?php } ?>
 
 
