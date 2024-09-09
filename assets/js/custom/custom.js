@@ -31,6 +31,20 @@
 
 jQuery(document).ready(function ($) {
 
+   /* Accordions */
+  // $('.accordion .q-title').on('click',function(){
+  //   $(this).find('a').toggleClass('active');
+  //   $(this).parents('.q-item').toggleClass('active');
+  //   //$(this).parents('.q-item').find('.q-text').show();
+  // });
+
+  // $('.acc-item').click(function() {
+
+  //     $(this).next('.answer').slideToggle(500);
+  //     $(this).toggleClass('close');
+
+  // });
+
   $('#popupClose').on('click', function(e){
     e.preventDefault();
     var now = new Date().getTime();

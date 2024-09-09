@@ -27,7 +27,7 @@ const styleSRC = './assets/sass/style.scss';
 const styleDestination = './';
 
 // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
-const outputStyle = 'compressed';
+const outputStyle = 'compact';
 const errLogToConsole = true;
 const precision = 10;
 
@@ -68,7 +68,7 @@ const imgDST = './assets/img/';
 const watchStyles = './assets/sass/**/*.scss';
 
 // Path to all vendor JS files.
-const watchJsVendor = './assets/js/vendor/*.js';
+const watchJsVendor = './assets/js/vendorz/*.js';
 
 // Path to all custom JS files.
 const watchJsCustom = './assets/js/custom/*.js';
@@ -98,7 +98,7 @@ const zipIgnoreGlob = [
 	'!./vscode',
 	'!./package.json',
 	'!./package-lock.json',
-	'!./assets/sass/**/*',
+	'!./assets/css/**/*',
 	'!./assets/css',
 	'!./assets/img/raw/**/*',
 	'!./assets/img/raw',

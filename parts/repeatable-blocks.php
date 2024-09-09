@@ -290,6 +290,62 @@
     <?php } ?>
 
 
+    <?php /* Flippible Card Layout */
+    if( get_row_layout() == 'card_section' ) { 
+      $cards = get_sub_field('cards');
+      // echo '<pre>';
+      // print_r($cards);
+      ?>
+      <div class="repeatable-card-layout  repeatable ">
+        <div class="wrapper" >
+          <div class="flexwrap-cards">
+            <?php foreach( $cards as $cs ) { 
+                    // $front_image = $cs['front_image']['sizes']['medium'];
+              $front_image = $cs['front_image']['url'];
+                    $hover_text = $cs['hover_text'];
+              ?>
+              <div class="card">
+                <div class="card-hover">
+                  <?php echo $hover_text; ?>
+                </div>
+                <img src="<?php echo $front_image; ?>">
+              </div>
+            <?php } ?>
+          </div>
+        </div>
+      </div>
+    <?php } ?>
+
+
+    <?php /* Accordion Layout */
+    if( get_row_layout() == 'accordion' ) { 
+      $panels = get_sub_field('panels');
+      
+      ?>
+      <div class="repeatable-accordion  repeatable ">
+        <div class="wrapper" >
+          <div class="accordions-section">
+
+
+            <div class="accordions">
+              <?php $i=1; foreach( $panels as $pan ) { ?>
+                <?php if ( $pan['panel_title'] && $pan['expanded_text'] ) { ?>
+                <div class="accordion acc-item<?php echo ($i==1) ? ' active first':'' ?>">
+                  <div class="title"><a href="javascript:void(0)"><?php echo $pan['panel_title']; ?></a></div>
+                  <div class="text"><?php echo $pan['expanded_text']; ?></div>
+                </div> 
+                <?php $i++; } ?>
+              <?php } ?>
+              </div>
+
+
+            
+          </div>
+        </div>
+      </div>
+    <?php } ?>
+
+
     <?php if( get_row_layout() == 'flexible_blocks' ) { 
       $flexible = get_sub_field('flexible');
       $textcolor = get_sub_field('textcolor');
@@ -335,3 +391,17 @@
     <?php } ?>
   <?php $i++; endwhile; ?>
 <?php } ?>
+<script>
+jQuery(document).ready(function($){
+
+});
+
+var handles = document.querySelectorAll('.acc-item .title');
+for (var i = 0; i < handles.length; i++) {
+  handles[i].addEventListener('click', function(e) {
+    var textPanel = e.target.parentNode.nextElementSibling;
+    var wrap = e.target.parentNode.parentNode;
+    wrap.classList.toggle("active");
+  });
+}
+</script>

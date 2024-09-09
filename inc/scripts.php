@@ -6,7 +6,7 @@ function bellaworks_scripts() {
 	//wp_enqueue_style( 'bellaworks-style', get_stylesheet_uri() );
        
   wp_enqueue_style( 'swiper-style', 'https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css' );
-  wp_enqueue_style('bellaworks-style', get_stylesheet_directory_uri() .'/style.min.css', array(), '2.1' );  
+  wp_enqueue_style('bellaworks-style', get_stylesheet_directory_uri() .'/style.min.css', array(), '2.2' );  
 
   wp_deregister_script('jquery');
   wp_register_script('jquery', get_stylesheet_directory_uri() . '/assets/js/jquery.min.js', false, '3.6.3', false);
