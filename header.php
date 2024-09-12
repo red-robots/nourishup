@@ -40,6 +40,38 @@ const currentPageId = <?php echo (is_page()) ? get_the_ID():"''"?>;
 const params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){params[k]=v});
 </script>
 <?php wp_head(); ?>
+<?php
+$terms = get_terms( [
+  'taxonomy' => 'tribe_events_cat',
+  'hide_empty' => false,
+] );
+?>
+<script>const tribeCategories = <?php echo ($terms) ? json_encode($terms) : '' ?>;</script>
+<style>
+  .filterInner .custom-calendar-filter {
+    position: relative;   
+  }
+  .filterInner .custom-calendar-filter a.resetLink {
+    display: inline-block;
+    position: absolute;
+    top: -35px;
+    right: 2px;
+  }
+  @media screen and (max-width:768px) {
+    .filterWrapper {
+      padding-top: 20px;
+    }
+    .filterInner .custom-calendar-filter {
+      text-align: center;
+    }
+    .filterInner .custom-calendar-filter a.resetLink {
+      position: relative;
+      top: -15px;
+      right: 0;
+      margin-bottom: 10px;
+    }
+  }
+</style>
 </head>
 <body <?php body_class(); ?>>
 

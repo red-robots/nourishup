@@ -1,31 +1,31 @@
 /**
- *	Custom jQuery Scripts
- *	Developed by: Lisa DeBona
- *  Date Modified: 11.08.2023
+ *  Custom jQuery Scripts
+ *  Developed by: Lisa DeBona
+ *  Date Modified: 09.11.2024
  */
 
  (function($) {
-	$.fn.jQuerySimpleCounter = function( options ) {
-	    var settings = $.extend({
-	        start:  0,
-	        end:    100,
-	        easing: 'swing',
-	        duration: 400,
-	        complete: ''
-	    }, options );
+  $.fn.jQuerySimpleCounter = function( options ) {
+      var settings = $.extend({
+          start:  0,
+          end:    100,
+          easing: 'swing',
+          duration: 400,
+          complete: ''
+      }, options );
 
-	    var thisElement = $(this);
+      var thisElement = $(this);
 
-	    $({count: settings.start}).animate({count: settings.end}, {
-			duration: settings.duration,
-			easing: settings.easing,
-			step: function() {
-				var mathCount = Math.ceil(this.count);
-				thisElement.text(mathCount);
-			},
-			complete: settings.complete
-		});
-	};
+      $({count: settings.start}).animate({count: settings.end}, {
+      duration: settings.duration,
+      easing: settings.easing,
+      step: function() {
+        var mathCount = Math.ceil(this.count);
+        thisElement.text(mathCount);
+      },
+      complete: settings.complete
+    });
+  };
 
 }(jQuery));
 
@@ -412,7 +412,7 @@ jQuery(document).ready(function ($) {
   }
 
   function splitUL(container,numCols) {
-    console.log(numCols);
+    //console.log(numCols);
     var num_cols = numCols,
     listItem = 'li',
     listClass = 'sub-list';
@@ -441,17 +441,31 @@ jQuery(document).ready(function ($) {
     });
     container.replaceWith('<div class="columns-split">'+ container.html() +'</div>');
   }
+  
 
   //Tribe Plugin
-  if( $('.tribe-events-header__events-bar.tribe-events-c-events-bar').length && $('.teccc-legend #legend li').length ) {
+  if( $('.tribe-events-header__events-bar.tribe-events-c-events-bar').length ) {
     var currentLink = window.location.href;
     var resetLink = ( $('h1.tribe-events-header__title-text').length ) ? '<a href="'+siteURL+'/pantries/" class="resetLink">Reset</a>':'';
     //$(resetLink + '<div class="event-category-dropdown"><button class="selectBox categoryFilterBtn" role="button" aria-expanded="false" aria-controls="legend_box"><span class="catlabel">Select A Category</span></button></div>').prependTo('.tribe-events-header__events-bar.tribe-events-c-events-bar');
+    
     $(resetLink + '<div class="event-category-dropdown"></div>').appendTo('.custom-calendar-filter');
-
+    
+  if( $('#legend_box').length ) {
     $('#legend_box').appendTo('.event-category-dropdown');
     $('#legend li[class*="tribe-events-category"]').last().addClass('last');
     $('.event-category-dropdown li.teccc-reset').prependTo('ul#legend');
+  } else {
+    
+    if(tribeCategories) {
+      var tribeCatList = '<div id="legend_box" class="teccc-legend"><ul id="legend"><li class="teccc-reset"><a href="'+siteURL+'/pantries/">Reset</a></li>';
+      $(tribeCategories).each(function(k,v){
+        tribeCatList +='<li class="tribe-events-category-'+v.slug+' tribe_events_cat-'+v.slug+'"><a href="'+siteURL+'/pantries/category/'+v.slug+'">'+v.name+'</a></li>';
+      });
+      tribeCatList +='</ul></div>';
+      $('.custom-calendar-filter .event-category-dropdown').html(tribeCatList);
+    }
+  }
     
     $('.otherFilters').html( $('.tribe-events-header__events-bar.tribe-events-c-events-bar').html() );
     
