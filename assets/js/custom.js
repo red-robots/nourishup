@@ -79,9 +79,9 @@ function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Sym
 function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 /**
- *	Custom jQuery Scripts
- *	Developed by: Lisa DeBona
- *  Date Modified: 11.08.2023
+ *  Custom jQuery Scripts
+ *  Developed by: Lisa DeBona
+ *  Date Modified: 09.11.2024
  */
 
 (function ($) {
@@ -470,7 +470,7 @@ jQuery(document).ready(function ($) {
     $('h1.page-title').remove();
   }
   function splitUL(container, numCols) {
-    console.log(numCols);
+    //console.log(numCols);
     var num_cols = numCols,
       listItem = 'li',
       listClass = 'sub-list';
@@ -501,14 +501,26 @@ jQuery(document).ready(function ($) {
   }
 
   //Tribe Plugin
-  if ( $('.tribe-events-header__events-bar.tribe-events-c-events-bar').length ) {
+  if ($('.tribe-events-header__events-bar.tribe-events-c-events-bar').length) {
     var currentLink = window.location.href;
     var resetLink = $('h1.tribe-events-header__title-text').length ? '<a href="' + siteURL + '/pantries/" class="resetLink">Reset</a>' : '';
     //$(resetLink + '<div class="event-category-dropdown"><button class="selectBox categoryFilterBtn" role="button" aria-expanded="false" aria-controls="legend_box"><span class="catlabel">Select A Category</span></button></div>').prependTo('.tribe-events-header__events-bar.tribe-events-c-events-bar');
+
     $(resetLink + '<div class="event-category-dropdown"></div>').appendTo('.custom-calendar-filter');
-    $('#legend_box').appendTo('.event-category-dropdown');
-    $('#legend li[class*="tribe-events-category"]').last().addClass('last');
-    $('.event-category-dropdown li.teccc-reset').prependTo('ul#legend');
+    if ($('#legend_box').length) {
+      $('#legend_box').appendTo('.event-category-dropdown');
+      $('#legend li[class*="tribe-events-category"]').last().addClass('last');
+      $('.event-category-dropdown li.teccc-reset').prependTo('ul#legend');
+    } else {
+      if (tribeCategories) {
+        var tribeCatList = '<div id="legend_box" class="teccc-legend"><ul id="legend"><li class="teccc-reset"><a href="' + siteURL + '/pantries/">Reset</a></li>';
+        $(tribeCategories).each(function (k, v) {
+          tribeCatList += '<li class="tribe-events-category-' + v.slug + ' tribe_events_cat-' + v.slug + '"><a href="' + siteURL + '/pantries/category/' + v.slug + '">' + v.name + '</a></li>';
+        });
+        tribeCatList += '</ul></div>';
+        $('.custom-calendar-filter .event-category-dropdown').html(tribeCatList);
+      }
+    }
     $('.otherFilters').html($('.tribe-events-header__events-bar.tribe-events-c-events-bar').html());
     $(document).on('click', '.categoryFilterBtn', function (e) {
       e.preventDefault();

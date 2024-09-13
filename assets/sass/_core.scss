@@ -1525,7 +1525,7 @@ footer.site-footer {
   }
   .wrapper {
     max-width: 1000px;
-    padding-top: 65px;
+    // padding-top: 65px;
     padding-bottom: 50px;
   } 
   .textwrap p:last-child {
@@ -4282,6 +4282,9 @@ body.error404 {
 }
 /* ACCORDIONS */
 .accordions {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   .acc-item {
     border-top: 1px solid #FFF;
     background: #FFF;
@@ -4338,6 +4341,8 @@ body.error404 {
 .repeatable-card-layout {
   .flexwrap-cards {
     width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -4347,6 +4352,7 @@ body.error404 {
     width: 32%;
     position: relative;
     margin-bottom: 30px;
+    line-height: 0;
     &:hover {
       .card-hover {
         opacity: 1;
@@ -4354,6 +4360,7 @@ body.error404 {
     }
     img {
       width: 100%;
+      line-height: 0;
     }
     .card-hover {
       position: absolute;
@@ -4364,8 +4371,24 @@ body.error404 {
       opacity: 0;
       transition: all ease .3s;
       background-color: rgba($primary, .9);
-      padding: 20px;
+      padding: 10px;
       color: #fff;
+      line-height: 1.3;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 12px;
+      @media screen and (min-width:820px) {
+        font-size: 18px;
+        padding: 20px;
+      }
     }
   }
 }
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 1em 1em}
+a img.alignleft {float:left; margin:0 1em 1em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
