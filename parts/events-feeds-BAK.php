@@ -1,62 +1,67 @@
 <?php
-$current_date = date('Y-m-d');
-$paged = ( get_query_var('paged') ) ? absint( get_query_var('paged') ) : 1;
-$is_past_events = ( isset($_GET['status']) && $_GET['status'] == 'past-events' );
+$paged = ( get_query_var( 'pg' ) ) ? absint( get_query_var( 'pg' ) ) : 1;
 
+$is_past_events = ( isset($_GET['status']) && $_GET['status']=='past-events' ) ? true : false;
+// $current_date = date('Y-m-d', strtotime(WP_CURRENT_TIME));
+$current_date = date('Y-m-d H:i:s', strtotime(WP_CURRENT_TIME));
+$current_time = date('H:i:s', strtotime(WP_CURRENT_TIME));
 $args = array(
-    'post_type'      => 'events',
-    'posts_per_page' => $perpage,
-    'post_status'    => 'publish',
-    'paged'          => $paged,
-    'meta_key'       => 'start_date',
-    'orderby'        => 'meta_value_num',
-    'order'          => 'ASC',
+  'post_type'         => 'events',
+  'posts_per_page'    => $perpage,
+  'post_status'       => 'publish',
+  'paged'             => $paged,
+  'meta_query'        => array(
+    'relation' => 'AND',
+    [
+      'key'       => 'start_date',
+      'compare'   => '<=',
+      'value'     => $current_date,
+      'type'      => 'DATE',
+    ],
+    [
+      'key'       => 'end_date',
+      'compare'   => '>=',
+      'value'     => $current_date,
+      'type'      => 'DATE',
+    ],
+  ),
+  'meta_key'=>'start_date',
+  'orderby'=>'meta_value_num',
+  'order'=>'DESC'
 );
 
-if ($is_past_events) {
-    // Query for past events only
-    $args['meta_query'] = array(
-        array(
-            'key'     => 'end_date',
-            'compare' => '<',
-            'value'   => $current_date,
-            'type'    => 'DATE',
-        ),
-    );
+if( $is_past_events ) {
+  $args['meta_query'] = array(
+    //'relation' => 'OR',
+    // [
+    //   'key'       => 'start_date',
+    //   'compare'   => '<',
+    //   'value'     => $current_date,
+    //   'type'      => 'DATE',
+    // ],
+    [
+      'key'       => 'end_date',
+      'compare'   => '<',
+      'value'     => $current_date,
+      'type'      => 'DATE',
+    ],
+  );
 } else {
-    // Query for ongoing or upcoming events
-    $args['meta_query'] = array(
-        'relation' => 'OR',
-        
-        // Ongoing events (started in the past and haven’t ended)
-        array(
-            'relation' => 'AND',
-            array(
-                'key'     => 'start_date',
-                'compare' => '<=',
-                'value'   => $current_date,
-                'type'    => 'DATE',
-            ),
-            array(
-                'key'     => 'end_date',
-                'compare' => '>=',
-                'value'   => $current_date,
-                'type'    => 'DATE',
-            ),
-        ),
-        
-        // Upcoming events (start date in the future)
-        array(
-            'key'     => 'start_date',
-            'compare' => '>',
-            'value'   => $current_date,
-            'type'    => 'DATE',
-        ),
-    );
+  $args = array(
+    'post_type'         => 'events',
+    'posts_per_page'    => $perpage1,
+    'post_status'       => 'publish',
+    'meta_query'        => array(
+      [
+        'key'       => 'start_date',
+        'compare'   => '>=',
+        'value'     => $current_date,
+        'type'      => 'DATE',
+      ]
+    ),
+  );
 }
-
 $news = new WP_Query($args);
-
 if ( $news->have_posts() ) {  
   $rpcount = $news->found_posts;
   ?>
