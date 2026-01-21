@@ -71,6 +71,17 @@ $terms = get_terms( [
       margin-bottom: 10px;
     }
   }
+  .footer-contact-info .footerInner {
+    gap: 0 1.5rem;
+  }
+  .footer-contact-info span {
+    padding: 5px 5px;
+  }
+  .footer-contact-info a.text-underline:after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #00b2cd;
+  }
 </style>
 </head>
 <body <?php body_class(); ?>>
