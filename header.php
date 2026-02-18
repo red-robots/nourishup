@@ -71,21 +71,21 @@ $terms = get_terms( [
       margin-bottom: 10px;
     }
   }
-  .footer-contact-info .footerInner {
-    gap: 0 1.5rem;
-  }
-  .footer-contact-info span {
-    padding: 5px 5px;
-  }
-  .footer-contact-info a.text-underline:after {
-    content: "";
-    display: block;
-    border-bottom: 1px solid #00b2cd;
-  }
+	.footer-contact-info .footerInner {
+		gap: 0 1.5rem;
+	}
+	.footer-contact-info span {
+		padding: 5px 5px;
+	}
+	.footer-contact-info a.text-underline:after {
+		content: "";
+		display: block;
+		border-bottom: 1px solid #00b2cd;
+	}
 </style>
 </head>
 <body <?php body_class(); ?>>
-  
+	
 <?php
 $tribe_ev_args = array(
   'taxonomy' => 'tribe_events_cat',
@@ -94,35 +94,35 @@ $tribe_ev_args = array(
 );
 $tribe_ev_terms = get_terms($tribe_ev_args);
 if($tribe_ev_terms) {
-  $tribe_css = '';
-  foreach($tribe_ev_terms as $term) {
-    $termId = $term->term_id;
-    $termSlug = $term->slug;
-    $term_class = '.tribe_events_cat-' . $termSlug;
-    $termColor = get_field('category_image', 'category_' . $term->term_id);
-    $meta = get_term_meta( $termId );
-//    echo '<pre>';
-//    print_r($meta);
-//    echo '</pre>';
-    $textColor = '';
-    $bgColor = '';
-    if( isset($meta['tec-events-cat-colors-text']) && $meta['tec-events-cat-colors-text'] ) {
-      $textColor = ($meta['tec-events-cat-colors-text']) ? $meta['tec-events-cat-colors-text'][0] : '';
-    }
-    if( isset($meta['tec-events-cat-colors-primary']) && $meta['tec-events-cat-colors-primary'] ) {
-      $bgColor = ($meta['tec-events-cat-colors-primary']) ? $meta['tec-events-cat-colors-primary'][0] : '';
-    }
-    if($bgColor && $textColor) {
-      $tribe_css .= '.event-category-dropdown ul#legend li' . $term_class . ' a{background-color:'.$bgColor.';color:'.$textColor.'}';
-      $tribe_css .= '.tribe-events-calendar-list .tribe-events-calendar-list__event.tribe_events_cat-'.$termSlug . ':after{content:"";display:block;width:100px;height:10px;background:'.$bgColor.';position:absolute;bottom:-5px;left:24px;}';
-      $tribe_css .= '.tribe-events-pro-map__event-card-wrapper .tribe-events-pro-map__event.tribe-common-g-row{position:relative;} .tribe-events-pro-map__event-card-wrapper .tribe_events_cat-'.$termSlug . ' .tribe-events-pro-map__event.tribe-common-g-row:after{content:"";display:block;width:80px;height:5px;background:'.$bgColor.';position:absolute;bottom:-5px;left:7px;}';
-    }
-  }
-  if($tribe_css) {
-    echo '<style id="tribe_category_color_css">'.$tribe_css.'</style>';
-  }
+	$tribe_css = '';
+	foreach($tribe_ev_terms as $term) {
+		$termId = $term->term_id;
+		$termSlug = $term->slug;
+		$term_class = '.tribe_events_cat-' . $termSlug;
+		$termColor = get_field('category_image', 'category_' . $term->term_id);
+		$meta = get_term_meta( $termId );
+// 		echo '<pre>';
+// 		print_r($meta);
+// 		echo '</pre>';
+		$textColor = '';
+		$bgColor = '';
+		if( isset($meta['tec-events-cat-colors-text']) && $meta['tec-events-cat-colors-text'] ) {
+			$textColor = ($meta['tec-events-cat-colors-text']) ? $meta['tec-events-cat-colors-text'][0] : '';
+		}
+		if( isset($meta['tec-events-cat-colors-primary']) && $meta['tec-events-cat-colors-primary'] ) {
+			$bgColor = ($meta['tec-events-cat-colors-primary']) ? $meta['tec-events-cat-colors-primary'][0] : '';
+		}
+		if($bgColor && $textColor) {
+			$tribe_css .= '.event-category-dropdown ul#legend li' . $term_class . ' a{background-color:'.$bgColor.';color:'.$textColor.'}';
+			$tribe_css .= '.tribe-events-calendar-list .tribe-events-calendar-list__event.tribe_events_cat-'.$termSlug . ':after{content:"";display:block;width:100px;height:10px;background:'.$bgColor.';position:absolute;bottom:-5px;left:24px;}';
+			$tribe_css .= '.tribe-events-pro-map__event-card-wrapper .tribe-events-pro-map__event.tribe-common-g-row{position:relative;} .tribe-events-pro-map__event-card-wrapper .tribe_events_cat-'.$termSlug . ' .tribe-events-pro-map__event.tribe-common-g-row:after{content:"";display:block;width:80px;height:5px;background:'.$bgColor.';position:absolute;bottom:-5px;left:7px;}';
+		}
+	}
+	if($tribe_css) {
+		echo '<style id="tribe_category_color_css">'.$tribe_css.'</style>';
+	}
 }
-?>  
+?>	
 <?php get_template_part('parts/announcement'); ?>
 <div id="page" class="site cf">
   <div id="overlay"></div>

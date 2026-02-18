@@ -368,7 +368,7 @@ function ea_disable_editor( $id = false ) {
   function ea_disable_gutenberg( $can_edit, $post_type ) {
 
     $exclude_posttypes = array('team','events');
-    $ptype = get_post_type($_GET['post']);
+    $ptype = ( isset($_GET['post']) && $_GET['post'] ) ?  get_post_type($_GET['post']) : '';
   
     if( ! ( is_admin() && !empty( $_GET['post'] ) ) )
       return $can_edit;
@@ -376,7 +376,7 @@ function ea_disable_editor( $id = false ) {
     if( ea_disable_editor( $_GET['post'] ) )
       $can_edit = false;
     
-    if( in_array($ptype, $exclude_posttypes) )
+    if( $ptype && in_array($ptype, $exclude_posttypes) )
       $can_edit = false;
 
     // if( get_post_type($_GET['post'])=='team' )
@@ -654,4 +654,5 @@ function bella_acf_input_admin_footer() { ?>
 <?php
 }
 add_action('acf/input/admin_footer', 'bella_acf_input_admin_footer');
+
 
