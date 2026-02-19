@@ -656,3 +656,12 @@ function bella_acf_input_admin_footer() { ?>
 add_action('acf/input/admin_footer', 'bella_acf_input_admin_footer');
 
 
+add_filter( 'gform_display_add_form_button', 'display_form_button_on_specific_page' );
+function display_form_button_on_specific_page( $display_add_form_button ) {
+  if ( isset( $_GET['post'] ) && get_field('repeatable_blocks', $_GET['post']) ) {
+    return true;
+  }
+  return $display_add_form_button;
+}
+
+
