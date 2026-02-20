@@ -1946,7 +1946,7 @@ img.aligncenter{display:block;margin-left:auto;margin-right:auto}
 a img.alignright{float:right;margin:0 0 1em 1em}
 a img.alignleft{float:left;margin:0 1em 1em 0}
 a img.aligncenter{display:block;margin-left:auto;margin-right:auto}
-.repeatable .gform_wrapper.gform-theme--no-framework,.repeatable .gform_wrapper{display:block !important}
+.repeatable .gform_wrapper.gform-theme--no-framework,.repeatable .gform_wrapper{display:block !important;text-align:initial}
 .repeatable--2{padding-top:40px}
 .repeatable-gallery_grid_layout{padding-top:40px;padding-bottom:40px}
 .repeatable-gallery_grid_layout .section-intro h2{margin:0}
