@@ -329,7 +329,10 @@ function eventsfeeds_func( $atts ) {
   return $output;
 }
 
-
+add_shortcode( 'accordion_collapsed', 'accordion_collapsed_func' );
+function accordion_collapsed_func( $atts ) {
+  return '<div class="accordion-is-collapsed"></div>';
+}
 
 // add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
 // function my_wp_nav_menu_objects( $items, $args ) {

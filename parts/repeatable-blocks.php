@@ -29,9 +29,18 @@ jQuery(document).ready(function($){
 var handles = document.querySelectorAll('.acc-item .title');
 for (var i = 0; i < handles.length; i++) {
   handles[i].addEventListener('click', function(e) {
-    var textPanel = e.target.parentNode.nextElementSibling;
-    var wrap = e.target.parentNode.parentNode;
+    var $btn = e.target;
+    var textPanel = $btn.parentNode.nextElementSibling;
+    var wrap = $btn.parentNode.parentNode;
     wrap.classList.toggle("active");
+    var current_expanded = $btn.getAttribute('aria-expanded');
+    if(current_expanded=='false') {
+      $btn.setAttribute('aria-expanded','true');
+    } else {
+      $btn.setAttribute('aria-expanded','false');
+    }
+    //$btn.toggleAttribute('aria-expanded', 'true'); 
+    //console.log(current_expanded);
   });
 }
 </script>
