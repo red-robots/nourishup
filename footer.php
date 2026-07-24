@@ -109,6 +109,7 @@
 				<?php } ?>
 
 				<?php
+			    $termsOfUse = get_field('terms_of_use','option');
 				$privacy = get_field('privacy_link','option');
 				$footLink = '';
 				if($privacy) {
@@ -117,6 +118,14 @@
 					$url = (isset($privacy['url']) && $privacy['url']) ? $privacy['url'] : '';
 					if($LinkName && $url) {
 						$footLink .= '<span class="privacy-policy"><a href="'.$url.'" target="'.$target.'">'.$LinkName.'</a></span>';
+					}
+				}
+			    if($termsOfUse) {
+					$terms_target = (isset($termsOfUse['target']) && $termsOfUse['target']) ? $termsOfUse['target'] : '_self';
+					$terms_LinkName = (isset($termsOfUse['title']) && $termsOfUse['title']) ? $termsOfUse['title'] : '';
+					$terms_url = (isset($termsOfUse['url']) && $termsOfUse['url']) ? $termsOfUse['url'] : '';
+					if($terms_LinkName && $terms_url) {
+						$footLink .= '<span class="terms-of-use"><a href="'.$terms_url.'" target="'.$terms_target.'">'.$terms_LinkName.'</a></span>';
 					}
 				}
 				$footLink .= '<span class="poweredby"><a href="https://bellaworksweb.com/" target="_blank">Site by Bellaworks</a></span>';
