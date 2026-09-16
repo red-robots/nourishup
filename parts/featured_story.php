@@ -8,13 +8,10 @@
     $image = get_field('thumbnail_image', $pid);
     $content = $result->post_content;
     $numpara = 2;
-    $excerpt = getParagraph($content, $numpara);
-
-    
-
-    if( get_field('excerpt', $pid) ) {
-      $excerpt = get_field('excerpt', $pid);
-    } 
+    $excerpt = get_field('excerpt', $pid);
+    if( !$excerpt ) {
+      $excerpt = getParagraph($content, $numpara);
+    }
 
     $column_class = ($excerpt && $image) ? 'half' : 'full';
     $heading = get_field('stories_title','option');

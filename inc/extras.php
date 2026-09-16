@@ -428,16 +428,12 @@ function myplugin_register_tinymce_javascript( $plugin_array ) {
 
 function getParagraph($content, $num=0) {
     $post_content = apply_filters('the_content', $content);
-    $post_content = str_replace('</p>', '', $post_content);
-    $paras = explode('<p>', $post_content);
-    array_shift($paras);
+    preg_match_all('/<p\b[^>]*>(.*?)<\/p>/is', $post_content, $matches);
     $output = '';
-    if($num) {
-        for($i=0; $i<$num; $i++) {
-            $output .= '<p>'. $paras[$i] .'</p>';
-        }
+    foreach (array_slice($matches[1], 0, $num) as $para) {
+        $output .= '<p>' . $para . '</p>';
     }
-    return $output; 
+    return $output;
 }
 
 add_action('rest_api_init', function () {
