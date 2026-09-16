@@ -66,3 +66,8 @@ require get_template_directory() . '/inc/visual-biography-editor/visual-editor-b
 
 require get_template_directory() . '/inc/repeatable-block-function.php';
 
+/**
+ * Poster, mobile source and reduced-motion handling for Cover block hero videos.
+ */
+require get_template_directory() . '/inc/hero-video.php';
+

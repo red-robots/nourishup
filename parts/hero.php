@@ -56,13 +56,13 @@
           if( in_array($extension,$videoFormat) ) { ?>
           <div class="banner-video <?php echo ($vidMobile) ? 'has-mobile-video':'no-mobile-video'?>">
             <div class="banner-inner">
-              <video class="video-desktop" width="400" autoplay muted loop>
+              <video class="video-desktop" width="400" autoplay muted loop playsinline preload="metadata">
                 <source src="<?php echo $banner_video ?>" type="video/<?php echo $extension ?>">
                 Your browser does not support HTML video.
               </video>
               <?php if ($vidMobile) { ?>
-              <video class="video-mobile" width="400" autoplay muted loop>
-                <source src="<?php echo $banner_video ?>" type="video/<?php echo $extension ?>">
+              <video class="video-mobile" width="400" autoplay muted loop playsinline preload="metadata">
+                <source src="<?php echo $vidMobile ?>" type="video/<?php echo $extension ?>">
                 Your browser does not support HTML video.
               </video>
               <?php } ?>
