@@ -8,6 +8,11 @@
  */
 
 /**
+ * Turn away bot crawls of the pantry calendar before anything else loads.
+ */
+require get_template_directory() . '/inc/calendar-guard.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/theme-setup.php';
