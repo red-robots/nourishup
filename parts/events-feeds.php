@@ -120,7 +120,7 @@ if ( $news->have_posts() ) {
           $event_date = date('F d, Y', strtotime($start_date));
           $event_date .= ' to ' . $end_date;
 
-          if($nowTime < $endDateStr) {
+          if($stDate <= $nowTime && $nowTime < $endDateStr) { // only once it has started
             $event_date = 'Now through ' . $end_date;
           }
           
