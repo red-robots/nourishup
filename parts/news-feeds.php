@@ -26,7 +26,8 @@ if ( $news->have_posts() ) {
         }
         if( !$excerpt ) {
           $content = get_the_content();
-          $content = ($content) ? strip_tags(strip_shortcodes($content))  : '';
+          // wp_strip_all_tags also drops <style>/<script> contents, so inline CSS in a post doesn't leak into the preview.
+          $content = ($content) ? trim( wp_strip_all_tags( strip_shortcodes($content) ) ) : '';
           $excerpt = ($content) ? shortenText( $content, 600, ".", "...") : "";
         }
         ?>
