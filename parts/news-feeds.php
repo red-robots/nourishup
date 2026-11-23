@@ -18,9 +18,17 @@ if ( $news->have_posts() ) {
         $img = get_field('thumbnail_image');
         $imageUrl = ($img) ? $img['url'] : '';
         $imgAlt = ($img) ? $img['title'] : '';
-        $content = get_the_content();
-        $content = ($content) ? strip_tags(strip_shortcodes($content))  : '';
-        $excerpt = ($content) ? shortenText( $content, 600, ".", "...") : "";
+        // Use the Excerpt field if filled in (ACF first, then the WP excerpt box),
+        // otherwise fall back to the start of the post.
+        $excerpt = get_field('excerpt');
+        if( !$excerpt && has_excerpt() ) {
+          $excerpt = wpautop( get_the_excerpt() );
+        }
+        if( !$excerpt ) {
+          $content = get_the_content();
+          $content = ($content) ? strip_tags(strip_shortcodes($content))  : '';
+          $excerpt = ($content) ? shortenText( $content, 600, ".", "...") : "";
+        }
         ?>
         <article class="post-item">
           <div class="inside">
